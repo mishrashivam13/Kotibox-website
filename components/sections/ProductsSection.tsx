@@ -109,7 +109,7 @@ export default function ProductsSection() {
               {tag}
             </span>
           ))}
-          <Link href="/products"
+          <Link href="/live-demo"
             className="px-6 py-2.5 rounded-full bg-[#0a1628] text-white
                        text-sm font-bold hover:bg-[#1a2f4e] transition-all
                        flex items-center gap-2">
@@ -117,59 +117,55 @@ export default function ProductsSection() {
           </Link>
         </div>
 
-        {/* Products Grid */}
+{/* Products Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {products.map((product) => (
-            <div key={product.id}
-              className="rounded-2xl overflow-hidden border border-gray-100
-                         hover:shadow-lg transition-all group">
-
+            <Link 
+              href={`/products/${product.id}`}
+              key={product.id}
+              className="block rounded-2xl overflow-hidden border border-gray-100 hover:shadow-xl hover:border-gray-200 transition-all duration-300 group cursor-pointer bg-white"
+            >
               {/* Image */}
               <div className="relative h-52 overflow-hidden">
                 <img
                   src={product.image}
                   alt={product.title}
-                  className="w-full h-full object-cover
-                             group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
 
                 {/* Tag badge */}
-                <div className={`absolute bottom-4 left-4 px-3 py-1 rounded-full
-                                text-white text-xs font-bold ${product.tagColor}`}>
+                <div className={`absolute bottom-4 left-4 px-3 py-1 rounded-full text-white text-xs font-bold ${product.tagColor}`}>
                   {product.tag}
                 </div>
 
                 {/* Icon button top right */}
-                <div className="absolute top-3 right-3 w-10 h-10 rounded-full
-                                bg-white shadow-md flex items-center justify-center">
+                <div className="absolute top-3 right-3 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center">
                   <product.Icon size={18} className={product.iconColor} />
                 </div>
               </div>
 
               {/* Content */}
-              <div className="p-6">
-                <h3 className="text-lg font-extrabold text-[#0a1628] mb-2">
+              <div className="p-6 flex flex-col h-[calc(100%-13rem)]">
+                <h3 className="text-lg font-extrabold text-[#0a1628] mb-2 group-hover:text-[#f5a623] transition-colors">
                   {product.title}
                 </h3>
-                <p className="text-gray-500 text-sm leading-relaxed mb-6">
+                
+                <p className="text-gray-500 text-sm leading-relaxed mb-6 flex-grow">
                   {product.description}
                 </p>
 
                 {/* Footer */}
-                <div className="flex items-center justify-between">
-                  <Link href={`/products/${product.id}`}
-                    className={`text-sm font-bold flex items-center gap-1
-                               hover:gap-2 transition-all ${product.exploreColor}`}>
+                <div className="flex items-center justify-between mt-auto pt-4 border-t border-gray-50">
+                  <span className={`text-sm font-bold flex items-center gap-1 group-hover:gap-2 transition-all ${product.exploreColor}`}>
                     Explore Now →
-                  </Link>
-                  <span className="text-xs font-semibold text-gray-400
-                                   border border-gray-200 px-3 py-1 rounded-full">
+                  </span>
+                  
+                  <span className="text-xs font-semibold text-gray-400 border border-gray-200 px-3 py-1 rounded-full">
                     Web + App
                   </span>
                 </div>
               </div>
-
-            </div>
+            </Link>
           ))}
         </div>
 

@@ -27,6 +27,7 @@ const navLinks = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
+  const [openMobileDropdown, setOpenMobileDropdown] = useState<string | null>(null)
   const pathname = usePathname()
 
   useEffect(() => {
@@ -35,9 +36,9 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  // Mobile menu band karo jab route change ho
   useEffect(() => {
     setMobileOpen(false)
+    setOpenMobileDropdown(null)
   }, [pathname])
 
   return (
@@ -67,31 +68,80 @@ export default function Navbar() {
           {navLinks.map((link) => {
             const isActive = pathname === link.href
             return (
-              <div key={link.label}
-                className="relative group h-full flex items-center">
+              <div
+                key={link.label}
+                className="relative group h-full flex items-center"
+              >
                 {link.hasDropdown ? (
-                  <button type="button"
-                    className={`flex items-center gap-1.5 py-2 text-[15px] 
-                               font-medium transition-all relative cursor-default
-                               ${scrolled ? 'text-[#0a1628]' : 'text-white/90'}`}>
-                    {link.label}
-                    <ChevronDown size={16} />
-                    <span className={`absolute -bottom-1 left-0 h-0.5 bg-[#f5a623] 
-                                     transition-all duration-300 
-                                     ${isActive ? 'w-full' : 'w-0 group-hover:w-full'}`} />
-                  </button>
+                  <>
+                    <button
+                      type="button"
+                      className={`flex items-center gap-1.5 py-2 text-[15px] 
+                                 font-medium transition-all relative cursor-default
+                                 ${scrolled ? 'text-[#0a1628]' : 'text-white/90'}`}
+                    >
+                      {link.label}
+                      <ChevronDown
+                        size={16}
+                        className="transition-transform duration-200 group-hover:rotate-180"
+                      />
+                      <span className={`absolute -bottom-1 left-0 h-0.5 bg-[#f5a623] 
+                                       transition-all duration-300 
+                                       ${isActive ? 'w-full' : 'w-0 group-hover:w-full'}`}
+                      />
+                    </button>
+
+                    {/* ✅ Dropdown Panel */}
+                    {link.dropdownItems && (
+                      <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2
+                                      opacity-0 invisible group-hover:opacity-100 
+                                      group-hover:visible transition-all duration-200
+                                      translate-y-2 group-hover:translate-y-0">
+                        <div className="bg-white rounded-2xl shadow-xl border border-gray-100 
+                                        p-3 flex flex-col gap-1 min-w-[200px]">
+                          {link.dropdownItems.map((item) => {
+                            const Icon = item.icon
+                            return (
+                              <Link
+                                key={item.title}
+                                href={item.href}
+                                className="flex items-center gap-3 px-3 py-2.5 rounded-xl
+                                           hover:bg-gray-50 transition-colors group/item"
+                              >
+                                <div className={`w-9 h-9 rounded-lg ${item.bgColor} 
+                                                flex items-center justify-center flex-shrink-0`}>
+                                  <Icon size={18} className={item.iconColor} />
+                                </div>
+                                <div>
+                                  <p className="text-[11px] text-gray-400 font-medium leading-none mb-0.5">
+                                    {item.prefix}
+                                  </p>
+                                  <p className={`text-[15px] font-semibold ${item.textColor} leading-none`}>
+                                    {item.title}
+                                  </p>
+                                </div>
+                              </Link>
+                            )
+                          })}
+                        </div>
+                      </div>
+                    )}
+                  </>
                 ) : (
-                  <Link href={link.href}
+                  <Link
+                    href={link.href}
                     className={`flex items-center gap-1.5 py-2 text-[15px] 
                                font-medium transition-all relative
                                ${scrolled
                                  ? isActive ? 'text-[#f5a623]' : 'text-[#0a1628]'
                                  : isActive ? 'text-white' : 'text-white/90'
-                               }`}>
+                               }`}
+                  >
                     {link.label}
                     <span className={`absolute -bottom-1 left-0 h-0.5 bg-[#f5a623] 
                                      transition-all duration-300 
-                                     ${isActive ? 'w-full' : 'w-0 hover:w-full'}`} />
+                                     ${isActive ? 'w-full' : 'w-0 hover:w-full'}`}
+                    />
                   </Link>
                 )}
               </div>
@@ -101,18 +151,18 @@ export default function Navbar() {
 
         {/* Desktop CTA + Mobile Hamburger */}
         <div className="flex items-center gap-3">
-          {/* Desktop CTA */}
-          <Link href="/contact"
+          <Link
+            href="/contact"
             className={`hidden lg:block px-7 py-2.5 rounded-full text-[15px] 
                        font-bold border-2 transition-all
                        ${scrolled
                          ? 'border-[#0a1628] text-[#0a1628] hover:bg-[#0a1628] hover:text-white'
                          : 'border-white/80 text-white hover:bg-white/10'
-                       }`}>
+                       }`}
+          >
             Let's Talk AI
           </Link>
 
-          {/* Hamburger Button - Mobile only */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className={`lg:hidden w-10 h-10 rounded-xl flex items-center 
@@ -130,27 +180,23 @@ export default function Navbar() {
       {/* Mobile Menu Overlay */}
       {mobileOpen && (
         <div className="fixed inset-0 z-40 lg:hidden">
-          {/* Backdrop */}
           <div
             className="absolute inset-0 bg-black/50 backdrop-blur-sm"
             onClick={() => setMobileOpen(false)}
           />
 
-          {/* Menu Panel - slides from right */}
           <div className="absolute top-0 right-0 h-full w-[280px] 
                           bg-[#0a1628] shadow-2xl flex flex-col">
 
-            {/* Panel Header */}
             <div className="flex items-center justify-between px-6 h-20 
                             border-b border-white/10">
-              {/* Mobile Panel Logo */}
-<Image
-  src="/images/logo_Copy.png"
-  alt="Kotibox"
-  width={120}
-  height={38}
-  className="brightness-0 invert object-contain"
-/>
+              <Image
+                src="/images/logo_Copy.png"
+                alt="Kotibox"
+                width={120}
+                height={38}
+                className="brightness-0 invert object-contain"
+              />
               <button
                 onClick={() => setMobileOpen(false)}
                 className="w-9 h-9 rounded-full bg-white/10 flex items-center 
@@ -160,33 +206,89 @@ export default function Navbar() {
               </button>
             </div>
 
-            {/* Nav Links */}
             <div className="flex-1 overflow-y-auto py-6 px-6">
               <div className="flex flex-col gap-1">
                 {navLinks.map((link) => {
                   const isActive = pathname === link.href
+                  const isDropdownOpen = openMobileDropdown === link.label
+
                   return (
-                    <Link
-                      key={link.label}
-                      href={link.href}
-                      className={`flex items-center justify-between px-4 py-3.5 
-                                 rounded-xl text-base font-medium transition-all
-                                 ${isActive
-                                   ? 'bg-[#f5a623]/15 text-[#f5a623]'
-                                   : 'text-white/80 hover:bg-white/10 hover:text-white'
-                                 }`}
-                    >
-                      {link.label}
-                      {link.hasDropdown && (
-                        <ChevronDown size={16} className="opacity-50" />
+                    <div key={link.label}>
+                      {link.dropdownItems ? (
+                        <>
+                          {/* ✅ Mobile: Toggle dropdown */}
+                          <button
+                            onClick={() =>
+                              setOpenMobileDropdown(isDropdownOpen ? null : link.label)
+                            }
+                            className={`w-full flex items-center justify-between px-4 py-3.5 
+                                       rounded-xl text-base font-medium transition-all
+                                       ${isActive
+                                         ? 'bg-[#f5a623]/15 text-[#f5a623]'
+                                         : 'text-white/80 hover:bg-white/10 hover:text-white'
+                                       }`}
+                          >
+                            {link.label}
+                            <ChevronDown
+                              size={16}
+                              className={`opacity-50 transition-transform duration-200
+                                         ${isDropdownOpen ? 'rotate-180' : ''}`}
+                            />
+                          </button>
+
+                          {/* ✅ Mobile dropdown items */}
+                          {isDropdownOpen && (
+                            <div className="mt-1 ml-4 flex flex-col gap-1">
+                              {link.dropdownItems.map((item) => {
+                                const Icon = item.icon
+                                return (
+                                  <Link
+                                    key={item.title}
+                                    href={item.href}
+                                    className="flex items-center gap-3 px-4 py-3 
+                                               rounded-xl bg-white/5 hover:bg-white/10 
+                                               transition-colors"
+                                  >
+                                    <div className={`w-8 h-8 rounded-lg ${item.bgColor} 
+                                                    flex items-center justify-center flex-shrink-0`}>
+                                      <Icon size={16} className={item.iconColor} />
+                                    </div>
+                                    <div>
+                                      <p className="text-[10px] text-white/40 leading-none mb-0.5">
+                                        {item.prefix}
+                                      </p>
+                                      <p className={`text-sm font-semibold ${item.textColor} leading-none`}>
+                                        {item.title}
+                                      </p>
+                                    </div>
+                                  </Link>
+                                )
+                              })}
+                            </div>
+                          )}
+                        </>
+                      ) : (
+                        <Link
+                          href={link.href}
+                          className={`flex items-center justify-between px-4 py-3.5 
+                                     rounded-xl text-base font-medium transition-all
+                                     ${isActive
+                                       ? 'bg-[#f5a623]/15 text-[#f5a623]'
+                                       : 'text-white/80 hover:bg-white/10 hover:text-white'
+                                     }`}
+                        >
+                          {link.label}
+                          {link.hasDropdown && (
+                            <ChevronDown size={16} className="opacity-50" />
+                          )}
+                        </Link>
                       )}
-                    </Link>
+                    </div>
                   )
                 })}
               </div>
             </div>
 
-            {/* Bottom CTA */}
             <div className="p-6 border-t border-white/10">
               <Link
                 href="/contact"
@@ -200,7 +302,6 @@ export default function Navbar() {
                 © 2025 Kotibox Global Technologies
               </p>
             </div>
-
           </div>
         </div>
       )}

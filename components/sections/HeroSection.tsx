@@ -300,7 +300,10 @@ export default function HeroSection() {
               <div className="text-sm text-white/55 mt-1">{stat.label}</div>
             </div>
           ))}
+          
         </div>
+
+      
       </section>
     </>
   )
