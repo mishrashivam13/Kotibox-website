@@ -6,3 +6,53 @@
   --color-primary: #0a1628;
   --color-accent: #f5a623;
 }
+
+/* ── Base typography ───────────────────────────────────────────────────────── */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.01em;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+p {
+  line-height: 1.7;
+}
+
+/* ── Social Icon Orbit Animation ─────────────────────────────────────────── */
+
+/* Outer wrapper: rotates to move icon in a circle */
+@keyframes orbit {
+  0%   { transform: rotate(0deg)   translateX(var(--orbit-r, 140px)); }
+  100% { transform: rotate(360deg) translateX(var(--orbit-r, 140px)); }
+}
+
+/* Inner pill: counter-rotates so icon stays upright */
+@keyframes counter-rotate {
+  0%   { transform: translate(-50%, -50%) rotate(0deg);    }
+  100% { transform: translate(-50%, -50%) rotate(-360deg); }
+}
+
+.orbit-node {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  --orbit-r: 130px;
+  animation: orbit 16s linear infinite;
+}
+
+.orbit-icon-pill {
+  position: absolute;
+  animation: counter-rotate 16s linear infinite;
+}
+
+@media (min-width: 480px)  { .orbit-node { --orbit-r: 155px; } }
+@media (min-width: 768px)  { .orbit-node { --orbit-r: 185px; } }
+@media (min-width: 1024px) { .orbit-node { --orbit-r: 210px; } }

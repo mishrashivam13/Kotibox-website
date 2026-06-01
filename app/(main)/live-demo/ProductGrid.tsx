@@ -34,7 +34,7 @@ const products = [
     category: 'latest',
     title: 'Security Monitoring Dashboard',
     description: 'Real-time security workspace for alerts, audits, user access, threat logs, and compliance tracking.',
-    image: 'https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&q=80&w=600',
+    image: '/images/SecurityMonitoringDashboard.jpg',
     badge: { text: 'Latest', type: 'latest', icon: Zap },
     platform: 'Web + App',
   },

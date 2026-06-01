@@ -26,7 +26,6 @@ export default function HomePage() {
             <MarketingHero />
             <CaseStudies />
             <Testtimonials />
-            <TrainingSection />
             <LogoTicker />
 
     </>

@@ -3,7 +3,25 @@ import Link from 'next/link'
 import { useState, useEffect, useRef } from 'react'
 import { usePathname } from 'next/navigation'
 import Image from 'next/image'
-import { ChevronDown, Smartphone, Monitor, Lightbulb, Menu, X, ChevronRight, ArrowRight } from 'lucide-react'
+import {
+  ArrowRight,
+  Bot,
+  BrainCircuit,
+  ChevronDown,
+  ImageIcon,
+  Lightbulb,
+  Menu,
+  Mic2,
+  Monitor,
+  Radio,
+  ShoppingBag,
+  Smartphone,
+  Sparkles,
+  UtensilsCrossed,
+  UserSearch,
+  Wand2,
+  X,
+} from 'lucide-react'
 import { useModal } from '@/components/providers/ModalContext'
 
 // ─── Services Mega Menu Data ───────────────────────────────────────────────
@@ -42,28 +60,34 @@ const leftCategories = [
 const rightPanels = [
   {
     title: 'AI Development',
+    eyebrow: 'Custom AI Builds',
+    description: 'Production-ready AI systems for customer support, automation, content, analytics, and operations.',
     accent: '#f5a623',
     href: '/services/ai',
     items: [
-      'AI Chatbot Development',
-      'AI Automation',
-      'Machine Learning',
-      'AI Integration Services',
-      'Generative AI Solutions',
-      'AI Consulting',
+      { label: 'AI Chatbot Development', href: '/services/ai', icon: Bot },
+      { label: 'AI Automation', href: '/services/ai', icon: Sparkles },
+      { label: 'Machine Learning', href: '/services/ai', icon: BrainCircuit },
+      { label: 'AI Integration Services', href: '/services/ai', icon: Monitor },
+      { label: 'Generative AI Solutions', href: '/services/ai', icon: Wand2 },
+      { label: 'AI Consulting', href: '/services/ai', icon: Lightbulb },
     ],
   },
   {
     title: 'Ready-made Solutions',
+    eyebrow: 'Already Built',
+    description: 'Launch faster with polished web and app suites that can be customized around your brand.',
     accent: '#34d399',
-    href: '/products',
+    href: '/live-demo',
     items: [
-      'KGT Apps Suite',
-      'Startup Bundle',
-      'E-Commerce Platform',
-      'CRM Dashboard',
-      'On-Demand App',
-      'Hospital Management',
+      { label: 'AI Image Generation', href: '/products/ai-image-generation', icon: ImageIcon },
+      { label: 'Transformation AI', href: '/products/ai-image-generation', icon: Wand2 },
+      { label: 'AI Voice Assistant', href: '/products/voice-ai', icon: Mic2 },
+      { label: 'OTT Platform', href: '/products/ott-platform', icon: Monitor },
+      { label: 'Voice Chat Room', href: '/products/voice-ai', icon: Radio },
+      { label: 'AI-Based Food Delivery Platform', href: '/products/food-delivery', icon: UtensilsCrossed },
+      { label: 'AI-Based Job Seeker', href: '/products/job-seeker', icon: UserSearch },
+      { label: 'E-Commerce Platform', href: '/live-demo/ecommerce-suite', icon: ShoppingBag },
     ],
   },
 ]
@@ -91,24 +115,43 @@ const navLinks = [
 function ServicesMegaMenu({ visible, onEnter, onLeave }: { visible: boolean; onEnter: () => void; onLeave: () => void }) {
   return (
     <div
-      className="fixed left-0 right-0 top-20 z-40 transition-all duration-200 ease-out"
+      className="fixed left-1/2 top-20 z-40 w-[min(1060px,calc(100vw-32px))] transition-all duration-200 ease-out"
       style={{
         opacity: visible ? 1 : 0,
         visibility: visible ? 'visible' : 'hidden',
-        transform: visible ? 'translateY(0)' : 'translateY(8px)',
+        transform: visible ? 'translate(-50%, 0)' : 'translate(-50%, 8px)',
         pointerEvents: visible ? 'auto' : 'none',
       }}
       onMouseEnter={onEnter}
       onMouseLeave={onLeave}
     >
-      <div className="bg-white shadow-[0_8px_40px_rgba(0,0,0,0.12)] border-t-2 border-[#f5a623]">
-        <div className="max-w-[1300px] mx-auto px-8 py-7 grid grid-cols-[280px_1fr] gap-8">
+      <div className="overflow-hidden rounded-2xl bg-white shadow-[0_18px_55px_rgba(10,22,40,0.14)] ring-1 ring-slate-200/80 border-t-2 border-[#f5a623]">
+        <div className="px-5 py-4">
+          <div className="mb-3 flex items-center justify-between gap-4 rounded-xl bg-[#0a1628] px-4 py-2.5 text-white">
+            <div>
+              <p className="text-[10px] font-extrabold uppercase tracking-[0.2em] text-[#f5a623]">
+                Explore Kotibox Services
+              </p>
+              <p className="mt-0.5 text-[14px] font-semibold leading-snug text-white/85">
+                Custom development, AI engineering, and ready-to-launch digital suites in one place.
+              </p>
+            </div>
+            <div className="hidden xl:flex items-center gap-2 text-[11px] font-bold text-white/70">
+              {['AI-first', 'Web + App', 'Launch Ready'].map((tag) => (
+                <span key={tag} className="rounded-full border border-white/15 px-2.5 py-1">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <div className="grid grid-cols-[235px_1fr] items-start gap-4">
 
           {/* ── LEFT: Category navigation ── */}
-          <div className="flex flex-col gap-5 border-r border-gray-100 pr-8">
+          <div className="flex flex-col gap-2.5 border-r border-gray-100 pr-4">
             {leftCategories.map((cat) => (
               <div key={cat.heading}>
-                <p className="text-[10px] font-extrabold tracking-[0.18em] text-[#f5a623] uppercase mb-2">
+                <p className="text-[10px] font-extrabold tracking-[0.15em] text-[#f5a623] uppercase mb-1.5">
                   {cat.heading}
                 </p>
                 <div className="flex flex-col">
@@ -116,7 +159,7 @@ function ServicesMegaMenu({ visible, onEnter, onLeave }: { visible: boolean; onE
                     <Link
                       key={item.label}
                       href={item.href}
-                      className="group flex items-center gap-2 text-[13px] text-gray-500 hover:text-[#0a1628] py-1.5 transition-colors duration-150"
+                      className="group flex items-center gap-2 rounded-lg px-2 py-1 text-[13.5px] font-semibold text-slate-600 hover:bg-orange-50 hover:text-[#0a1628] transition-all duration-150"
                     >
                       <span className="w-1 h-1 rounded-full bg-gray-300 group-hover:bg-[#f5a623] transition-colors flex-shrink-0" />
                       {item.label}
@@ -128,30 +171,40 @@ function ServicesMegaMenu({ visible, onEnter, onLeave }: { visible: boolean; onE
           </div>
 
           {/* ── RIGHT: Service panels ── */}
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 items-start gap-3">
             {rightPanels.map((panel) => (
               <div
                 key={panel.title}
-                className="rounded-xl p-5 border border-gray-100 hover:border-[#f5a623]/25 hover:bg-orange-50/50 transition-all duration-200 group/panel"
+                className="self-start rounded-xl p-3.5 border border-slate-100 bg-slate-50/60 hover:border-[#f5a623]/35 hover:bg-white hover:shadow-[0_18px_38px_rgba(10,22,40,0.08)] transition-all duration-200 group/panel"
               >
-                <Link href={panel.href} className="flex items-center justify-between mb-3">
-                  <div className="flex items-center gap-2.5">
-                    <span className="w-2.5 h-2.5 rounded-full flex-shrink-0" style={{ background: panel.accent }} />
-                    <span className="text-[#0a1628] text-sm font-extrabold group-hover/panel:text-[#f5a623] transition-colors">
+                <Link href={panel.href} className="flex items-start justify-between gap-3 mb-2.5">
+                  <div>
+                    <p className="text-[10px] font-extrabold uppercase tracking-[0.18em]" style={{ color: panel.accent }}>
+                      {panel.eyebrow}
+                    </p>
+                    <span className="mt-0.5 block text-[#0a1628] text-[17px] font-extrabold leading-tight group-hover/panel:text-[#f5a623] transition-colors">
                       {panel.title}
                     </span>
+                    <p className="mt-1 text-[12.5px] leading-snug text-slate-500">
+                      {panel.description}
+                    </p>
                   </div>
-                  <ArrowRight size={14} className="text-gray-300 group-hover/panel:text-[#f5a623] group-hover/panel:translate-x-0.5 transition-all" />
+                  <span className="mt-1 flex h-8 w-8 items-center justify-center rounded-full bg-white text-slate-300 shadow-sm group-hover/panel:text-[#f5a623] group-hover/panel:translate-x-0.5 transition-all">
+                    <ArrowRight size={15} />
+                  </span>
                 </Link>
 
-                <div className="flex flex-col">
+                <div className="grid grid-cols-1 xl:grid-cols-2 gap-1.5">
                   {panel.items.map((item) => (
                     <Link
-                      key={item}
-                      href={panel.href}
-                      className="text-[12.5px] text-gray-400 hover:text-[#0a1628] py-1 transition-colors leading-snug"
+                      key={item.label}
+                      href={item.href}
+                      className="group/item flex min-h-[32px] items-center gap-2 rounded-lg border border-transparent bg-white px-2.5 py-1 text-[12.5px] font-bold leading-snug text-slate-600 hover:border-[#f5a623]/20 hover:text-[#0a1628] hover:shadow-sm transition-all"
                     >
-                      {item}
+                      <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-md bg-slate-100 text-slate-500 group-hover/item:bg-[#f5a623]/10 group-hover/item:text-[#f5a623] transition-colors">
+                        <item.icon size={13} />
+                      </span>
+                      <span>{item.label}</span>
                     </Link>
                   ))}
                 </div>
@@ -161,6 +214,7 @@ function ServicesMegaMenu({ visible, onEnter, onLeave }: { visible: boolean; onE
 
         </div>
       </div>
+    </div>
     </div>
   )
 }
@@ -202,8 +256,8 @@ export default function Navbar() {
     <>
       <nav className={`fixed top-0 left-0 right-0 z-50 flex items-center
                       justify-between px-6 md:px-12 h-20 transition-all duration-300
-                      ${scrolled
-                        ? 'bg-white shadow-[0_4px_20px_rgba(0,0,0,0.05)] border-b border-gray-100'
+                      ${scrolled || servicesOpen
+                        ? 'bg-white shadow-[0_4px_20px_rgba(0,0,0,0.06)] border-b border-gray-100'
                         : 'bg-transparent border-b border-white/10'
                       }`}>
 
@@ -216,7 +270,7 @@ export default function Navbar() {
             height={50}
             priority
             className={`w-auto h-auto object-contain transition-all duration-500
-                        ${!scrolled ? 'brightness-0 invert' : 'brightness-100'}`}
+                        ${!scrolled && !servicesOpen ? 'brightness-0 invert' : 'brightness-100'}`}
           />
         </Link>
 
@@ -237,9 +291,9 @@ export default function Navbar() {
                 >
                   <button
                     type="button"
-                    className={`flex items-center gap-1.5 py-2 text-[15px]
-                               font-medium transition-all relative cursor-default
-                               ${scrolled ? 'text-[#0a1628]' : 'text-white/90'}`}
+                    className={`flex items-center gap-1.5 py-2 text-[14px]
+                               font-semibold tracking-wide transition-all relative cursor-default
+                               ${scrolled || servicesOpen ? 'text-[#0a1628]' : 'text-white/90'}`}
                   >
                     {link.label}
                     <ChevronDown
@@ -262,9 +316,9 @@ export default function Navbar() {
                 <div key={link.label} className="relative group h-full flex items-center">
                   <button
                     type="button"
-                    className={`flex items-center gap-1.5 py-2 text-[15px]
-                               font-medium transition-all relative cursor-default
-                               ${scrolled ? 'text-[#0a1628]' : 'text-white/90'}`}
+                    className={`flex items-center gap-1.5 py-2 text-[14px]
+                               font-semibold tracking-wide transition-all relative cursor-default
+                               ${scrolled || servicesOpen ? 'text-[#0a1628]' : 'text-white/90'}`}
                   >
                     {link.label}
                     <ChevronDown
@@ -318,9 +372,9 @@ export default function Navbar() {
               <div key={link.label} className="relative h-full flex items-center">
                 <Link
                   href={link.href}
-                  className={`flex items-center gap-1.5 py-2 text-[15px]
-                             font-medium transition-all relative
-                             ${scrolled
+                  className={`flex items-center gap-1.5 py-2 text-[14px]
+                             font-semibold tracking-wide transition-all relative
+                             ${scrolled || servicesOpen
                                ? isActive ? 'text-[#f5a623]' : 'text-[#0a1628]'
                                : isActive ? 'text-white' : 'text-white/90'
                              }`}
@@ -342,7 +396,7 @@ export default function Navbar() {
             onClick={openModal}
             className={`hidden lg:block px-7 py-2.5 rounded-full text-[15px]
                        font-bold border-2 transition-all
-                       ${scrolled
+                       ${scrolled || servicesOpen
                          ? 'border-[#0a1628] text-[#0a1628] hover:bg-[#0a1628] hover:text-white'
                          : 'border-white/80 text-white hover:bg-white/10'
                        }`}
@@ -354,7 +408,7 @@ export default function Navbar() {
             onClick={() => setMobileOpen(!mobileOpen)}
             className={`lg:hidden w-10 h-10 rounded-xl flex items-center
                        justify-center transition-all
-                       ${scrolled
+                       ${scrolled || servicesOpen
                          ? 'bg-gray-100 text-[#0a1628]'
                          : 'bg-white/10 text-white'
                        }`}
@@ -445,12 +499,12 @@ export default function Navbar() {
                                 </p>
                                 {panel.items.map((item) => (
                                   <Link
-                                    key={item}
-                                    href={panel.href}
+                                    key={item.label}
+                                    href={item.href}
                                     className="flex items-center gap-2 px-3 py-2 rounded-lg text-white/60 text-sm hover:text-white hover:bg-white/10 transition-all"
                                   >
                                     <span className="w-1 h-1 rounded-full bg-white/30 flex-shrink-0" />
-                                    {item}
+                                    {item.label}
                                   </Link>
                                 ))}
                               </div>

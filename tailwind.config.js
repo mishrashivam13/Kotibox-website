@@ -7,8 +7,13 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        // Roboto ko 'sans' default font bana diya
-        sans: ['var(--font-roboto)', 'sans-serif'],
+        sans: ['var(--font-inter)', 'Inter', 'system-ui', 'sans-serif'],
+      },
+      letterSpacing: {
+        tighter: '-0.03em',
+        tight:   '-0.015em',
+        normal:  '0em',
+        wide:    '0.02em',
       },
     },
   },

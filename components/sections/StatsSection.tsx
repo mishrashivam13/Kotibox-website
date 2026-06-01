@@ -124,7 +124,7 @@ export default function StatsSection() {
                   alt={badge.alt}
                   width={120}
                   height={120}
-                  className="object-contain w-20 h-20 md:w-28 md:h-28 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 hover:scale-110 transition-all duration-500 ease-in-out cursor-pointer drop-shadow-sm"
+                  className="object-contain w-20 h-20 md:w-28 md:h-28 drop-shadow-sm"
                 />
               </div>
             ))}
