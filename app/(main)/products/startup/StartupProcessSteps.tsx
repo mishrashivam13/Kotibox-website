@@ -57,7 +57,7 @@ export default function StartupProcessSteps() {
                 
                 {/* Text Content (Slides up slightly on hover) */}
                 <div className="translate-y-8 group-hover:translate-y-0 transition-transform duration-500 ease-out">
-                  <h3 className="text-2xl md:text-[28px] font-bold text-white mb-5 leading-snug">
+                  <h3 className="text-2xl font-bold text-white mb-5 leading-snug">
                     {step.title}
                   </h3>
                   <p className="text-white/90 text-sm md:text-[15px] leading-relaxed">

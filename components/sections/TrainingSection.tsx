@@ -1,4 +1,6 @@
+'use client'
 import React from 'react';
+import { useModal } from '@/components/providers/ModalContext';
 import { 
   Briefcase, 
   Users, 
@@ -49,6 +51,7 @@ const trainingFeatures = [
 ];
 
 export default function TrainingSection() {
+  const { openModal } = useModal()
   return (
     <section className="bg-white py-24 px-4 md:px-8 lg:px-16 font-sans w-full relative">
       <div className="max-w-[1300px] mx-auto flex flex-col lg:flex-row gap-12 lg:gap-20 items-start">
@@ -56,7 +59,7 @@ export default function TrainingSection() {
         {/* LEFT COLUMN: Sticky Content */}
         <div className="w-full lg:w-[45%] lg:sticky lg:top-32 flex flex-col items-start">
           
-          <h2 className="text-4xl md:text-5xl font-bold text-[#0f172a] leading-tight mb-6">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-[#0f172a] leading-tight mb-6">
             Transform Your <br />
             <span className="text-[#f5a623] relative inline-block">
               Career
@@ -93,7 +96,7 @@ export default function TrainingSection() {
                 Learn directly from experienced professionals who provide insights, feedback, and career guidance.
               </p>
               
-              <button className="bg-[#f5a623] hover:bg-[#e0931c] text-white font-bold px-6 py-3 rounded-lg flex items-center gap-2 transition-colors duration-300 shadow-lg cursor-pointer">
+              <button onClick={openModal} className="bg-[#f5a623] hover:bg-[#e0931c] text-white font-bold px-6 py-3 rounded-lg flex items-center gap-2 transition-colors duration-300 shadow-lg cursor-pointer">
                 Book 30 Min Consultation
                 <ArrowRight size={18} strokeWidth={2.5} />
               </button>
@@ -119,7 +122,7 @@ export default function TrainingSection() {
 
                 {/* Content */}
                 <div className="flex-1">
-                  <h3 className="text-xl md:text-2xl font-bold text-[#0f172a] mb-3">
+                  <h3 className="text-2xl font-bold text-[#0f172a] mb-3">
                     {feature.title}
                   </h3>
                   <p className="text-slate-600 text-sm md:text-base mb-6 leading-relaxed">

@@ -68,7 +68,7 @@ export default function BusinessExpansionSteps() {
                 
                 {/* Text Content */}
                 <div className="w-full lg:w-1/2 flex flex-col items-start text-left">
-                  <h3 className="text-4xl font-extrabold text-[#0a1628] mb-3">
+                  <h3 className="text-2xl font-bold text-[#0a1628] mb-3">
                     {step.title}
                   </h3>
                   <h4 className="text-[22px] font-bold text-[#0a1628] mb-4 leading-snug">

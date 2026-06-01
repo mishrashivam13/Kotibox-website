@@ -36,7 +36,7 @@ export default function WhyPickUs() {
         {/* --- LEFT COLUMN: Header & Image --- */}
         {/* 'lg:sticky' ensures it stays in place while the user scrolls through the cards on desktop */}
         <div className="flex flex-col lg:sticky lg:top-28">
-          <h2 className="text-4xl md:text-5xl lg:text-[3.25rem] font-extrabold text-[#0a1628] leading-[1.2] mb-6 tracking-tight">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-[#0a1628] leading-[1.2] mb-6 tracking-tight">
             Why Pick Us to Help You <span className="text-[#f5a623]">Launch</span> Your <br className="hidden md:block" />
             <span className="relative inline-block">
               Business?
@@ -80,7 +80,7 @@ export default function WhyPickUs() {
 
                 {/* Card Text Content */}
                 <div className="flex flex-col">
-                  <h3 className="text-xl md:text-[22px] font-bold text-[#1e3a5f] mb-3">
+                  <h3 className="text-2xl font-bold text-[#1e3a5f] mb-3">
                     {reason.title}
                   </h3>
                   <p className="text-slate-500 text-[15px] leading-relaxed">

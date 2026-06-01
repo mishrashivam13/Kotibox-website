@@ -81,7 +81,7 @@ export default function KgtAppsHero() {
         
         {/* --- LEFT CONTENT --- */}
         <div className="flex flex-col z-30 pt-10 lg:pt-0">
-          <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-white leading-tight mb-8 max-w-xl">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-white leading-tight mb-8 max-w-xl">
             Designing Impactful Solutions to Elevate Your Digital Presence
           </h2>
           

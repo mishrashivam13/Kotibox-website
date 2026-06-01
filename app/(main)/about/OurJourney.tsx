@@ -56,7 +56,7 @@ export default function OurJourney() {
             <Star size={16} className="text-[#f5a623]" />
             <span className="text-sm font-bold tracking-widest uppercase text-white/80">Company Timeline</span>
           </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6 tracking-tight">
             Our <span className="text-[#f5a623]">Journey</span> So Far
           </h2>
           <div className="w-24 h-1.5 bg-gradient-to-r from-[#f5a623] to-orange-400 rounded-full" />
@@ -120,7 +120,7 @@ export default function OurJourney() {
                       </div>
                       
                       {/* Text Content */}
-                      <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">
+                      <h3 className="text-2xl font-bold text-white mb-3">
                         {item.title}
                       </h3>
                       <p className="text-slate-400 text-sm md:text-base leading-relaxed">

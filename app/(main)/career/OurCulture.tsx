@@ -30,7 +30,7 @@ export default function OurCulture() {
 
           {/* Right - Content */}
           <div className="flex-1">
-            <h2 className="text-4xl font-extrabold text-[#0a1628] mb-4">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-[#0a1628] mb-4">
               Our Culture
             </h2>
             <div className="w-16 h-1 bg-[#f5a623] rounded-full mb-8" />

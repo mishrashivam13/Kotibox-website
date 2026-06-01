@@ -135,7 +135,7 @@ export default function ContactSection() {
 
               {/* Form Header */}
               <div className="bg-[#0a1f3c] px-8 py-6">
-                <h3 className="text-2xl font-extrabold text-white mb-1">
+                <h3 className="text-2xl font-bold text-white mb-1">
                   Get Your Custom App Today
                 </h3>
                 <p className="text-white/60 text-sm">

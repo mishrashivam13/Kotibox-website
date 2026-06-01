@@ -146,7 +146,7 @@ export default function ProductsSection() {
 
               {/* Content */}
               <div className="p-6 flex flex-col h-[calc(100%-13rem)]">
-                <h3 className="text-lg font-extrabold text-[#0a1628] mb-2 group-hover:text-[#f5a623] transition-colors">
+                <h3 className="text-lg font-bold text-[#0a1628] mb-2 group-hover:text-[#f5a623] transition-colors">
                   {product.title}
                 </h3>
                 

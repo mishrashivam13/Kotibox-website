@@ -100,7 +100,7 @@ export default function HiringProcess() {
               </div>
 
               {/* Title & Description */}
-              <h3 className="text-lg font-bold text-[#0a1628] mb-3">
+              <h3 className="text-2xl font-bold text-[#0a1628] mb-3">
                 {step.title}
               </h3>
               <p className="text-[14px] text-gray-600 leading-relaxed mb-6">

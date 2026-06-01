@@ -32,7 +32,7 @@ export default function OurValues() {
 
         {/* Heading */}
         <div className="text-center mb-14">
-          <h2 className="text-4xl font-extrabold text-white mb-3">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-3">
             Our Values
           </h2>
           <div className="w-16 h-1 bg-[#f5a623] rounded-full mx-auto" />
@@ -53,7 +53,7 @@ export default function OurValues() {
                 <value.Icon size={28} className="text-[#f5a623]" />
               </div>
 
-              <h3 className="text-lg font-extrabold text-[#0a1628] mb-3">
+              <h3 className="text-lg font-bold text-[#0a1628] mb-3">
                 {value.title}
               </h3>
               <p className="text-gray-500 text-sm leading-relaxed">

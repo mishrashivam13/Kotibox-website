@@ -73,7 +73,7 @@ export default function OpenPositions() {
               </div>
 
               {/* Title */}
-              <h3 className="text-base font-extrabold text-[#0a1628] mb-3">
+              <h3 className="text-base font-bold text-[#0a1628] mb-3">
                 {job.title}
               </h3>
 

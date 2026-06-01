@@ -82,7 +82,7 @@ export default function CaseStudies() {
             <h6 className="text-slate-800 font-bold text-sm tracking-wide mb-2 uppercase">
               Case Studies
             </h6>
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-0">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-0">
               Transforming Ideas Into Impact
             </h2>
             {/* Orange Underline Accent */}
@@ -116,7 +116,7 @@ export default function CaseStudies() {
                 <h6 className="text-white/90 font-semibold text-sm mb-3 tracking-wide">
                   {study.category}
                 </h6>
-                <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                <h3 className="text-2xl font-bold text-white mb-4">
                   {study.title}
                 </h3>
                 <p className="text-white/80 text-base leading-relaxed mb-8 max-w-sm">

@@ -77,7 +77,7 @@ export default function WhyWorkWithUs() {
                 />
               </div>
 
-              <h3 className="text-xl font-extrabold text-white mb-3">
+              <h3 className="text-2xl font-bold text-white mb-3">
                 {benefit.title}
               </h3>
               <p className="text-white/65 text-sm leading-relaxed">

@@ -161,7 +161,7 @@ export default function ServicesSection() {
 
         {/* Heading */}
         <div className="flex flex-col items-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#0a1628] text-center mb-6 leading-tight tracking-tight">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-[#0a1628] text-center mb-6 leading-tight tracking-tight">
             Our Full Spectrum of <span className="text-[#f5a623]">AI & Software</span> Services
           </h2>
           <div className="w-24 h-1.5 bg-gradient-to-r from-[#f5a623] to-orange-400 rounded-full mb-6" />
@@ -217,7 +217,7 @@ export default function ServicesSection() {
                 ref={(el) => { sectionRefs.current[service.id] = el }}
                 className="bg-white rounded-3xl border border-slate-100 p-6 md:p-10 shadow-sm hover:shadow-md transition-shadow duration-300 scroll-mt-36"
               >
-                <h3 className="text-2xl md:text-3xl font-bold text-[#0a1628] mb-3">
+                <h3 className="text-2xl font-bold text-[#0a1628] mb-3">
                   {service.title}
                 </h3>
                 <p className="text-slate-500 mb-10 text-base leading-relaxed max-w-3xl">

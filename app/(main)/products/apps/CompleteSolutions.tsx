@@ -1,5 +1,6 @@
 'use client'
 import React, { useState } from 'react';
+import { useModal } from '@/components/providers/ModalContext';
 
 // Data structure for tabs and their respective cards
 const solutionsData = [
@@ -51,6 +52,7 @@ const solutionsData = [
 
 export default function CompleteSolutions() {
   const [activeTab, setActiveTab] = useState('orders');
+  const { openModal } = useModal();
 
   // Find the currently active tab's data
   const currentData = solutionsData.find(tab => tab.id === activeTab);
@@ -61,7 +63,7 @@ export default function CompleteSolutions() {
         
         {/* --- HEADER SECTION --- */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl lg:text-[3.25rem] font-bold text-white leading-tight mb-6 tracking-tight">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-white leading-tight mb-6 tracking-tight">
             Combine Your <span className="text-[#f5a623]">Business Concept</span> With <br className="hidden md:block" />
             <span className="relative inline-block mt-2">
               Complete
@@ -117,7 +119,7 @@ export default function CompleteSolutions() {
               </div>
 
               {/* Action Button */}
-              <button className="w-full bg-transparent border border-slate-500 text-slate-300 font-semibold py-3 rounded-full transition-all duration-300 group-hover:border-[#f5a623] group-hover:text-white group-hover:bg-[#f5a623]/10">
+              <button onClick={openModal} className="w-full bg-transparent border border-slate-500 text-slate-300 font-semibold py-3 rounded-full transition-all duration-300 group-hover:border-[#f5a623] group-hover:text-white group-hover:bg-[#f5a623]/10">
                 Book Free Demo
               </button>
               

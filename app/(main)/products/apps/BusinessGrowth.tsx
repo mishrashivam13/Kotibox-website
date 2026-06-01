@@ -7,7 +7,7 @@ export default function BusinessGrowth() {
       <div className="max-w-[1200px] mx-auto text-center">
         
         {/* --- HEADER SECTION --- */}
-        <h2 className="text-4xl md:text-5xl lg:text-[3.5rem] font-extrabold text-[#0a1628] leading-tight mb-6 tracking-tight">
+        <h2 className="text-4xl md:text-5xl font-extrabold text-[#0a1628] leading-tight mb-6 tracking-tight">
           Use Complete Technology to Drive Your <br className="hidden md:block" />
           <span className="relative inline-block mt-2 md:mt-0 text-[#f5a623]">
             Business Growth

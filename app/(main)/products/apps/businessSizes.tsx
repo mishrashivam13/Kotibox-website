@@ -77,7 +77,7 @@ export default function RegardlessOfSize() {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-[22px] font-bold text-[#1a1a1a] mb-4">
+                <h3 className="text-2xl font-bold text-[#1a1a1a] mb-4">
                   {item.title}
                 </h3>
                 

@@ -1,7 +1,10 @@
 'use client'
 import React from 'react';
+import { useModal } from '@/components/providers/ModalContext';
 
 export default function CTASection() {
+  const { openModal } = useModal()
+
   return (
     <section className="bg-slate-50 py-16 px-6 font-sans flex justify-center">
       <div className="max-w-[1300px] w-full">
@@ -22,9 +25,8 @@ export default function CTASection() {
             
             {/* Text Content */}
             <div className="flex-1">
-              <h2 className="text-3xl md:text-[2.5rem] text-white mb-4 tracking-wide">
-                <span className="font-semibold">Let’s Discuss </span>
-                <span className="font-extrabold">Your Project</span>
+              <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-4 tracking-wide">
+                Let’s Discuss Your Project
               </h2>
               <p className="text-slate-200 text-[15px] md:text-[17px] font-medium leading-relaxed max-w-2xl">
                 Get a free consultation to discuss how we will transform your idea into an amazing digital product.
@@ -33,7 +35,7 @@ export default function CTASection() {
 
             {/* CTA Button */}
             <div className="shrink-0">
-              <button className="bg-[#f5a623] hover:bg-[#e0931c] text-white font-bold px-8 py-4 rounded-md uppercase tracking-wider text-[15px] transition-transform duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 cursor-pointer">
+              <button onClick={openModal} className="bg-[#f5a623] hover:bg-[#e0931c] text-white font-bold px-8 py-4 rounded-md uppercase tracking-wider text-[15px] transition-transform duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 cursor-pointer">
                 Get Free Consultation
               </button>
             </div>

@@ -19,7 +19,7 @@ export default function BusinessDeservesBest() {
         
         {/* --- HEADER SECTION --- */}
         <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl lg:text-[3.5rem] font-extrabold text-[#0a1628] leading-tight mb-6 tracking-tight">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-[#0a1628] leading-tight mb-6 tracking-tight">
             Your Business <span className="relative inline-block">
               Deserves
               {/* Orange Underline exactly under 'Deserves' */}
@@ -45,7 +45,7 @@ export default function BusinessDeservesBest() {
                 <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-0 bg-[#f5a623] rounded-full transition-all duration-300 group-hover:h-full opacity-0 group-hover:opacity-100"></div>
                 
                 {/* Text */}
-                <h3 className="text-xl md:text-2xl font-bold text-[#0a1628] group-hover:text-[#f5a623] transition-colors duration-300">
+                <h3 className="text-2xl font-bold text-[#0a1628] group-hover:text-[#f5a623] transition-colors duration-300">
                   {feature}
                 </h3>
               </div>

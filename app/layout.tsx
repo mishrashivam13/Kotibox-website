@@ -13,6 +13,10 @@ const roboto = Roboto({
 export const metadata: Metadata = {
   title: 'Kotibox - Global Technologies',
   description: 'Google Certified AI Agency',
+  icons: {
+    icon: '/icons/favicon.svg',
+    shortcut: '/icons/favicon.svg',
+  },
 }
 
 // Single RootLayout (Sahi tareeka)

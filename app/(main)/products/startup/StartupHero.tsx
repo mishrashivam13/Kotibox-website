@@ -8,7 +8,7 @@ export default function StartupHero() {
         
         {/* --- LEFT COLUMN: Text Content --- */}
         <div className="flex flex-col items-start text-left z-10">
-          <h1 className="text-4xl md:text-5xl lg:text-[4rem] font-extrabold text-white leading-[1.15] mb-6 tracking-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-[1.15] mb-6 tracking-tight">
             Start Your Business from the Ground Up
           </h1>
           

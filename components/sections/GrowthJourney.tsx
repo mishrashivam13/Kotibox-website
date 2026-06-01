@@ -55,7 +55,7 @@ export default function GrowthJourney() {
             </span>
           </div>
 
-          <h2 className="text-4xl md:text-5xl lg:text-[3.2rem] font-extrabold text-[#0a1628] leading-tight mb-6 tracking-tight">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-[#0a1628] leading-tight mb-6 tracking-tight">
             How We Empower Your <br className="hidden md:block" /> 
             <span className="text-[#f5a623] relative inline-block mt-2 md:mt-0">
               Digital Growth

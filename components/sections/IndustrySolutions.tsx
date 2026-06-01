@@ -119,7 +119,7 @@ export default function IndustrySolutions() {
       
       {/* Header Section */}
       <div className="text-center max-w-4xl mx-auto mb-16">
-        <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+        <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6 leading-tight">
           We Build <span className="text-[#f97316]">AI Solutions For 15+ different</span> Industries
         </h2>
         <p className="text-slate-300 text-lg md:text-xl font-light max-w-3xl mx-auto leading-relaxed">

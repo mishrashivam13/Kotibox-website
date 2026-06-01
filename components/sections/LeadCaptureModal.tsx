@@ -38,7 +38,7 @@ export default function LeadCaptureModal() {
 
             {/* Header */}
             <div className="px-8 pt-10 pb-6 border-b border-white/10">
-              <h3 className="text-3xl font-bold text-white mb-2 tracking-tight">
+              <h3 className="text-2xl font-bold text-white mb-2 tracking-tight">
                 Start Your <span className="text-[#f5a623]">Project</span>
               </h3>
               <p className="text-slate-300 text-sm font-medium">

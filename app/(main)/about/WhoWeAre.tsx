@@ -20,7 +20,14 @@ export default function WhoWeAre() {
 
           {/* Right - Text */}
           <div className="flex-1">
-            <h2 className="text-4xl font-extrabold text-[#0a1628] mb-4">
+            {/* Section label */}
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-8 h-[2px] bg-[#f5a623]" />
+              <span className="text-[#f5a623] text-xs font-semibold tracking-[0.25em] uppercase">
+                Our Story
+              </span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-extrabold text-[#0a1628] mb-4">
               Who We Are
             </h2>
             <div className="w-16 h-1 bg-[#f5a623] rounded-full mb-8" />

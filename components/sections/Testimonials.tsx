@@ -84,7 +84,7 @@ export default function Testimonials() {
       
       {/* Header Section */}
       <div className="text-center z-20 mb-16 max-w-3xl mx-auto px-4 mt-8">
-        <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+        <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6">
           What Our <span className="relative inline-block">
             Clients Say
             {/* Orange Underline */}

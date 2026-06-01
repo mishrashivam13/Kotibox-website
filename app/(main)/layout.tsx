@@ -1,13 +1,17 @@
-    // Yeh file server component rehne do - koi changes nahi
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
+import { ModalProvider } from '@/components/providers/ModalContext'
+import FloatingButtons from '@/components/ui/FloatingButtons'
 
 export default function MainLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="bg-white min-h-screen">
-      <Navbar />
-      <main>{children}</main>
-      <Footer />
-    </div>
+    <ModalProvider>
+      <div className="bg-white min-h-screen">
+        <Navbar />
+        <main>{children}</main>
+        <Footer />
+        <FloatingButtons />
+      </div>
+    </ModalProvider>
   )
 }

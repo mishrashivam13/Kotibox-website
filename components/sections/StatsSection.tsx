@@ -61,7 +61,7 @@ export default function StatsSection() {
         {/* Heading Area */}
         <div className="flex flex-col items-center mb-20">
           {/* Changed from font-extrabold to font-bold */}
-          <h2 className="text-4xl md:text-5xl lg:text-5xl font-bold text-[#0a1628] text-center mb-6 leading-tight tracking-tight">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-[#0a1628] text-center mb-6 leading-tight tracking-tight">
             Architecting Digital Excellence For <br className="hidden md:block" />
             <span className="text-[#f5a623]">2,000+ Industry Leaders</span>
           </h2>

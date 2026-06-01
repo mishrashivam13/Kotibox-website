@@ -48,7 +48,7 @@ export default function MarketingHero() {
           </div>
           
           {/* Main Heading */}
-          <h1 className="text-4xl md:text-6xl lg:text-[4rem] font-bold text-white leading-[1.1] mb-8 tracking-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-[1.1] mb-8 tracking-tight">
             Your One-Stop Marketing <br className="hidden md:block" />
             Agency for <span className="text-[#f5a623]">Complete 360° Brand <br className="hidden md:block" /> Growth</span>
           </h1>

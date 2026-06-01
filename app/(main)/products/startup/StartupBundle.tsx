@@ -53,7 +53,7 @@ export default function StartupBundle() {
         
         {/* --- HEADER SECTION --- */}
         <div className="mb-14 max-w-5xl">
-          <h2 className="text-3xl md:text-4xl lg:text-[2.8rem] font-bold text-white leading-tight tracking-tight">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-white leading-tight tracking-tight">
             Choose any service individually, or unlock the complete Startup <span className="relative inline-block mt-2 lg:mt-0">
               Bundle
               {/* Orange Underline exactly under 'Bundle' */}
@@ -72,7 +72,7 @@ export default function StartupBundle() {
                 key={index} 
                 className="bg-[#172c45] rounded-xl p-8 hover:-translate-y-1 hover:shadow-xl transition-all duration-300 border border-transparent hover:border-[#f5a623]/30"
               >
-                <h3 className="text-xl md:text-[22px] font-semibold text-white mb-6 leading-snug">
+                <h3 className="text-2xl font-bold text-white mb-6 leading-snug">
                   {service.title}
                 </h3>
                 <ul className="space-y-3">
