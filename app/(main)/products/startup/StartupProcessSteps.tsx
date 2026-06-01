@@ -29,7 +29,7 @@ const processSteps = [
 
 export default function StartupProcessSteps() {
   return (
-    <section className="bg-white py-24 px-6 font-sans">
+    <section className="bg-white py-14 md:py-24 px-6 font-sans">
       <div className="max-w-[1400px] mx-auto">
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">

@@ -4,35 +4,78 @@
 
 @theme {
   --color-primary: #0a1628;
-  --color-accent: #f5a623;
+  --color-accent:  #f5a623;
 }
 
 /* ── Base typography ───────────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 15px;
+  scroll-behavior: smooth;
+}
+
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  letter-spacing: -0.01em;
-  line-height: 1.6;
+  font-weight: 400;
+  line-height: 1.65;
+  color: #1a2535;
+  letter-spacing: -0.008em;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  letter-spacing: -0.02em;
+h1 {
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.08;
+}
+
+h2 {
+  font-weight: 600;
+  letter-spacing: -0.022em;
   line-height: 1.15;
 }
 
-p {
-  line-height: 1.7;
+h3 {
+  font-weight: 600;
+  letter-spacing: -0.016em;
+  line-height: 1.22;
 }
 
-/* ── Social Icon Orbit Animation ─────────────────────────────────────────── */
+h4, h5, h6 {
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
 
-/* Outer wrapper: rotates to move icon in a circle */
+p {
+  line-height: 1.72;
+  font-weight: 400;
+}
+
+/* ── Smooth transitions ─────────────────────────────────────────────────────── */
+a, button {
+  transition-property: color, background-color, border-color, box-shadow, opacity, transform;
+  transition-duration: 180ms;
+  transition-timing-function: ease;
+}
+
+/* ── Section heading accent line ─────────────────────────────────────────── */
+.section-accent {
+  width: 3rem;
+  height: 2px;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, #f5a623, #e8950f);
+}
+
+/* ── Orbit animation ─────────────────────────────────────────────────────── */
 @keyframes orbit {
   0%   { transform: rotate(0deg)   translateX(var(--orbit-r, 140px)); }
   100% { transform: rotate(360deg) translateX(var(--orbit-r, 140px)); }
 }
 
-/* Inner pill: counter-rotates so icon stays upright */
 @keyframes counter-rotate {
   0%   { transform: translate(-50%, -50%) rotate(0deg);    }
   100% { transform: translate(-50%, -50%) rotate(-360deg); }
@@ -40,10 +83,8 @@ p {
 
 .orbit-node {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
+  top: 50%; left: 50%;
+  width: 0; height: 0;
   --orbit-r: 130px;
   animation: orbit 16s linear infinite;
 }

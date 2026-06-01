@@ -25,8 +25,8 @@ export default function CTASection() {
             
             {/* Text Content */}
             <div className="flex-1">
-              <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-4 tracking-wide">
-                Let’s Discuss Your Project
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 tracking-wide">
+                Letâ€™s Discuss Your Project
               </h2>
               <p className="text-slate-200 text-[15px] md:text-[17px] font-medium leading-relaxed max-w-2xl">
                 Get a free consultation to discuss how we will transform your idea into an amazing digital product.

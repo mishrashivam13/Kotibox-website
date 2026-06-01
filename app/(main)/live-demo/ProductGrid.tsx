@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 import React, { useState } from 'react';
 import Link from 'next/link';
 import {
@@ -256,7 +256,7 @@ export default function ProductGrid() {
                 {product.badge && (
                   <div className="absolute top-4 left-4">
                     {product.badge.type === 'design' ? (
-                      <div className="bg-[#001e36] text-[#31a8ff] text-xs font-extrabold px-2 py-1 rounded shadow-sm border border-[#31a8ff]/20">
+                      <div className="bg-[#001e36] text-[#31a8ff] text-xs font-bold px-2 py-1 rounded shadow-sm border border-[#31a8ff]/20">
                         {product.badge.text}
                       </div>
                     ) : (
@@ -311,7 +311,7 @@ export default function ProductGrid() {
         {!hasMore && filtered.length > PAGE_SIZE && (
           <div className="flex justify-center pb-12">
             <p className="text-slate-400 text-sm font-medium">
-              ✓ All {filtered.length} products loaded
+              âœ“ All {filtered.length} products loaded
             </p>
           </div>
         )}

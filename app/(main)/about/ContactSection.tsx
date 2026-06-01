@@ -28,7 +28,7 @@ export default function ContactSection() {
   }
 
   return (
-    <section className="bg-[#f8f4f0] py-24 px-6">
+    <section className="bg-[#f8f4f0] py-14 md:py-24 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col lg:flex-row gap-12 items-start">
 
@@ -45,7 +45,7 @@ export default function ContactSection() {
               </span>
             </div>
 
-            <h2 className="text-4xl md:text-5xl font-extrabold text-[#0a1628] 
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#0a1628] 
                            leading-tight mb-6">
               AI-Powered Excellence{' '}
               <span className="text-[#f5a623]">for Next-Gen</span> Ideas

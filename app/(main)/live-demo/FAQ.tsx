@@ -38,12 +38,12 @@ export default function FAQ() {
   };
 
   return (
-    <section className="bg-[#f8fafc] py-24 px-6 font-sans">
+    <section className="bg-[#f8fafc] py-14 md:py-24 px-6 font-sans">
       <div className="max-w-[900px] mx-auto">
         
         {/* Header Section */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-[#0a1628] mb-6 tracking-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#0a1628] mb-6 tracking-tight">
             Frequently <span className="relative inline-block">
               Asked
               {/* Orange Underline exactly like screenshot */}

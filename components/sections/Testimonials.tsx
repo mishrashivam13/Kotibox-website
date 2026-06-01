@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 import React, { useState, useEffect } from 'react';
 import { Star, ChevronLeft, ChevronRight } from 'lucide-react';
 
@@ -14,35 +14,35 @@ const testimonials = [
   {
     id: 1,
     name: 'Friya',
-    review: '“Beautiful travel website design, fast booking experience, and smooth user navigation overall.”',
+    review: 'â€œBeautiful travel website design, fast booking experience, and smooth user navigation overall.â€',
     image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=200',
     rating: 5
   },
   {
     id: 2,
     name: 'Amit Patel',
-    review: '“Quick delivery and flawless execution. The custom E-commerce platform works like a charm and sales are up!”',
+    review: 'â€œQuick delivery and flawless execution. The custom E-commerce platform works like a charm and sales are up!â€',
     image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=200',
     rating: 5
   },
   {
     id: 3,
     name: 'Elena Rostova',
-    review: '“From UI/UX design to final deployment, they handled everything perfectly. Best digital agency we have worked with.”',
+    review: 'â€œFrom UI/UX design to final deployment, they handled everything perfectly. Best digital agency we have worked with.â€',
     image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200',
     rating: 5
   },
   {
     id: 4,
     name: 'Rohan Sharma',
-    review: '“The AI automation dashboard they built saved us hours of manual work. Highly professional team!”',
+    review: 'â€œThe AI automation dashboard they built saved us hours of manual work. Highly professional team!â€',
     image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=200',
     rating: 5
   },
   {
     id: 5,
     name: 'Sarah Jenkins',
-    review: '“Exceptional service! Their React Native app development is top-notch. Highly recommended for startups.”',
+    review: 'â€œExceptional service! Their React Native app development is top-notch. Highly recommended for startups.â€',
     image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=200',
     rating: 5
   }
@@ -80,19 +80,17 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="bg-[#0b1727] py-24 px-4 overflow-hidden font-sans relative min-h-[850px] flex flex-col items-center justify-center">
+    <section className="bg-[#0b1727] py-14 md:py-24 px-4 overflow-hidden font-sans relative min-h-[600px] md:min-h-[850px] flex flex-col items-center justify-center">
       
       {/* Header Section */}
       <div className="text-center z-20 mb-16 max-w-3xl mx-auto px-4 mt-8">
-        <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6">
-          What Our <span className="relative inline-block">
-            Clients Say
-            {/* Orange Underline */}
-            <span className="absolute -bottom-2 left-0 w-full h-1 bg-[#f5a623] rounded-full"></span>
-          </span>
+        <p className="text-xs font-semibold text-[#f5a623] tracking-[0.2em] uppercase mb-4">Client Reviews</p>
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.8rem] font-bold text-white mb-4">
+          What Our Clients Say
         </h2>
-        <p className="text-slate-300 text-lg md:text-xl font-light">
-          Our clients really enjoy our services. We are grateful for that.
+        <div className="w-12 h-[2px] bg-[#f5a623] rounded-full mx-auto mb-5" />
+        <p className="text-slate-300 text-[0.95rem] md:text-base font-normal leading-relaxed">
+          We are proud to deliver results our clients love. Here's what they have to say.
         </p>
       </div>
 

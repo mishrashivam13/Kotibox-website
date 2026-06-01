@@ -42,7 +42,7 @@ const milestones = [
 
 export default function OurJourney() {
   return (
-    <section className="bg-[#0b1727] py-24 px-4 md:px-8 overflow-hidden font-sans relative">
+    <section className="bg-[#0b1727] py-14 md:py-24 px-4 md:px-8 overflow-hidden font-sans relative">
       
       {/* Background Subtle Glows */}
       <div className="absolute top-1/4 left-0 w-[500px] h-[500px] bg-[#f5a623]/5 rounded-full blur-[100px] pointer-events-none"></div>
@@ -56,7 +56,7 @@ export default function OurJourney() {
             <Star size={16} className="text-[#f5a623]" />
             <span className="text-sm font-bold tracking-widest uppercase text-white/80">Company Timeline</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6 tracking-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 tracking-tight">
             Our <span className="text-[#f5a623]">Journey</span> So Far
           </h2>
           <div className="w-24 h-1.5 bg-gradient-to-r from-[#f5a623] to-orange-400 rounded-full" />

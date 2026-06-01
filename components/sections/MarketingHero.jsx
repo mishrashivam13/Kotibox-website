@@ -1,5 +1,4 @@
 'use client'
-import React from 'react';
 import { TrendingUp } from 'lucide-react';
 import { useModal } from '@/components/providers/ModalContext';
 
@@ -84,22 +83,22 @@ export default function MarketingHero() {
   const { openModal } = useModal();
 
   return (
-    <section className="relative bg-[#0b1727] min-h-screen py-20 px-6 md:px-12 lg:px-20 overflow-hidden font-sans flex items-center">
+    <section className="relative bg-[#0b1727] min-h-[80vh] lg:min-h-screen py-14 sm:py-20 px-4 sm:px-6 md:px-12 lg:px-20 overflow-hidden font-sans flex items-center">
 
       {/* Background glows */}
       <div className="absolute top-0 right-0 w-[700px] h-[700px] bg-slate-800/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-900/10 rounded-full blur-3xl translate-y-1/3 -translate-x-1/4 pointer-events-none" />
 
-      <div className="max-w-[1400px] mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-8 items-center relative z-10">
+      <div className="max-w-[1400px] mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-8 items-center relative z-10">
 
         {/* ── LEFT: Text ── */}
         <div className="flex flex-col items-start text-left max-w-2xl">
-          <div className="flex items-center gap-2 text-[#a3e635] mb-6 font-semibold tracking-[0.2em] uppercase text-sm">
+          <div className="flex items-center gap-2 text-[#a3e635] mb-5 font-medium tracking-[0.18em] uppercase text-xs">
             <TrendingUp size={20} strokeWidth={2.2} />
             Premium Marketing Solutions
           </div>
 
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-[1.1] mb-8 tracking-tight">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-[1.15] mb-6 sm:mb-8 tracking-tight">
             Your One-Stop Marketing{' '}
             <br className="hidden md:block" />
             Agency for{' '}
@@ -112,14 +111,14 @@ export default function MarketingHero() {
 
           <button
             onClick={openModal}
-            className="bg-[#f5a623] hover:bg-[#e0931c] text-[#0b1727] font-extrabold text-base px-8 py-4 rounded-xl shadow-[0_8px_24px_rgba(245,166,35,0.35)] hover:shadow-[0_12px_32px_rgba(245,166,35,0.5)] transition-all duration-300 hover:-translate-y-1"
+            className="bg-[#f5a623] hover:bg-[#e0931c] text-[#0b1727] font-semibold text-base px-8 py-4 rounded-xl shadow-[0_8px_24px_rgba(245,166,35,0.35)] hover:shadow-[0_12px_32px_rgba(245,166,35,0.5)] transition-all duration-300 hover:-translate-y-1"
           >
             Start Your Marketing Journey →
           </button>
         </div>
 
         {/* ── RIGHT: Orbit Visual ── */}
-        <div className="relative w-full max-w-[480px] mx-auto aspect-square flex items-center justify-center">
+        <div className="relative w-full max-w-[280px] sm:max-w-[360px] md:max-w-[420px] lg:max-w-[480px] mx-auto aspect-square flex items-center justify-center">
 
           {/* Dashed orbit ring (decorative) */}
           <div
@@ -195,7 +194,7 @@ export default function MarketingHero() {
                 />
               </svg>
               <div className="absolute inset-0 flex flex-col items-center justify-center">
-                <span className="text-sm font-extrabold text-slate-800 leading-none">491K</span>
+                <span className="text-sm font-bold text-slate-800 leading-none">491K</span>
                 <span className="text-[9px] text-slate-500 font-medium text-center leading-tight mt-0.5">
                   Total<br />Audience
                 </span>

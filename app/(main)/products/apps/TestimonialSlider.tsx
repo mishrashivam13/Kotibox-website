@@ -41,12 +41,12 @@ export default function TestimonialSlider() {
   const currentTestimonial = testimonials[currentIndex];
 
   return (
-    <section className="bg-[#f8fafc] py-24 px-6 font-sans">
+    <section className="bg-[#f8fafc] py-14 md:py-24 px-6 font-sans">
       <div className="max-w-[1000px] mx-auto flex flex-col items-center text-center">
         
         {/* --- HEADER SECTION --- */}
         <div className="mb-16">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-[#0a1628] leading-tight mb-6 tracking-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#0a1628] leading-tight mb-6 tracking-tight">
             Here Are A Few Of Our Contented <br className="hidden md:block" />
             <span className="relative inline-block mt-2 md:mt-0">
               Customers

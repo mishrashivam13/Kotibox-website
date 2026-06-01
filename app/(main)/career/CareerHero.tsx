@@ -87,7 +87,7 @@ export default function CareerHero() {
           {/* LEFT */}
           <div>
             <h1
-              className="text-4xl sm:text-5xl lg:text-[3.4rem] font-extrabold text-white leading-[1.1] tracking-tight mb-6"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.4rem] font-bold text-white leading-[1.1] tracking-tight mb-4 sm:mb-6"
               style={{ ...fade(0.2), textShadow: '0 2px 20px rgba(0,0,0,0.35)' }}
             >
               Build Your Career
@@ -115,7 +115,7 @@ export default function CareerHero() {
             <div className="flex flex-wrap items-center gap-4 mb-10" style={fade(0.48)}>
               <button
                 onClick={openModal}
-                className="group relative overflow-hidden bg-[#f5a623] text-[#0a1628] px-8 py-3.5 text-sm font-extrabold tracking-wide rounded-lg hover:shadow-[0_6px_24px_rgba(245,166,35,0.45)] hover:scale-[1.02] transition-all duration-300"
+                className="group relative overflow-hidden bg-[#f5a623] text-[#0a1628] px-8 py-3.5 text-sm font-bold tracking-wide rounded-lg hover:shadow-[0_6px_24px_rgba(245,166,35,0.45)] hover:scale-[1.02] transition-all duration-300"
               >
                 <span className="relative z-10">Get Free Consultation</span>
                 <div className="absolute inset-0 bg-white/20 -translate-x-full group-hover:translate-x-0 transition-transform duration-300 skew-x-12" />
@@ -141,7 +141,7 @@ export default function CareerHero() {
             </div>
           </div>
 
-          {/* RIGHT — Open Roles */}
+          {/* RIGHT â€” Open Roles */}
           <div
             style={{
               opacity: visible ? 1 : 0,
@@ -212,11 +212,11 @@ export default function CareerHero() {
             { val: '150+', label: 'Team Members' },
             { val: '8+', label: 'Tech Stacks' },
             { val: '3', label: 'Global Offices' },
-            { val: '4.8★', label: 'Glassdoor Rating' },
+            { val: '4.8â˜…', label: 'Glassdoor Rating' },
           ].map((s) => (
             <div key={s.label} className="flex flex-col">
-              <span className="text-2xl md:text-3xl font-extrabold text-white leading-none">
-                {s.val.replace('★', '')}<span className="text-[#f5a623]">{s.val.includes('★') ? '★' : ''}</span>
+              <span className="text-2xl md:text-3xl font-bold text-white leading-none">
+                {s.val.replace('â˜…', '')}<span className="text-[#f5a623]">{s.val.includes('â˜…') ? 'â˜…' : ''}</span>
               </span>
               <span className="text-[10px] uppercase tracking-[0.18em] text-white/40 font-medium mt-1.5">{s.label}</span>
             </div>
@@ -230,7 +230,7 @@ export default function CareerHero() {
         style={{ opacity: visible ? 0.4 : 0, transition: 'opacity 0.6s ease 1.3s' }}
       >
         <span className="text-[9px] uppercase tracking-[0.22em] text-white/50 font-semibold">Scroll</span>
-        <div className="w-[1px] h-9 bg-gradient-to-b from-white/50 to-transparent animate-pulse" />
+        <div className="w-[1px] h-9 bg-gradient-to-b from-white/50 to-transparent" />
       </div>
 
       {/* Bottom accent */}

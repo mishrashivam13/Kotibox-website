@@ -156,18 +156,19 @@ export default function ServicesSection() {
   }
 
   return (
-    <section className="bg-slate-50 py-24 px-4 md:px-8 lg:px-16 font-sans w-full">
+    <section className="bg-slate-50 py-14 md:py-24 px-4 md:px-8 lg:px-16 font-sans w-full">
       <div className="max-w-[1400px] mx-auto">
 
         {/* Heading */}
-        <div className="flex flex-col items-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-[#0a1628] text-center mb-6 leading-tight tracking-tight">
-            Our Full Spectrum of <span className="text-[#f5a623]">AI & Software</span> Services
+        <div className="flex flex-col items-center mb-12 text-center">
+          <p className="text-xs font-semibold text-[#f5a623] tracking-[0.2em] uppercase mb-4">Our Services</p>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.8rem] font-bold text-[#0a1628] mb-4 leading-tight tracking-tight max-w-2xl">
+            Full Spectrum of <span className="text-[#f5a623]">AI & Software</span> Services
           </h2>
-          <div className="w-24 h-1.5 bg-gradient-to-r from-[#f5a623] to-orange-400 rounded-full mb-6" />
-          <p className="text-center text-slate-500 text-lg max-w-2xl mx-auto leading-relaxed">
-            We deliver end-to-end AI and software solutions, from automation to
-            custom applications, driving innovation and business growth.
+          <div className="w-12 h-[2px] bg-[#f5a623] rounded-full mb-5" />
+          <p className="text-slate-500 text-[0.95rem] md:text-base max-w-xl mx-auto leading-relaxed">
+            End-to-end AI and software solutions — from intelligent automation to
+            custom applications — driving innovation and business growth.
           </p>
         </div>
 
@@ -196,7 +197,7 @@ export default function ServicesSection() {
                               : 'border-transparent hover:bg-[#1a2f4e]/50'
                             }`}
               >
-                <div className={`font-bold text-sm lg:text-base transition-colors
+                <div className={`font-semibold text-sm lg:text-base transition-colors
                                ${activeId === service.id ? 'text-white' : 'text-white/70'}`}>
                   {service.label}
                 </div>
@@ -217,7 +218,7 @@ export default function ServicesSection() {
                 ref={(el) => { sectionRefs.current[service.id] = el }}
                 className="bg-white rounded-3xl border border-slate-100 p-6 md:p-10 shadow-sm hover:shadow-md transition-shadow duration-300 scroll-mt-36"
               >
-                <h3 className="text-2xl font-bold text-[#0a1628] mb-3">
+                <h3 className="text-2xl font-semibold text-[#0a1628] mb-3">
                   {service.title}
                 </h3>
                 <p className="text-slate-500 mb-10 text-base leading-relaxed max-w-3xl">
@@ -243,7 +244,7 @@ export default function ServicesSection() {
                         </div>
 
                         {/* Icon Label */}
-                        <span className="text-sm font-semibold text-slate-700 leading-snug group-hover:text-[#0a1628] transition-colors duration-300">
+                        <span className="text-sm font-medium text-slate-700 leading-snug group-hover:text-[#0a1628] transition-colors duration-300">
                           {item.name}
                         </span>
                       </div>

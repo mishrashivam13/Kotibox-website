@@ -8,7 +8,7 @@ export default function TryKGTApps() {
         
         {/* --- HEADER SECTION --- */}
         <div className="mb-16 z-10 relative">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-white leading-tight mb-6 tracking-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-6 tracking-tight">
             Believing is building Try KGT Apps Now
           </h2>
           <p className="text-white/90 text-lg md:text-2xl font-medium max-w-4xl mx-auto tracking-wide">

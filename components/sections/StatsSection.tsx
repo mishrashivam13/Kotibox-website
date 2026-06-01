@@ -2,46 +2,11 @@ import Image from 'next/image';
 import { Award, TrendingUp, Users, Cpu, Globe, ShieldCheck } from 'lucide-react';
 
 const stats = [
-  {
-    num: '10+',
-    label: 'Years of Digital\nEngineering Excellence',
-    color: 'text-[#0a1628]',
-    iconBg: 'bg-slate-100 group-hover:bg-[#0a1628]',
-    iconColor: 'text-[#0a1628] group-hover:text-white',
-    icon: Award,
-  },
-  {
-    num: '2000+',
-    label: 'Business Ventures\nTransformed',
-    color: 'text-[#f5a623]',
-    iconBg: 'bg-[#f5a623]/15 group-hover:bg-[#f5a623]',
-    iconColor: 'text-[#f5a623] group-hover:text-white',
-    icon: TrendingUp,
-  },
-  {
-    num: '50+',
-    label: 'Team of Professionals',
-    color: 'text-[#0a1628]',
-    iconBg: 'bg-slate-100 group-hover:bg-[#0a1628]',
-    iconColor: 'text-[#0a1628] group-hover:text-white',
-    icon: Users,
-  },
-  {
-    num: '25+',
-    label: 'AI-Powered Enterprise\nSolutions',
-    color: 'text-[#f5a623]',
-    iconBg: 'bg-[#f5a623]/15 group-hover:bg-[#f5a623]',
-    iconColor: 'text-[#f5a623] group-hover:text-white',
-    icon: Cpu,
-  },
-  {
-    num: '45+',
-    label: 'Countries We Proudly\nServe',
-    color: 'text-[#0a1628]',
-    iconBg: 'bg-slate-100 group-hover:bg-[#0a1628]',
-    iconColor: 'text-[#0a1628] group-hover:text-white',
-    icon: Globe,
-  },
+  { num: '10+',   label: 'Years of Excellence',         color: '#0a1628', icon: Award,     iconBg: '#0a162810' },
+  { num: '2000+', label: 'Businesses Transformed',      color: '#f5a623', icon: TrendingUp, iconBg: '#f5a62312' },
+  { num: '50+',   label: 'Team of Professionals',       color: '#0a1628', icon: Users,     iconBg: '#0a162810' },
+  { num: '25+',   label: 'Enterprise AI Solutions',     color: '#f5a623', icon: Cpu,       iconBg: '#f5a62312' },
+  { num: '45+',   label: 'Countries Served',            color: '#0a1628', icon: Globe,     iconBg: '#0a162810' },
 ];
 
 const badges = [
@@ -55,44 +20,41 @@ const badges = [
 
 export default function StatsSection() {
   return (
-    <section className="bg-white py-24 px-6 font-sans">
+    <section className="bg-white py-16 md:py-24 px-4 sm:px-6">
       <div className="max-w-[1200px] mx-auto">
 
-        {/* Heading Area */}
-        <div className="flex flex-col items-center mb-20">
-          {/* Changed from font-extrabold to font-bold */}
-          <h2 className="text-4xl md:text-5xl font-extrabold text-[#0a1628] text-center mb-6 leading-tight tracking-tight">
-            Architecting Digital Excellence For <br className="hidden md:block" />
+        {/* Heading */}
+        <div className="flex flex-col items-center text-center mb-14">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.8rem] font-bold
+                         text-[#0a1628] mb-4 leading-tight tracking-tight max-w-2xl">
+            Architecting Digital Excellence For{' '}
             <span className="text-[#f5a623]">2,000+ Industry Leaders</span>
           </h2>
-          {/* Subtle Orange Underline */}
-          <div className="w-24 h-1.5 bg-gradient-to-r from-[#f5a623] to-orange-400 rounded-full" />
+          <div className="w-12 h-[2px] bg-[#f5a623] rounded-full" />
         </div>
 
-        {/* Stats Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 md:gap-0 md:divide-x divide-gray-200/80 mb-24">
+        {/* Stats row */}
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 md:gap-0 md:divide-x divide-slate-100 mb-16">
           {stats.map((stat) => {
-            const IconComponent = stat.icon;
-            
+            const Icon = stat.icon;
             return (
-              <div
-                key={stat.label}
-                className="group flex flex-col items-center text-center px-4 cursor-pointer transition-transform duration-300 hover:-translate-y-1"
-              >
-                {/* Icon Circle */}
-                <div 
-                  className={`w-20 h-20 rounded-full flex items-center justify-center mb-6 transition-all duration-500 ease-out shadow-sm group-hover:shadow-lg ${stat.iconBg}`}
+              <div key={stat.label} className="group flex flex-col items-center text-center px-4 cursor-default">
+
+                {/* Icon */}
+                <div
+                  className="w-11 h-11 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300"
+                  style={{ background: stat.iconBg }}
                 >
-                  <IconComponent size={32} strokeWidth={1.75} className={`transition-colors duration-300 ${stat.iconColor}`} />
+                  <Icon size={20} strokeWidth={1.8} style={{ color: stat.color }} />
                 </div>
 
-                {/* Number - Changed from font-extrabold to font-bold */}
-                <div className={`text-4xl lg:text-5xl font-bold mb-3 tracking-tight ${stat.color}`}>
+                {/* Number */}
+                <div className="text-2xl md:text-3xl lg:text-4xl font-bold mb-1.5 tracking-tight" style={{ color: stat.color }}>
                   {stat.num}
                 </div>
 
-                {/* Label - Changed from font-semibold to font-medium */}
-                <p className="text-sm lg:text-base font-medium text-slate-600 leading-relaxed whitespace-pre-line group-hover:text-[#0a1628] transition-colors">
+                {/* Label */}
+                <p className="text-xs md:text-sm text-slate-500 leading-snug font-normal">
                   {stat.label}
                 </p>
               </div>
@@ -100,36 +62,26 @@ export default function StatsSection() {
           })}
         </div>
 
-        {/* Badges Section */}
-        <div className="bg-slate-50 rounded-3xl p-8 md:p-12 border border-slate-100">
-          
-          {/* Recognized For Excellence Title */}
-          <div className="text-center mb-10 flex justify-center">
-            {/* Changed from font-bold to font-semibold */}
-            <div className="inline-flex items-center gap-2.5 text-sm font-semibold text-[#0a1628] tracking-[0.2em] uppercase bg-white px-6 py-2.5 rounded-full shadow-sm border border-slate-100">
-              <ShieldCheck size={18} strokeWidth={2} className="text-[#f5a623]" />
+        {/* Awards row */}
+        <div className="bg-slate-50 rounded-2xl py-8 px-6 md:px-10 border border-slate-100">
+          <div className="flex items-center justify-center gap-2 mb-7">
+            <ShieldCheck size={15} strokeWidth={2} className="text-[#f5a623]" />
+            <span className="text-[11px] font-semibold text-slate-500 uppercase tracking-[0.18em]">
               Recognized For Excellence
-            </div>
+            </span>
           </div>
-
-          {/* Badges Row */}
-          <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12 lg:gap-16">
+          <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10 lg:gap-14">
             {badges.map((badge) => (
-              <div 
+              <Image
                 key={badge.alt}
-                className="relative flex items-center justify-center"
-              >
-                <Image
-                  src={badge.src}
-                  alt={badge.alt}
-                  width={120}
-                  height={120}
-                  className="object-contain w-20 h-20 md:w-28 md:h-28 drop-shadow-sm"
-                />
-              </div>
+                src={badge.src}
+                alt={badge.alt}
+                width={100}
+                height={100}
+                className="object-contain w-16 h-16 md:w-20 md:h-20 opacity-80 hover:opacity-100 transition-opacity"
+              />
             ))}
           </div>
-          
         </div>
 
       </div>

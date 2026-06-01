@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 import React, { useState } from 'react';
 import { Phone } from 'lucide-react';
 
@@ -365,7 +365,7 @@ export default function Footer() {
 
       {/* 3. INTERACTIVE LARGE TEXT SECTION */}
       <div className="w-full px-4 sm:px-6 md:px-12 lg:px-20 pt-6 md:pt-8 pb-8 md:pb-12 overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
-        <h1 className="w-max mx-auto text-2xl sm:text-3xl md:text-5xl lg:text-[4rem] xl:text-6xl font-extrabold text-white tracking-tight leading-loose whitespace-nowrap">
+        <h1 className="w-max mx-auto text-2xl sm:text-3xl md:text-5xl lg:text-[4rem] xl:text-6xl font-bold text-white tracking-tight leading-loose whitespace-nowrap">
           <InteractiveLetter char="K" role="Strategist" pos="bottom" img="https://i.pravatar.cc/100?img=11" />
           OTIBOX{' '}
           <InteractiveLetter char="G" role="Manager" pos="top" img="https://i.pravatar.cc/100?img=32" />
@@ -386,7 +386,7 @@ export default function Footer() {
       {/* COPYRIGHT BAR */}
       <div className="text-center py-5 md:py-6 px-4">
         <p className="text-slate-500 text-xs sm:text-sm">
-          © {new Date().getFullYear()} Kotibox. All rights reserved.
+          Â© {new Date().getFullYear()} Kotibox. All rights reserved.
         </p>
       </div>
 

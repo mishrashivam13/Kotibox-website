@@ -37,12 +37,12 @@ const steps = [
 
 export default function BusinessExpansionSteps() {
   return (
-    <section className="bg-white py-24 px-6 font-sans overflow-hidden">
+    <section className="bg-white py-14 md:py-24 px-6 font-sans overflow-hidden">
       <div className="max-w-[1200px] mx-auto">
         
         {/* --- HEADER SECTION --- */}
         <div className="text-center mb-24 flex flex-col items-center">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-[#0a1628] leading-[1.3] mb-6 tracking-tight max-w-4xl">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#0a1628] leading-[1.3] mb-6 tracking-tight max-w-4xl">
             Examine the countless opportunities to start, manage, and expand <span className="relative inline-block">
               your
               {/* Orange Underline under 'your' */}

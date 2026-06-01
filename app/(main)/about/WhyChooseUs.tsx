@@ -5,7 +5,7 @@ import { useModal } from '@/components/providers/ModalContext'
 
 const features = [
   { Icon: Shuffle, label: 'Flexible engagement models' },
-  { Icon: Headphones, label: '24×7 Support across timezones' },
+  { Icon: Headphones, label: '24Ã—7 Support across timezones' },
   { Icon: Truck, label: 'Competitive pricing & on-time delivery' },
   { Icon: Cpu, label: 'State of the art IT infrastructure' },
   { Icon: Settings, label: 'Strong technology competency' },
@@ -31,7 +31,7 @@ export default function WhyChooseUs() {
               </span>
             </div>
 
-            <h2 className="text-4xl md:text-5xl font-extrabold text-[#0a1628] leading-tight mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#0a1628] leading-tight mb-4">
               Why Customers in over{' '}
               <span className="text-[#f5a623]">45+ countries</span>{' '}
               choose Our Company?
@@ -71,7 +71,7 @@ export default function WhyChooseUs() {
           <div className="w-full lg:w-[460px] flex-shrink-0 relative">
             <div className="rounded-2xl overflow-hidden shadow-xl">
               <img
-                src="https://lh3.googleusercontent.com/p/AF1QipOlhmCEY9TWOs37BU71047hfOk3hwEEeg2T2gs=s1360-w1360-h1020-rw"
+                src="https://lh3.googleusercontent.com/p/AF1QipOhGVXvdRbsEcZeMAf_1qTcaf2t5B2yDhCU-Is=s1360-w1360-h1020-rw"
                 alt="Kotibox Team"
                 className="w-full h-[420px] object-cover object-top hover:scale-105 transition-transform duration-500"
               />
@@ -86,7 +86,7 @@ export default function WhyChooseUs() {
                 </svg>
               </div>
               <div>
-                <div className="text-2xl font-extrabold text-[#0a1628] leading-none">500+</div>
+                <div className="text-2xl font-bold text-[#0a1628] leading-none">500+</div>
                 <div className="text-gray-500 text-xs font-medium mt-0.5">Happy Clients</div>
               </div>
             </div>

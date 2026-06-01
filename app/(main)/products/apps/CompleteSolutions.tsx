@@ -58,12 +58,12 @@ export default function CompleteSolutions() {
   const currentData = solutionsData.find(tab => tab.id === activeTab);
 
   return (
-    <section className="bg-[#243e56] py-24 px-6 font-sans min-h-screen">
+    <section className="bg-[#243e56] py-14 md:py-24 px-6 font-sans min-h-screen">
       <div className="max-w-[1300px] mx-auto">
         
         {/* --- HEADER SECTION --- */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-white leading-tight mb-6 tracking-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-6 tracking-tight">
             Combine Your <span className="text-[#f5a623]">Business Concept</span> With <br className="hidden md:block" />
             <span className="relative inline-block mt-2">
               Complete

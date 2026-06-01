@@ -22,7 +22,7 @@ export default function ProjectQuote() {
         
         {/* LEFT COLUMN: Content & Benefits */}
         <div className="flex flex-col text-left">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6 tracking-tight leading-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 tracking-tight leading-tight">
             Get a Free Project Quote
           </h2>
           

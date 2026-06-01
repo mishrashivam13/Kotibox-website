@@ -9,7 +9,7 @@ const highlights = [
 
 export default function VisionaryLeader() {
   return (
-    <section className="bg-white py-24 px-6 relative overflow-hidden">
+    <section className="bg-white py-14 md:py-24 px-6 relative overflow-hidden">
 
       {/* Subtle top border to separate from hero */}
       <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-transparent via-[#f5a623] to-transparent opacity-60" />
@@ -32,7 +32,7 @@ export default function VisionaryLeader() {
 
         <div className="flex flex-col lg:flex-row items-start gap-16">
 
-          {/* Left — CEO Photo + Stats */}
+          {/* Left â€” CEO Photo + Stats */}
           <div className="w-full lg:w-72 flex-shrink-0">
             <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-100">
               <div className="h-80 overflow-hidden bg-gray-100">
@@ -59,16 +59,16 @@ export default function VisionaryLeader() {
                   key={h.label}
                   className="bg-[#fdf8f3] border border-[#f5a623]/20 rounded-xl px-3 py-4 text-center"
                 >
-                  <div className="text-base font-extrabold text-[#0a1628] leading-none mb-1">{h.label}</div>
+                  <div className="text-base font-bold text-[#0a1628] leading-none mb-1">{h.label}</div>
                   <div className="text-gray-400 text-[10px] font-medium leading-snug">{h.desc}</div>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Right — Content */}
+          {/* Right â€” Content */}
           <div className="flex-1">
-            <h2 className="text-4xl md:text-5xl font-extrabold text-[#0a1628] mb-4 leading-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#0a1628] mb-4 leading-tight">
               Meet Our{' '}
               <span className="text-[#f5a623]">Visionary Leader</span>
             </h2>
@@ -86,7 +86,7 @@ export default function VisionaryLeader() {
             <div className="space-y-4 text-gray-500 text-base leading-relaxed">
               <p>
                 With over 12 years of expertise in web and mobile app development,
-                Sachin Khandelwal leads Kotibox Global Technologies with a clear vision —
+                Sachin Khandelwal leads Kotibox Global Technologies with a clear vision â€”
                 to empower businesses with cutting-edge digital solutions that unlock
                 measurable growth and competitive advantage.
               </p>

@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 import React from 'react';
 const stats = [
   { num: '2000+', label: 'Projects Completed' },
@@ -19,7 +19,7 @@ export default function AboutStats() {
                          flex flex-col items-center justify-center text-center
                          hover:bg-[#1a2f4e] transition-all duration-300"
             >
-              <div className="text-4xl font-extrabold text-[#f5a623] mb-3">
+              <div className="text-4xl font-bold text-[#f5a623] mb-3">
                 {stat.num}
               </div>
               <div className="text-white/80 text-sm font-medium">

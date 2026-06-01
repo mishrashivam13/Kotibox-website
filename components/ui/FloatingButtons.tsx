@@ -1,14 +1,14 @@
-'use client'
+﻿'use client'
 import { useState, useEffect } from 'react'
 import { X, Send, User, MessageCircle } from 'lucide-react'
 
 const WHATSAPP_NUMBER = '917240247809' // +91 72402 47809
 const WHATSAPP_MESSAGE = 'Hi! I want to know more about Kotibox services.'
 
-// ─── Chatbot ─────────────────────────────────────────────────────────────────
+// â”€â”€â”€ Chatbot â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 const botReplies: Record<string, string> = {
-  default: "Hi! I'm Kotibot 🤖 How can I help you today?",
+  default: "Hi! I'm Kotibot ðŸ¤– How can I help you today?",
   services: "We offer Mobile App Development, Web Development, AI Solutions, Digital Marketing & more. Which interests you?",
   pricing: "Our pricing depends on project scope. Let me connect you with our team for a free estimate!",
   contact: "You can reach us at business@kotiboxglobaltech.com or call +91 72402-47809.",
@@ -63,14 +63,14 @@ function ChatbotWindow({ onClose }: { onClose: () => void }) {
     >
       {/* Header */}
       <div className="bg-[#0a1628] px-4 py-3.5 flex items-center gap-3 flex-shrink-0">
-        <div className="w-9 h-9 rounded-full bg-[#f5a623] flex items-center justify-center font-extrabold text-[#0a1628] text-sm flex-shrink-0">
+        <div className="w-9 h-9 rounded-full bg-[#f5a623] flex items-center justify-center font-bold text-[#0a1628] text-sm flex-shrink-0">
           KB
         </div>
         <div className="flex-1 min-w-0">
           <p className="text-white font-semibold text-sm leading-none">Kotibot</p>
           <p className="text-white/50 text-xs mt-0.5 flex items-center gap-1">
             <span className="w-1.5 h-1.5 rounded-full bg-green-400 inline-block" />
-            Online — replies instantly
+            Online â€” replies instantly
           </p>
         </div>
         <button onClick={onClose} className="text-white/50 hover:text-white transition-colors">
@@ -83,7 +83,7 @@ function ChatbotWindow({ onClose }: { onClose: () => void }) {
         {messages.map((msg, i) => (
           <div key={i} className={`flex ${msg.from === 'user' ? 'justify-end' : 'justify-start'}`}>
             {msg.from === 'bot' && (
-              <div className="w-6 h-6 rounded-full bg-[#0a1628] flex items-center justify-center text-[#f5a623] text-[9px] font-extrabold flex-shrink-0 mt-auto mr-2">
+              <div className="w-6 h-6 rounded-full bg-[#0a1628] flex items-center justify-center text-[#f5a623] text-[9px] font-bold flex-shrink-0 mt-auto mr-2">
                 KB
               </div>
             )}
@@ -105,7 +105,7 @@ function ChatbotWindow({ onClose }: { onClose: () => void }) {
         ))}
         {typing && (
           <div className="flex justify-start gap-2">
-            <div className="w-6 h-6 rounded-full bg-[#0a1628] flex items-center justify-center text-[#f5a623] text-[9px] font-extrabold flex-shrink-0 mt-auto">KB</div>
+            <div className="w-6 h-6 rounded-full bg-[#0a1628] flex items-center justify-center text-[#f5a623] text-[9px] font-bold flex-shrink-0 mt-auto">KB</div>
             <div className="bg-white border border-gray-100 shadow-sm px-4 py-3 rounded-2xl rounded-bl-sm flex gap-1">
               {[0, 1, 2].map((i) => (
                 <span key={i} className="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: `${i * 0.15}s` }} />
@@ -149,7 +149,7 @@ function ChatbotWindow({ onClose }: { onClose: () => void }) {
   )
 }
 
-// ─── Main FloatingButtons ─────────────────────────────────────────────────────
+// â”€â”€â”€ Main FloatingButtons â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 export default function FloatingButtons() {
   const [chatOpen, setChatOpen] = useState(false)
@@ -167,7 +167,7 @@ export default function FloatingButtons() {
       {/* Chatbot window */}
       {chatOpen && <ChatbotWindow onClose={() => setChatOpen(false)} />}
 
-      {/* WhatsApp — bottom left */}
+      {/* WhatsApp â€” bottom left */}
       <a
         href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`}
         target="_blank"
@@ -198,7 +198,7 @@ export default function FloatingButtons() {
         </div>
       </a>
 
-      {/* Chatbot — bottom right */}
+      {/* Chatbot â€” bottom right */}
       <button
         onClick={() => setChatOpen((prev) => !prev)}
         className="fixed bottom-6 right-5 z-[140] group"

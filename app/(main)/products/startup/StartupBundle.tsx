@@ -53,7 +53,7 @@ export default function StartupBundle() {
         
         {/* --- HEADER SECTION --- */}
         <div className="mb-14 max-w-5xl">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-white leading-tight tracking-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight tracking-tight">
             Choose any service individually, or unlock the complete Startup <span className="relative inline-block mt-2 lg:mt-0">
               Bundle
               {/* Orange Underline exactly under 'Bundle' */}

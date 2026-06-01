@@ -1,5 +1,5 @@
 'use client'
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import { ArrowLeft, ArrowRight, ExternalLink } from 'lucide-react';
 
 const caseStudies = [
@@ -117,7 +117,7 @@ export default function CaseStudies() {
   const study = caseStudies[active];
 
   return (
-    <section className="bg-[#0a1628] py-24 px-6 relative overflow-hidden">
+    <section className="bg-[#0a1628] py-14 md:py-24 px-4 sm:px-6 relative overflow-hidden">
 
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-[0.03]"
@@ -130,13 +130,12 @@ export default function CaseStudies() {
         {/* Header */}
         <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-6 mb-14">
           <div>
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-8 h-[2px] bg-[#f5a623]" />
-              <span className="text-[#f5a623] text-xs font-semibold tracking-[0.28em] uppercase">
+            <div className="mb-4">
+              <span className="text-[#f5a623] text-xs font-semibold tracking-[0.22em] uppercase">
                 Case Studies
               </span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-extrabold text-white leading-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.8rem] font-bold text-white leading-tight">
               Transforming Ideas{' '}
               <span className="text-[#f5a623]">Into Impact</span>
             </h2>
@@ -175,25 +174,25 @@ export default function CaseStudies() {
             style={{ opacity: animating ? 0 : 1, transition: 'opacity 0.25s ease' }}
           >
             {/* LEFT: Content */}
-            <div className="p-8 md:p-12 lg:p-14 flex flex-col justify-between">
+            <div className="p-6 sm:p-8 md:p-12 lg:p-14 flex flex-col justify-between">
               <div>
                 {/* Category + platforms */}
                 <div className="flex flex-wrap items-center gap-2.5 mb-6">
-                  <span className="text-xs font-bold tracking-widest uppercase text-white/60 bg-white/10 px-3 py-1.5 rounded-full">
+                  <span className="text-xs font-medium tracking-widest uppercase text-white/60 bg-white/10 px-3 py-1.5 rounded-full">
                     {study.category}
                   </span>
                   {study.platforms.map((p) => (
-                    <span key={p} className="text-xs font-semibold text-white/55 bg-white/10 px-2.5 py-1 rounded-full">
+                    <span key={p} className="text-xs font-normal text-white/55 bg-white/10 px-2.5 py-1 rounded-full">
                       {p}
                     </span>
                   ))}
                 </div>
 
                 {/* Title */}
-                <h3 className="text-4xl md:text-5xl font-extrabold text-white mb-3 leading-tight">
+                <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 leading-tight">
                   {study.title}
                 </h3>
-                <p className="text-white/70 text-sm font-semibold tracking-wide mb-6 uppercase">
+                <p className="text-white/70 text-sm font-medium tracking-wide mb-6 uppercase">
                   {study.tagline}
                 </p>
 
@@ -218,7 +217,7 @@ export default function CaseStudies() {
                 <div className="flex gap-6">
                   {study.metrics.map((m) => (
                     <div key={m.label}>
-                      <div className="text-2xl font-extrabold text-white leading-none">{m.value}</div>
+                      <div className="text-2xl font-bold text-white leading-none">{m.value}</div>
                       <div className="text-white/50 text-xs font-medium mt-1">{m.label}</div>
                     </div>
                   ))}
@@ -228,7 +227,7 @@ export default function CaseStudies() {
                 <div className="hidden sm:block w-px h-10 bg-white/15" />
 
                 {/* CTA */}
-                <button className="flex items-center gap-2 bg-white text-[#0a1628] font-bold text-sm px-6 py-3 rounded-xl hover:bg-[#f5a623] hover:text-white transition-all duration-200 shadow-lg flex-shrink-0">
+                <button className="flex items-center gap-2 bg-white text-[#0a1628] font-semibold text-sm px-6 py-3 rounded-xl hover:bg-[#f5a623] hover:text-white transition-all duration-200 shadow-lg flex-shrink-0">
                   View Case Study
                   <ExternalLink size={14} />
                 </button>

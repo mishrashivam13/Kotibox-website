@@ -17,7 +17,7 @@ const reasons = [
   {
     id: 3,
     title: "Dedicated Support, Every Step of the Way",
-    description: "We don't just provide services—we become your growth partners. From planning to launch and beyond, we guide you through every stage of your business journey with reliable, hands-on support.",
+    description: "We don't just provide servicesâ€”we become your growth partners. From planning to launch and beyond, we guide you through every stage of your business journey with reliable, hands-on support.",
     icon: Headset,
   },
   {
@@ -30,13 +30,13 @@ const reasons = [
 
 export default function WhyPickUs() {
   return (
-    <section className="bg-[#fafbfc] py-24 px-6 font-sans">
+    <section className="bg-[#fafbfc] py-14 md:py-24 px-6 font-sans">
       <div className="max-w-[1300px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-12 items-start">
         
         {/* --- LEFT COLUMN: Header & Image --- */}
         {/* 'lg:sticky' ensures it stays in place while the user scrolls through the cards on desktop */}
         <div className="flex flex-col lg:sticky lg:top-28">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-[#0a1628] leading-[1.2] mb-6 tracking-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#0a1628] leading-[1.2] mb-6 tracking-tight">
             Why Pick Us to Help You <span className="text-[#f5a623]">Launch</span> Your <br className="hidden md:block" />
             <span className="relative inline-block">
               Business?

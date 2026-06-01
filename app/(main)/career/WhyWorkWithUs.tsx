@@ -45,7 +45,7 @@ export default function WhyWorkWithUs() {
 
         {/* Heading */}
         <div className="text-center mb-14">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-[#0a1628] mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#0a1628] mb-4">
             Why Work With Us
           </h2>
           <div className="w-20 h-1 bg-[#f5a623] rounded-full mx-auto mb-6" />

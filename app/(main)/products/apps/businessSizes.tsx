@@ -44,12 +44,12 @@ const businessSizes = [
 
 export default function RegardlessOfSize() {
   return (
-    <section className="bg-[#fcf9f4] py-24 px-6 font-sans">
+    <section className="bg-[#fcf9f4] py-14 md:py-24 px-6 font-sans">
       <div className="max-w-[1200px] mx-auto">
         
         {/* --- HEADER SECTION --- */}
         <div className="text-center mb-16 flex flex-col items-center">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-[#1a1a1a] mb-6 tracking-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#1a1a1a] mb-6 tracking-tight">
             Regardless <span className="relative inline-block">
               of Your
               {/* Orange Underline centered under "of Your" */}

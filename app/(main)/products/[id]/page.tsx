@@ -183,7 +183,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
           >
             {product.tag}
           </span>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white leading-tight mb-3">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-3">
             {product.title}
           </h1>
           <p className="text-white/75 text-base md:text-lg leading-relaxed">
@@ -193,7 +193,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
       </div>
 
       {/* ── Main Content ── */}
-      <div className="max-w-6xl mx-auto px-6 md:px-12 py-16">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-12 py-10 md:py-16">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
 
           {/* LEFT: Overview + Gallery + FAQs */}

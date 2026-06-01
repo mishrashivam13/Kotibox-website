@@ -9,20 +9,30 @@ const stats = [
   { value: '3', label: 'Countries' },
 ];
 
-function useCountUp(target: number, duration = 1800, start = false) {
+function StatItem({ value, label, delay, visible }: { value: string; label: string; delay: number; visible: boolean }) {
+  const num = parseInt(value.replace(/\D/g, ''));
+  const suffix = value.replace(/[0-9]/g, '');
   const [count, setCount] = useState(0);
   useEffect(() => {
-    if (!start) return;
+    if (!visible) return;
     let st: number | null = null;
+    const duration = 1600 + delay * 150;
     const step = (ts: number) => {
       if (!st) st = ts;
       const p = Math.min((ts - st) / duration, 1);
-      setCount(Math.floor((1 - Math.pow(1 - p, 3)) * target));
+      setCount(Math.floor((1 - Math.pow(1 - p, 3)) * num));
       if (p < 1) requestAnimationFrame(step);
     };
     requestAnimationFrame(step);
-  }, [target, duration, start]);
-  return count;
+  }, [visible, num, delay]);
+  return (
+    <div className="flex flex-col">
+      <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-none">
+        {visible ? count : 0}<span className="text-[#f5a623]">{suffix}</span>
+      </span>
+      <span className="text-xs uppercase tracking-[0.18em] text-white/45 font-medium mt-1.5">{label}</span>
+    </div>
+  );
 }
 
 export default function AboutHero() {
@@ -87,7 +97,7 @@ export default function AboutHero() {
 
         {/* Heading */}
         <h1
-          className="text-4xl sm:text-5xl lg:text-[3.6rem] font-extrabold text-white leading-[1.1] tracking-tight mb-6 max-w-[700px]"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.6rem] font-bold text-white leading-[1.1] tracking-tight mb-4 sm:mb-6 max-w-[700px]"
           style={{ ...fade(0.2), textShadow: '0 2px 20px rgba(0,0,0,0.4)' }}
         >
           Your Trusted Partner
@@ -116,7 +126,7 @@ export default function AboutHero() {
         <div className="flex flex-wrap gap-4 mb-16" style={fade(0.48)}>
           <button
             onClick={openModal}
-            className="group relative overflow-hidden bg-[#f5a623] text-[#0a1628] px-8 py-3.5 text-sm font-extrabold tracking-wide rounded-lg transition-all duration-300 hover:shadow-[0_6px_24px_rgba(245,166,35,0.45)] hover:scale-[1.02]"
+            className="group relative overflow-hidden bg-[#f5a623] text-[#0a1628] px-8 py-3.5 text-sm font-bold tracking-wide rounded-lg transition-all duration-300 hover:shadow-[0_6px_24px_rgba(245,166,35,0.45)] hover:scale-[1.02]"
           >
             <span className="relative z-10">Get Free Consultation</span>
             <div className="absolute inset-0 bg-white/20 -translate-x-full group-hover:translate-x-0 transition-transform duration-300 skew-x-12" />
@@ -137,23 +147,9 @@ export default function AboutHero() {
           className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8 pt-8 border-t border-white/[0.12]"
           style={fade(0.6)}
         >
-          {stats.map((stat, i) => {
-            const num = parseInt(stat.value.replace(/\D/g, ''));
-            const suffix = stat.value.replace(/[0-9]/g, '');
-            // eslint-disable-next-line react-hooks/rules-of-hooks
-            const count = useCountUp(num, 1600 + i * 150, visible);
-            return (
-              <div key={stat.label} className="flex flex-col">
-                <span className="text-3xl md:text-4xl font-extrabold text-white leading-none">
-                  {visible ? count : 0}
-                  <span className="text-[#f5a623]">{suffix}</span>
-                </span>
-                <span className="text-xs uppercase tracking-[0.18em] text-white/45 font-medium mt-1.5">
-                  {stat.label}
-                </span>
-              </div>
-            );
-          })}
+          {stats.map((stat, i) => (
+            <StatItem key={stat.label} value={stat.value} label={stat.label} delay={i} visible={visible} />
+          ))}
         </div>
       </div>
 
@@ -163,7 +159,7 @@ export default function AboutHero() {
         style={{ opacity: visible ? 0.4 : 0, transition: 'opacity 0.6s ease 1.2s' }}
       >
         <span className="text-[9px] uppercase tracking-[0.22em] text-white/50 font-semibold">Scroll</span>
-        <div className="w-[1px] h-9 bg-gradient-to-b from-white/50 to-transparent animate-pulse" />
+        <div className="w-[1px] h-9 bg-gradient-to-b from-white/50 to-transparent" />
       </div>
 
       {/* Bottom accent */}

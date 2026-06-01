@@ -28,7 +28,7 @@ export default function OpenPositions() {
 
         {/* Heading */}
         <div className="text-center mb-10">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-[#0a1628] mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#0a1628] mb-4">
             Open Positions
           </h2>
           <div className="w-20 h-1 bg-[#f5a623] rounded-full mx-auto mb-6" />

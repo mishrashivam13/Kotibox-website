@@ -53,13 +53,13 @@ const trainingFeatures = [
 export default function TrainingSection() {
   const { openModal } = useModal()
   return (
-    <section className="bg-white py-24 px-4 md:px-8 lg:px-16 font-sans w-full relative">
+    <section className="bg-white py-14 md:py-24 px-4 md:px-8 lg:px-16 font-sans w-full relative">
       <div className="max-w-[1300px] mx-auto flex flex-col lg:flex-row gap-12 lg:gap-20 items-start">
         
         {/* LEFT COLUMN: Sticky Content */}
         <div className="w-full lg:w-[45%] lg:sticky lg:top-32 flex flex-col items-start">
           
-          <h2 className="text-4xl md:text-5xl font-extrabold text-[#0f172a] leading-tight mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#0f172a] leading-tight mb-4 sm:mb-6">
             Transform Your <br />
             <span className="text-[#f5a623] relative inline-block">
               Career
