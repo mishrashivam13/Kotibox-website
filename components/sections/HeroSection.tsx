@@ -38,13 +38,15 @@ export default function HeroSection() {
       <div className="relative z-10 flex-1 flex flex-col items-center justify-center text-center px-4 sm:px-6 pt-20 pb-10">
 
         {/* Eyebrow */}
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full
-                        bg-white/[0.07] border border-white/[0.15] mb-7">
-          <span className="w-1.5 h-1.5 rounded-full bg-[#f5a623]" />
-          <span className="text-white/80 text-xs font-medium tracking-[0.14em] uppercase">
-            Google Certified AI Agency
-          </span>
-        </div>
+<div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/[0.03] hover:bg-white/[0.08] transition-colors border border-white/[0.1] mb-7 cursor-pointer backdrop-blur-sm">
+  <span className="relative flex h-2 w-2">
+    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+    <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+  </span>
+  <span className="text-white/80 text-xs font-semibold tracking-[0.15em] uppercase">
+    Next-Gen AI Powered
+  </span>
+</div>
 
         {/* Heading */}
         <h1 className="text-[2.2rem] sm:text-[2.8rem] md:text-[3.6rem] lg:text-[4.2rem]
