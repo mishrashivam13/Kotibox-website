@@ -280,7 +280,7 @@ export default function TechStack() {
         {/* Header */}
         <div className="flex flex-col items-center text-center mb-12 md:mb-16">
           <p className="text-xs font-semibold text-[#f5a623] tracking-[0.2em] uppercase mb-4">Technology Stack</p>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.8rem] font-bold text-[#0a1628] mb-4 leading-tight max-w-2xl">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.8rem] font-bold text-[#0a1628] mb-4 leading-snug max-w-2xl">
             Built With the <span className="text-[#f5a623]">Best Technologies</span> in the Industry
           </h2>
           <div className="w-12 h-[2px] bg-[#f5a623] rounded-full mb-5" />
@@ -326,7 +326,7 @@ export default function TechStack() {
                       <tech.Icon />
                     </div>
                     {/* Name */}
-                    <span className="text-slate-700 text-[13px] font-medium leading-tight group-hover/item:text-[#0a1628] transition-colors">
+                    <span className="text-slate-700 text-[13px] font-medium leading-snug group-hover/item:text-[#0a1628] transition-colors">
                       {tech.name}
                     </span>
                   </div>
@@ -338,7 +338,7 @@ export default function TechStack() {
 
         {/* Bottom badges */}
         <div className="mt-10 md:mt-14 flex flex-wrap items-center justify-center gap-3">
-          {['ISO Certified', 'Google Partner', 'AWS Partner', 'Clutch Top Company', '10+ Years Experience'].map((badge) => (
+          {['ISO Certified', 'AWS Partner', 'Clutch Top Company', '10+ Years Experience'].map((badge) => (
             <span
               key={badge}
               className="inline-flex items-center gap-2 bg-white border border-slate-200 text-slate-600 text-xs font-medium px-4 py-2.5 rounded-full shadow-sm hover:border-[#f5a623]/40 hover:text-[#0a1628] transition-colors"

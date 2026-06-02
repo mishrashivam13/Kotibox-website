@@ -162,7 +162,7 @@ export default function ServicesSection() {
         {/* Heading */}
         <div className="flex flex-col items-center mb-12 text-center">
           <p className="text-xs font-semibold text-[#f5a623] tracking-[0.2em] uppercase mb-4">Our Services</p>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.8rem] font-bold text-[#0a1628] mb-4 leading-tight tracking-tight max-w-2xl">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.8rem] font-bold text-[#0a1628] mb-4 leading-snug tracking-tight max-w-2xl">
             Full Spectrum of <span className="text-[#f5a623]">AI & Software</span> Services
           </h2>
           <div className="w-12 h-[2px] bg-[#f5a623] rounded-full mb-5" />

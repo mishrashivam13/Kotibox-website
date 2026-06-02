@@ -195,7 +195,7 @@ export default function MarketingHero() {
               </svg>
               <div className="absolute inset-0 flex flex-col items-center justify-center">
                 <span className="text-sm font-bold text-slate-800 leading-none">491K</span>
-                <span className="text-[9px] text-slate-500 font-medium text-center leading-tight mt-0.5">
+                <span className="text-[9px] text-slate-500 font-medium text-center leading-snug mt-0.5">
                   Total<br />Audience
                 </span>
               </div>

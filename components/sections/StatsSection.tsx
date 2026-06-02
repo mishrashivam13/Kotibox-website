@@ -25,11 +25,10 @@ export default function StatsSection() {
 
         {/* Heading */}
         <div className="flex flex-col items-center text-center mb-14">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.8rem] font-bold
-                         text-[#0a1628] mb-4 leading-tight tracking-tight max-w-2xl">
-            Architecting Digital Excellence For{' '}
-            <span className="text-[#f5a623]">2,000+ Industry Leaders</span>
-          </h2>
+<h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.8rem] font-bold text-[#0a1628] mb-4 tracking-tight max-w-2xl">
+  <span className="block">Architecting Digital Excellence</span>
+  <span className="block mt-3">For{' '}<span className="text-[#f5a623]">2,000+ Industry Leaders</span></span>
+</h2>
           <div className="w-12 h-[2px] bg-[#f5a623] rounded-full" />
         </div>
 

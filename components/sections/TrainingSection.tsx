@@ -59,7 +59,7 @@ export default function TrainingSection() {
         {/* LEFT COLUMN: Sticky Content */}
         <div className="w-full lg:w-[45%] lg:sticky lg:top-32 flex flex-col items-start">
           
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#0f172a] leading-tight mb-4 sm:mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#0f172a] leading-snug mb-4 sm:mb-6">
             Transform Your <br />
             <span className="text-[#f5a623] relative inline-block">
               Career

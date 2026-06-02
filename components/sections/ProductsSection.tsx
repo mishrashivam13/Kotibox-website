@@ -1,166 +1,186 @@
+'use client'
 import Link from 'next/link'
-import { Monitor, MessageSquare, Mic, UtensilsCrossed, Wand2, UserSearch } from 'lucide-react'
+import { Monitor, MessageSquare, Mic, UtensilsCrossed, Wand2, UserSearch, ArrowRight, Zap } from 'lucide-react'
 
 const products = [
   {
     id: 'ott-platform',
-    tag: 'VERTICAL OTT',
-    tagColor: 'bg-red-500',
-    title: 'AI-Powered Vertical OTT Platform',
-    description: 'Niche OTT solution with video streaming, subscriptions, recommendations, creator panels, and AI content...',
-    exploreColor: 'text-red-500',
+    tag: ' OTT',
+    accentColor: '#ef4444',
+    title: 'AI-Powered  OTT Platform',
+    description: 'Niche OTT solution with 4K video streaming, AI content recommendations, subscriptions, and creator panels.',
+    features: ['AI Recommendations', '4K Streaming', 'Subscription Engine'],
     Icon: Monitor,
-    iconBg: 'bg-white',
-    iconColor: 'text-red-500',
-    image: 'https://images.unsplash.com/photo-1611162616475-46b635cb6868?w=600&q=80',
+    image: '/images/products/Aiott.png',
   },
   {
     id: 'ai-chatbot',
     tag: 'AI CHATBOT',
-    tagColor: 'bg-blue-500',
+    accentColor: '#3b82f6',
     title: 'AI Chatbot Web & App Suite',
-    description: 'Smart support and sales chatbot with knowledge base training, lead capture, analytics, and CRM handoff.',
-    exploreColor: 'text-blue-500',
+    description: 'Smart support and sales chatbot with custom knowledge base training, lead capture, and CRM handoff.',
+    features: ['Custom KB Training', 'CRM Integration', '90+ Languages'],
     Icon: MessageSquare,
-    iconBg: 'bg-white',
-    iconColor: 'text-blue-500',
-    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&q=80',
+    image: '/images/products/chatbot.png',
   },
   {
     id: 'voice-ai',
-    tag: 'VOICE-TO-VOICE',
-    tagColor: 'bg-[#f5a623]',
-    title: 'Voice-to-Voice AI Chat',
-    description: 'Real-time voice conversation assistant for calls, bookings, FAQs, follow-ups, and customer workflows.',
-    exploreColor: 'text-[#f5a623]',
+    tag: 'VOICE AI',
+    accentColor: '#f5a623',
+    title: 'Voice-to-Voice AI Assistant',
+    description: 'Real-time voice conversation AI for calls, bookings, FAQs, and follow-ups — human-like, 24/7.',
+    features: ['<500ms Latency', 'Voice Cloning', 'Booking Workflows'],
     Icon: Mic,
-    iconBg: 'bg-white',
-    iconColor: 'text-[#f5a623]',
-    image: 'https://images.unsplash.com/photo-1589254065878-42efde2cd8d9?w=600&q=80',
+    image: '/images/products/voiceai.png',
   },
   {
     id: 'food-delivery',
-    tag: 'AI FOOD DELIVERY',
-    tagColor: 'bg-green-500',
+    tag: 'FOOD DELIVERY',
+    accentColor: '#22c55e',
     title: 'AI Food Delivery Platform',
-    description: 'Food ordering suite with smart recommendations, route optimization, rider tracking, and restaurant analytics.',
-    exploreColor: 'text-green-500',
+    description: 'End-to-end food delivery with AI route optimization, rider tracking, restaurant portal, and analytics.',
+    features: ['AI Route Optimizer', 'Live Tracking', '3 Apps Included'],
     Icon: UtensilsCrossed,
-    iconBg: 'bg-white',
-    iconColor: 'text-green-500',
-    image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=80',
+    image: '/images/products/food.webp',
   },
   {
     id: 'ai-image-generation',
     tag: 'AI IMAGE GEN',
-    tagColor: 'bg-purple-500',
-    title: 'AI Image Generation & Transformation',
-    description: 'Creative AI suite for text-to-image, image editing, background removal, style transfer, and brand visuals.',
-    exploreColor: 'text-purple-500',
+    accentColor: '#a855f7',
+    title: 'AI Image Generation Suite',
+    description: 'Text-to-image, bulk background removal, style transfer, upscaling, and product photo enhancement.',
+    features: ['Text-to-Image', 'Bulk BG Removal', 'LoRA Fine-tuning'],
     Icon: Wand2,
-    iconBg: 'bg-white',
-    iconColor: 'text-purple-500',
-    image: 'https://images.unsplash.com/photo-1633412802994-5c058f151b66?w=600&q=80',
+    image: '/images/products/imagegenaration.jpeg',
   },
   {
     id: 'job-seeker',
     tag: 'AI JOB SEEKER',
-    tagColor: 'bg-teal-500',
+    accentColor: '#14b8a6',
     title: 'AI Job Seeker & Career Platform',
-    description: 'Career platform with AI resume builder, job matching, interview prep, recruiter tools, and applicant tracking.',
-    exploreColor: 'text-teal-500',
+    description: 'Career platform with AI resume builder, smart job matching, mock interviews, and recruiter ATS.',
+    features: ['AI Matching', 'Mock Interviews', 'ATS Ready'],
     Icon: UserSearch,
-    iconBg: 'bg-white',
-    iconColor: 'text-teal-500',
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80',
+    image: '/images/products/job.webp',
   },
 ]
 
 export default function ProductsSection() {
   return (
-    <section className="bg-white py-14 md:py-20 px-4 sm:px-6">
-      <div className="max-w-6xl mx-auto">
+    <section id="products-section" className="bg-[#f8fafc] py-16 md:py-24 px-4 sm:px-6 md:px-12">
+      <div className="max-w-[1300px] mx-auto">
 
-        {/* Heading */}
-        <div className="flex flex-col items-center text-center mb-10">
-          <p className="text-xs font-semibold text-[#f5a623] tracking-[0.2em] uppercase mb-4">Product Suites</p>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.8rem] font-bold text-[#0a1628]
-                         mb-4 leading-tight max-w-2xl">
-            Ready-to-Launch Digital Product Suites
-          </h2>
-          <div className="w-12 h-[2px] bg-[#f5a623] rounded-full mb-5" />
-          <p className="text-slate-500 text-[0.95rem] md:text-base max-w-xl mx-auto leading-relaxed">
-            AI-first product suites for OTT, chatbots, voice assistants, food delivery,
-            image generation, and career platforms — ready to customise and launch.
-          </p>
-        </div>
+        {/* ── Header ── */}
+        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-12">
+          <div>
+            <div className="flex items-center gap-2 mb-4">
+              <span className="flex items-center gap-1.5 text-[11px] font-bold text-[#f5a623] tracking-[0.2em] uppercase">
+                <Zap size={11} className="fill-[#f5a623]" />
+                Product Suites
+              </span>
+            </div>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#0a1628] leading-snug max-w-lg">
+              Ready-to-Launch{' '}
+              <span className="text-[#f5a623]">AI Product Suites</span>
+            </h2>
+            <p className="text-slate-500 text-sm md:text-base mt-3 max-w-md leading-relaxed">
+              Fully built, customisable AI-powered products — OTT, chatbots, voice AI, food delivery, image generation, and more.
+            </p>
+          </div>
 
-        {/* CTA */}
-        <div className="flex items-center justify-center gap-3 mb-10 flex-wrap">
-          {['6 AI Suites', 'Web + App', 'Customisable'].map((tag) => (
-            <span key={tag} className="px-3.5 py-1.5 rounded-md border border-slate-200
-                         text-xs font-medium text-slate-600">
-              {tag}
-            </span>
-          ))}
-          <Link href="/live-demo"
-            className="px-5 py-2 rounded-md bg-[#0a1628] text-white
-                       text-xs font-semibold hover:bg-[#1a2f4e] transition-all
-                       flex items-center gap-1.5">
-            Browse All Products →
-          </Link>
-        </div>
-
-{/* Products Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {products.map((product) => (
-            <Link 
-              href={`/products/${product.id}`}
-              key={product.id}
-              className="block rounded-2xl overflow-hidden border border-gray-100 hover:shadow-xl hover:border-gray-200 transition-all duration-300 group cursor-pointer bg-white"
+          {/* Tags + CTA */}
+          <div className="flex flex-col items-start sm:items-end gap-3 flex-shrink-0">
+            <div className="flex gap-2 flex-wrap sm:justify-end">
+              {['6 AI Suites', 'Web + App', '4–6 Week Launch'].map((t) => (
+                <span key={t} className="text-[11px] font-semibold text-slate-500 border border-slate-200 px-3 py-1 rounded-full bg-white">
+                  {t}
+                </span>
+              ))}
+            </div>
+            <Link
+              href="/live-demo"
+              className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#f5a623] text-[#0a1628] text-sm font-bold hover:bg-[#e8950f] hover:-translate-y-0.5 transition-all shadow-[0_4px_20px_rgba(245,166,35,0.25)]"
             >
-              {/* Image */}
-              <div className="relative h-52 overflow-hidden">
-                <img
-                  src={product.image}
-                  alt={product.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-
-                {/* Tag badge */}
-                <div className={`absolute bottom-4 left-4 px-3 py-1 rounded-full text-white text-xs font-bold ${product.tagColor}`}>
-                  {product.tag}
-                </div>
-
-                {/* Icon button top right */}
-                <div className="absolute top-3 right-3 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center">
-                  <product.Icon size={18} className={product.iconColor} />
-                </div>
-              </div>
-
-              {/* Content */}
-              <div className="p-6 flex flex-col h-[calc(100%-13rem)]">
-                <h3 className="text-lg font-semibold text-[#0a1628] mb-2 group-hover:text-[#f5a623] transition-colors">
-                  {product.title}
-                </h3>
-                
-                <p className="text-gray-500 text-sm leading-relaxed mb-6 flex-grow">
-                  {product.description}
-                </p>
-
-                {/* Footer */}
-                <div className="flex items-center justify-between mt-auto pt-4 border-t border-gray-50">
-                  <span className={`text-sm font-medium flex items-center gap-1 group-hover:gap-2 transition-all ${product.exploreColor}`}>
-                    Explore Now →
-                  </span>
-                  
-                  <span className="text-xs font-semibold text-gray-400 border border-gray-200 px-3 py-1 rounded-full">
-                    Web + App
-                  </span>
-                </div>
-              </div>
+              Browse All Products
+              <ArrowRight size={15} />
             </Link>
-          ))}
+          </div>
+        </div>
+
+        {/* ── Grid ── */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {products.map((product) => {
+            const Icon = product.Icon
+            return (
+              <Link
+                key={product.id}
+                href={`/products/${product.id}`}
+                className="group rounded-2xl overflow-hidden bg-white border border-slate-100 hover:border-slate-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col"
+              >
+                {/* Image */}
+                <div className="relative h-48 overflow-hidden bg-slate-100">
+                  <img
+                    src={product.image}
+                    alt={product.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+
+                  {/* Tag */}
+                  <span
+                    className="absolute top-4 left-4 text-[10px] font-bold text-white px-2.5 py-1 rounded-full"
+                    style={{ background: product.accentColor }}
+                  >
+                    {product.tag}
+                  </span>
+
+                  {/* Icon */}
+                  <div
+                    className="absolute top-4 right-4 w-9 h-9 rounded-xl bg-white shadow-md flex items-center justify-center"
+                  >
+                    <Icon size={16} style={{ color: product.accentColor }} />
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="p-5 flex flex-col flex-1">
+                  <div className="w-8 h-[2px] rounded-full mb-3" style={{ background: product.accentColor }} />
+
+                  <h3 className="text-base font-bold text-[#0a1628] mb-2 leading-snug group-hover:text-[#f5a623] transition-colors">
+                    {product.title}
+                  </h3>
+
+                  <p className="text-slate-500 text-sm leading-relaxed mb-4 flex-1">
+                    {product.description}
+                  </p>
+
+                  {/* Feature pills */}
+                  <div className="flex flex-wrap gap-1.5 mb-4">
+                    {product.features.map((f) => (
+                      <span
+                        key={f}
+                        className="text-[10px] font-semibold px-2 py-0.5 rounded-full border"
+                        style={{ color: product.accentColor, borderColor: product.accentColor + '40', background: product.accentColor + '12' }}
+                      >
+                        {f}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Footer */}
+                  <div className="flex items-center justify-between pt-3.5 border-t border-slate-100">
+                    <span className="flex items-center gap-1.5 text-sm font-semibold transition-colors" style={{ color: product.accentColor }}>
+                      Explore Suite
+                      <ArrowRight size={13} className="group-hover:translate-x-1 transition-transform" />
+                    </span>
+                    <span className="text-[10px] text-slate-400 font-medium border border-slate-200 px-2.5 py-1 rounded-full">
+                      Web + App
+                    </span>
+                  </div>
+                </div>
+              </Link>
+            )
+          })}
         </div>
 
       </div>

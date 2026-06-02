@@ -47,7 +47,7 @@ export default function WhyKotibox() {
             Why Choose Us
           </p>
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.8rem] font-bold
-                         text-[#0a1628] mb-4 leading-tight max-w-2xl">
+                         text-[#0a1628] mb-4 leading-snug max-w-2xl">
             What Sets Kotibox Apart From Every Other Agency
           </h2>
           <div className="w-12 h-[2px] bg-[#f5a623] rounded-full mb-5" />

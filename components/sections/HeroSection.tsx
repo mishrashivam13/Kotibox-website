@@ -1,6 +1,20 @@
 'use client'
 import Link from 'next/link'
 import { useModal } from '@/components/providers/ModalContext'
+import { ArrowDown, Zap } from 'lucide-react'
+
+const suites = [
+  { label: 'OTT Platform',   color: '#ef4444' },
+  { label: 'AI Chatbot',     color: '#3b82f6' },
+  { label: 'Voice AI',       color: '#f5a623' },
+  { label: 'Food Delivery',  color: '#22c55e' },
+  { label: 'Image Gen AI',   color: '#a855f7' },
+  { label: 'Job Platform',   color: '#14b8a6' },
+]
+
+function scrollToProducts() {
+  document.getElementById('products-section')?.scrollIntoView({ behavior: 'smooth' })
+}
 
 export default function HeroSection() {
   const { openModal } = useModal()
@@ -67,6 +81,66 @@ export default function HeroSection() {
           >
             View Our Work →
           </Link>
+        </div>
+
+      </div>
+
+      {/* ── Marquee Suite Strip ── */}
+      <div className="relative z-10 border-t border-b border-white/[0.08]">
+        <style>{`
+          @keyframes hero-marquee {
+            0%   { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
+          .hero-marquee-track { animation: hero-marquee 28s linear infinite; }
+          .hero-marquee-track:hover { animation-play-state: paused; }
+        `}</style>
+
+        <div className="flex items-stretch">
+
+          {/* Fixed left label */}
+          <div className="flex-shrink-0 flex items-center gap-2 px-5 py-3.5 border-r border-white/[0.08]">
+            <Zap size={12} className="fill-[#f5a623] text-[#f5a623]" />
+            <span className="text-[#f5a623] text-[10px] font-bold uppercase tracking-[0.22em] whitespace-nowrap">
+              Ready-made
+            </span>
+          </div>
+
+          {/* Scrolling section */}
+          <div className="flex-1 overflow-hidden relative">
+            {/* fade left */}
+            <div className="absolute left-0 top-0 bottom-0 w-10 bg-gradient-to-r from-[#0a1628] to-transparent z-10 pointer-events-none" />
+            {/* fade right */}
+            <div className="absolute right-0 top-0 bottom-0 w-10 bg-gradient-to-l from-[#0a1628] to-transparent z-10 pointer-events-none" />
+
+            <div className="hero-marquee-track flex items-center" style={{ width: 'max-content' }}>
+              {[...suites, ...suites].map((s, i) => (
+                <button
+                  key={i}
+                  onClick={scrollToProducts}
+                  className="group flex items-center gap-2.5 px-6 py-3.5 hover:opacity-100 transition-opacity"
+                >
+                  <span className="w-2 h-2 rounded-full flex-shrink-0 group-hover:scale-125 transition-transform" style={{ background: s.color }} />
+                  <span className="text-white/50 text-[12.5px] font-medium whitespace-nowrap group-hover:text-white transition-colors">
+                    {s.label}
+                  </span>
+                  <span className="text-white/15 text-base ml-2">·</span>
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Fixed right CTA */}
+          <button
+            onClick={scrollToProducts}
+            className="group flex-shrink-0 flex items-center gap-2 px-5 py-3.5 border-l border-white/[0.08] hover:bg-white/[0.05] transition-colors"
+          >
+            <span className="text-white/45 text-[11px] font-medium group-hover:text-white/70 transition-colors whitespace-nowrap hidden sm:block">
+              Explore All
+            </span>
+            <ArrowDown size={13} className="text-[#f5a623] group-hover:translate-y-0.5 transition-transform" />
+          </button>
+
         </div>
       </div>
 

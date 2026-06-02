@@ -135,7 +135,7 @@ export default function CaseStudies() {
                 Case Studies
               </span>
             </div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.8rem] font-bold text-white leading-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.8rem] font-bold text-white leading-snug">
               Transforming Ideas{' '}
               <span className="text-[#f5a623]">Into Impact</span>
             </h2>
@@ -189,7 +189,7 @@ export default function CaseStudies() {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 leading-tight">
+                <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 leading-snug">
                   {study.title}
                 </h3>
                 <p className="text-white/70 text-sm font-medium tracking-wide mb-6 uppercase">

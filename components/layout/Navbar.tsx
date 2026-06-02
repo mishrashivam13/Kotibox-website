@@ -72,12 +72,12 @@ const rightPanels = [
     accent: '#f5a623',
     href: '/services/ai',
     items: [
-      { label: 'AI Chatbot Development', href: '/services/ai', icon: Bot },
-      { label: 'AI Automation', href: '/services/ai', icon: Sparkles },
-      { label: 'Machine Learning', href: '/services/ai', icon: BrainCircuit },
-      { label: 'AI Integration Services', href: '/services/ai', icon: Monitor },
-      { label: 'Generative AI Solutions', href: '/services/ai', icon: Wand2 },
-      { label: 'AI Consulting', href: '/services/ai', icon: Lightbulb },
+      { label: 'AI Chatbot Development', href: '/services/ai-chatbot', icon: Bot },
+      { label: 'AI Automation', href: '/services/ai-automation', icon: Sparkles },
+      { label: 'Machine Learning', href: '/services/machine-learning', icon: BrainCircuit },
+      { label: 'AI Integration Services', href: '/services/ai-integration', icon: Monitor },
+      { label: 'Generative AI Solutions', href: '/services/generative-ai', icon: Wand2 },
+      { label: 'AI Consulting', href: '/services/ai-consulting', icon: Lightbulb },
     ],
   },
   {
@@ -124,13 +124,13 @@ const navLinks = [
 ]
 
 // ─── Services Mega Menu Component ─────────────────────────────────────────
- 
+
 function ServicesMegaMenu({ visible, onEnter, onLeave }: { visible: boolean; onEnter: () => void; onLeave: () => void }) {
   return (
     <div
       className="fixed left-1/2 top-20 z-40 w-[min(1060px,calc(100vw-32px))] transition-all duration-200 ease-out"
       style={{
-        opacity: visible ? 1 : 0, 
+        opacity: visible ? 1 : 0,
         visibility: visible ? 'visible' : 'hidden',
         transform: visible ? 'translate(-50%, 0)' : 'translate(-50%, 8px)',
         pointerEvents: visible ? 'auto' : 'none',
@@ -244,6 +244,13 @@ export default function Navbar() {
   const pathname = usePathname()
   const { openModal } = useModal()
 
+  // Force solid navbar on any detail/inner page
+  const solidNav = scrolled || servicesOpen
+    || pathname.startsWith('/services')
+    || pathname.startsWith('/live-demo')
+    || pathname.startsWith('/products')
+    || pathname.startsWith('/admin')
+
   const openServices = () => {
     if (closeTimerRef.current) clearTimeout(closeTimerRef.current)
     setServicesOpen(true)
@@ -269,7 +276,7 @@ export default function Navbar() {
     <>
       <nav className={`fixed top-0 left-0 right-0 z-50 flex items-center
                       justify-between px-6 md:px-12 h-20 transition-all duration-300
-                      ${scrolled || servicesOpen
+                      ${solidNav
                         ? 'bg-white shadow-[0_4px_20px_rgba(0,0,0,0.06)] border-b border-gray-100'
                         : 'bg-transparent border-b border-white/10'
                       }`}>
@@ -283,7 +290,7 @@ export default function Navbar() {
             height={50}
             priority
             className={`w-auto h-auto object-contain transition-all duration-500
-                        ${!scrolled && !servicesOpen ? 'brightness-0 invert' : 'brightness-100'}`}
+                        ${!solidNav ? 'brightness-0 invert' : 'brightness-100'}`}
           />
         </Link>
 
@@ -306,7 +313,7 @@ export default function Navbar() {
                     type="button"
                     className={`flex items-center gap-1.5 py-2 text-[14px]
                                font-semibold tracking-wide transition-all relative cursor-default
-                               ${scrolled || servicesOpen ? 'text-[#0a1628]' : 'text-white/90'}`}
+                               ${solidNav ? 'text-[#0a1628]' : 'text-white/90'}`}
                   >
                     {link.label}
                     <ChevronDown
@@ -331,7 +338,7 @@ export default function Navbar() {
                     type="button"
                     className={`flex items-center gap-1.5 py-2 text-[14px]
                                font-semibold tracking-wide transition-all relative cursor-default
-                               ${scrolled || servicesOpen ? 'text-[#0a1628]' : 'text-white/90'}`}
+                               ${solidNav ? 'text-[#0a1628]' : 'text-white/90'}`}
                   >
                     {link.label}
                     <ChevronDown
@@ -387,7 +394,7 @@ export default function Navbar() {
                   href={link.href}
                   className={`flex items-center gap-1.5 py-2 text-[14px]
                              font-semibold tracking-wide transition-all relative
-                             ${scrolled || servicesOpen
+                             ${solidNav
                                ? isActive ? 'text-[#f5a623]' : 'text-[#0a1628]'
                                : isActive ? 'text-white' : 'text-white/90'
                              }`}
@@ -409,7 +416,7 @@ export default function Navbar() {
             onClick={openModal}
             className={`hidden lg:block px-7 py-2.5 rounded-full text-[15px]
                        font-semibold border-2 transition-all
-                       ${scrolled || servicesOpen
+                       ${solidNav
                          ? 'border-[#0a1628] text-[#0a1628] hover:bg-[#0a1628] hover:text-white'
                          : 'border-white/80 text-white hover:bg-white/10'
                        }`}
@@ -421,7 +428,7 @@ export default function Navbar() {
             onClick={() => setMobileOpen(!mobileOpen)}
             className={`lg:hidden w-10 h-10 rounded-xl flex items-center
                        justify-center transition-all
-                       ${scrolled || servicesOpen
+                       ${solidNav
                          ? 'bg-gray-100 text-[#0a1628]'
                          : 'bg-white/10 text-white'
                        }`}

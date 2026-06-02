@@ -7,7 +7,7 @@ const industries = [
     id: 1,
     title: 'Healthcare',
     description: 'AI-enabled appointment systems, patient support, diagnostics workflows, reports, and more.',
-    image: 'https://images.unsplash.com/photo-1584982751601-97ddc0d2a09e?w=800&q=85',
+    image: 'https://img.etimg.com/thumb/width-1200,height-1200,imgsize-97626,resizemode-75,msid-80444626/industry/healthcare/biotech/healthcare/home-health-care-services-on-rise-in-india-due-to-covid-19-pandemic-experts.jpg',
   },
   {
     id: 2,
@@ -121,7 +121,7 @@ export default function IndustrySolutions() {
         <p className="text-xs font-semibold text-[#f5a623] tracking-[0.2em] uppercase mb-4">
           Industry Expertise
         </p>
-        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.8rem] font-bold text-white mb-4 leading-tight">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.8rem] font-bold text-white mb-4 leading-snug">
           We Build <span className="text-[#f5a623]">AI Solutions</span> For
           <span className="text-white/70"> 16+ Different Industries</span>
         </h2>

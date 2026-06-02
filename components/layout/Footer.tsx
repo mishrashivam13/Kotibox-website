@@ -1,6 +1,7 @@
 ﻿'use client';
 import React, { useState } from 'react';
 import { Phone } from 'lucide-react';
+import Image from "next/image";
 
 // --- Custom Social Media SVG Icons ---
 const Facebook = ({ size = 24, fill = "none" }: { size?: number; fill?: string }) => (
@@ -32,47 +33,47 @@ const Instagram = ({ size = 24, fill = "none" }: { size?: number; fill?: string 
 );
 
 // --- Skyline Components ---
-const IndiaSkyline = () => (
-  <svg viewBox="0 0 500 130" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-    <path d="M220 105 L220 72 Q221 68 225 65 Q230 55 240 50 Q250 45 260 50 Q270 55 275 65 Q279 68 280 72 L280 105" stroke="white" strokeWidth="1.2" fill="none"/>
-    <path d="M235 65 Q250 42 265 65" stroke="white" strokeWidth="1.2" fill="none"/>
-    <path d="M240 58 Q250 38 260 58" stroke="white" strokeWidth="1" fill="none"/>
-    <path d="M244 52 Q250 35 256 52" stroke="white" strokeWidth="0.8" fill="none"/>
-    <line x1="250" y1="35" x2="250" y2="22" stroke="white" strokeWidth="1.2"/>
-    <path d="M246 35 Q250 30 254 35" stroke="white" strokeWidth="1" fill="none"/>
-    <circle cx="250" cy="21" r="2" stroke="white" strokeWidth="1" fill="none"/>
-    <path d="M228 105 L228 78 Q229 72 235 70 L237 70 Q243 72 244 78 L244 105" stroke="white" strokeWidth="1" fill="none"/>
-    <path d="M256 105 L256 78 Q257 72 263 70 L265 70 Q271 72 272 78 L272 105" stroke="white" strokeWidth="1" fill="none"/>
-    <path d="M195 105 L195 80 L220 80 L220 105" stroke="white" strokeWidth="1" fill="none"/>
-    <path d="M280 105 L280 80 L305 80 L305 105" stroke="white" strokeWidth="1" fill="none"/>
-    <path d="M200 80 Q207 72 214 80" stroke="white" strokeWidth="1" fill="none"/>
-    <path d="M286 80 Q293 72 300 80" stroke="white" strokeWidth="1" fill="none"/>
-    <path d="M188 105 L188 55 L195 55 L195 105" stroke="white" strokeWidth="1" fill="none"/>
-    <ellipse cx="191" cy="54" rx="5" ry="8" stroke="white" strokeWidth="1" fill="none"/>
-    <line x1="191" y1="46" x2="191" y2="38" stroke="white" strokeWidth="1"/>
-    <circle cx="191" cy="37" r="2" stroke="white" strokeWidth="0.8" fill="none"/>
-    <path d="M305 105 L305 55 L312 55 L312 105" stroke="white" strokeWidth="1" fill="none"/>
-    <ellipse cx="308" cy="54" rx="5" ry="8" stroke="white" strokeWidth="1" fill="none"/>
-    <line x1="308" y1="46" x2="308" y2="38" stroke="white" strokeWidth="1"/>
-    <circle cx="308" cy="37" r="2" stroke="white" strokeWidth="0.8" fill="none"/>
-    <path d="M170 105 L170 62 L176 62 L176 105" stroke="white" strokeWidth="0.8" fill="none"/>
-    <ellipse cx="173" cy="61" rx="4" ry="6" stroke="white" strokeWidth="0.8" fill="none"/>
-    <line x1="173" y1="55" x2="173" y2="48" stroke="white" strokeWidth="0.8"/>
-    <path d="M324 105 L324 62 L330 62 L330 105" stroke="white" strokeWidth="0.8" fill="none"/>
-    <ellipse cx="327" cy="61" rx="4" ry="6" stroke="white" strokeWidth="0.8" fill="none"/>
-    <line x1="327" y1="55" x2="327" y2="48" stroke="white" strokeWidth="0.8"/>
-    <path d="M165 105 L165 108 L335 108 L335 105" stroke="white" strokeWidth="0.8" fill="none"/>
-    <path d="M155 108 L155 112 L345 112 L345 108" stroke="white" strokeWidth="0.8" fill="none"/>
-    <path d="M100 112 L100 85 L140 85 L140 112" stroke="white" strokeWidth="0.8" fill="none"/>
-    <path d="M110 85 Q120 75 130 85" stroke="white" strokeWidth="0.8" fill="none"/>
-    <path d="M360 112 L360 85 L400 85 L400 112" stroke="white" strokeWidth="0.8" fill="none"/>
-    <path d="M370 85 Q380 75 390 85" stroke="white" strokeWidth="0.8" fill="none"/>
-    <path d="M80 112 L80 95 M75 100 Q80 90 85 100" stroke="white" strokeWidth="0.7" fill="none"/>
-    <path d="M420 112 L420 95 M415 100 Q420 90 425 100" stroke="white" strokeWidth="0.7" fill="none"/>
-    <path d="M50 115 Q150 112 250 115 Q350 118 450 115" stroke="white" strokeWidth="0.5" strokeDasharray="3 3" opacity="0.4"/>
-    <line x1="30" y1="112" x2="470" y2="112" stroke="white" strokeWidth="0.8" opacity="0.5"/>
-  </svg>
-);
+// const IndiaSkyline = () => (
+//   <svg viewBox="0 0 500 130" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+//     <path d="M220 105 L220 72 Q221 68 225 65 Q230 55 240 50 Q250 45 260 50 Q270 55 275 65 Q279 68 280 72 L280 105" stroke="white" strokeWidth="1.2" fill="none"/>
+//     <path d="M235 65 Q250 42 265 65" stroke="white" strokeWidth="1.2" fill="none"/>
+//     <path d="M240 58 Q250 38 260 58" stroke="white" strokeWidth="1" fill="none"/>
+//     <path d="M244 52 Q250 35 256 52" stroke="white" strokeWidth="0.8" fill="none"/>
+//     <line x1="250" y1="35" x2="250" y2="22" stroke="white" strokeWidth="1.2"/>
+//     <path d="M246 35 Q250 30 254 35" stroke="white" strokeWidth="1" fill="none"/>
+//     <circle cx="250" cy="21" r="2" stroke="white" strokeWidth="1" fill="none"/>
+//     <path d="M228 105 L228 78 Q229 72 235 70 L237 70 Q243 72 244 78 L244 105" stroke="white" strokeWidth="1" fill="none"/>
+//     <path d="M256 105 L256 78 Q257 72 263 70 L265 70 Q271 72 272 78 L272 105" stroke="white" strokeWidth="1" fill="none"/>
+//     <path d="M195 105 L195 80 L220 80 L220 105" stroke="white" strokeWidth="1" fill="none"/>
+//     <path d="M280 105 L280 80 L305 80 L305 105" stroke="white" strokeWidth="1" fill="none"/>
+//     <path d="M200 80 Q207 72 214 80" stroke="white" strokeWidth="1" fill="none"/>
+//     <path d="M286 80 Q293 72 300 80" stroke="white" strokeWidth="1" fill="none"/>
+//     <path d="M188 105 L188 55 L195 55 L195 105" stroke="white" strokeWidth="1" fill="none"/>
+//     <ellipse cx="191" cy="54" rx="5" ry="8" stroke="white" strokeWidth="1" fill="none"/>
+//     <line x1="191" y1="46" x2="191" y2="38" stroke="white" strokeWidth="1"/>
+//     <circle cx="191" cy="37" r="2" stroke="white" strokeWidth="0.8" fill="none"/>
+//     <path d="M305 105 L305 55 L312 55 L312 105" stroke="white" strokeWidth="1" fill="none"/>
+//     <ellipse cx="308" cy="54" rx="5" ry="8" stroke="white" strokeWidth="1" fill="none"/>
+//     <line x1="308" y1="46" x2="308" y2="38" stroke="white" strokeWidth="1"/>
+//     <circle cx="308" cy="37" r="2" stroke="white" strokeWidth="0.8" fill="none"/>
+//     <path d="M170 105 L170 62 L176 62 L176 105" stroke="white" strokeWidth="0.8" fill="none"/>
+//     <ellipse cx="173" cy="61" rx="4" ry="6" stroke="white" strokeWidth="0.8" fill="none"/>
+//     <line x1="173" y1="55" x2="173" y2="48" stroke="white" strokeWidth="0.8"/>
+//     <path d="M324 105 L324 62 L330 62 L330 105" stroke="white" strokeWidth="0.8" fill="none"/>
+//     <ellipse cx="327" cy="61" rx="4" ry="6" stroke="white" strokeWidth="0.8" fill="none"/>
+//     <line x1="327" y1="55" x2="327" y2="48" stroke="white" strokeWidth="0.8"/>
+//     <path d="M165 105 L165 108 L335 108 L335 105" stroke="white" strokeWidth="0.8" fill="none"/>
+//     <path d="M155 108 L155 112 L345 112 L345 108" stroke="white" strokeWidth="0.8" fill="none"/>
+//     <path d="M100 112 L100 85 L140 85 L140 112" stroke="white" strokeWidth="0.8" fill="none"/>
+//     <path d="M110 85 Q120 75 130 85" stroke="white" strokeWidth="0.8" fill="none"/>
+//     <path d="M360 112 L360 85 L400 85 L400 112" stroke="white" strokeWidth="0.8" fill="none"/>
+//     <path d="M370 85 Q380 75 390 85" stroke="white" strokeWidth="0.8" fill="none"/>
+//     <path d="M80 112 L80 95 M75 100 Q80 90 85 100" stroke="white" strokeWidth="0.7" fill="none"/>
+//     <path d="M420 112 L420 95 M415 100 Q420 90 425 100" stroke="white" strokeWidth="0.7" fill="none"/>
+//     <path d="M50 115 Q150 112 250 115 Q350 118 450 115" stroke="white" strokeWidth="0.5" strokeDasharray="3 3" opacity="0.4"/>
+//     <line x1="30" y1="112" x2="470" y2="112" stroke="white" strokeWidth="0.8" opacity="0.5"/>
+//   </svg>
+// );
 
 const UKSkyline = () => (
   <svg viewBox="0 0 500 130" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
@@ -181,21 +182,21 @@ const locations = [
   {
     country: 'INDIA',
     flag: '/images/footer/flag1.png',
-    SkylineComponent: IndiaSkyline,
+    SkylineComponent: '/images/footer/india.svg',
     address: '214, giriraj nagar, Sumer Nagar, Mansarovar, Jaipur, Rajasthan 302020',
     phone: '+91 72402-47809'
   },
   {
     country: 'UK',
     flag: '/images/footer/flag2.png',
-    SkylineComponent: UKSkyline,
+    SkylineComponent: '/images/footer/uk.svg',
     address: '275 New North Road Islington, London, N17AA united-kingdom',
     phone: '+44 70212-47809'
   },
   {
     country: 'UAE',
     flag: '/images/footer/flag3.png',
-    SkylineComponent: UAESkyline,
+    SkylineComponent: '/images/footer/uae.svg',
     address: 'Parklane tower, 16th floor office 1616 Business Bay, Dubai',
     phone: '+971 54 508 7885'
   }
@@ -255,10 +256,16 @@ export default function Footer() {
               } ${idx !== locations.length - 1 ? 'pb-10 sm:pb-0' : ''}`}
             >
               {/* Skyline */}
-              <div className="h-20 sm:h-24 md:h-28 mb-4 w-full max-w-[280px] sm:max-w-none flex justify-center items-end">
-                <loc.SkylineComponent />
-              </div>
-
+<div className="h-20 sm:h-24 md:h-28 mb-4 w-full max-w-[280px] sm:max-w-none flex justify-center items-end">
+<Image
+  src={loc.SkylineComponent}
+  alt={`${loc.country} skyline`}
+  width={300}
+  height={120}
+  className="max-h-full object-contain"
+  style={{ width: 'auto' }}
+/>
+</div>
               {/* Divider */}
               <div className="w-24 sm:w-28 md:w-32 h-px bg-slate-700 mb-5 md:mb-6" />
 
