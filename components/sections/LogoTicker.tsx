@@ -25,33 +25,32 @@ export default function LogoTicker() {
         <div className="absolute right-0 top-0 bottom-0 w-24 md:w-40 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
 
         {/* Marquee Container */}
-        <div className="flex w-full group">
-          
+        <div className="flex group">
+
           {/* First List */}
-          <div className="flex items-center justify-around min-w-full gap-12 md:gap-24 animate-[marquee_25s_linear_infinite] group-hover:[animation-play-state:paused] pr-12 md:pr-24">
+          <div className="flex items-center shrink-0 gap-16 md:gap-24 animate-[marquee_30s_linear_infinite] group-hover:[animation-play-state:paused] pr-16 md:pr-24">
             {logos.map((logo) => (
               <img
                 key={`first-${logo.id}`}
                 src={logo.src}
                 alt={logo.name}
-                /* Removed grayscale, added hover:scale-105 for a nice pop effect */
-                className="h-10 md:h-14 w-auto object-contain transition-transform duration-300 hover:scale-105 cursor-pointer shrink-0"
+                className="h-8 md:h-12 w-auto object-contain transition-transform duration-300 hover:scale-105 cursor-pointer shrink-0"
               />
             ))}
           </div>
 
-          {/* Second List (Duplicated for infinite looping effect) */}
-          <div className="flex items-center justify-around min-w-full gap-12 md:gap-24 animate-[marquee_25s_linear_infinite] group-hover:[animation-play-state:paused] pr-12 md:pr-24">
+          {/* Second List (duplicate for seamless loop) */}
+          <div className="flex items-center shrink-0 gap-16 md:gap-24 animate-[marquee_30s_linear_infinite] group-hover:[animation-play-state:paused] pr-16 md:pr-24">
             {logos.map((logo) => (
               <img
                 key={`second-${logo.id}`}
                 src={logo.src}
                 alt={logo.name}
-                className="h-10 md:h-14 w-auto object-contain transition-transform duration-300 hover:scale-105 cursor-pointer shrink-0"
+                className="h-8 md:h-12 w-auto object-contain transition-transform duration-300 hover:scale-105 cursor-pointer shrink-0"
               />
             ))}
           </div>
-          
+
         </div>
       </div>
 

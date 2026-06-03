@@ -51,7 +51,7 @@ const products = [
     description: 'Text-to-image, bulk background removal, style transfer, upscaling, and product photo enhancement.',
     features: ['Text-to-Image', 'Bulk BG Removal', 'LoRA Fine-tuning'],
     Icon: Wand2,
-    image: '/images/products/imagegenaration.jpeg',
+    image: '/images/products/ai-image-generation.jpeg',
   },
   {
     id: 'banking-software',
@@ -61,7 +61,7 @@ const products = [
     description: 'Modern banking platform with online banking, payment processing, customer management, fraud detection, and real-time transaction monitoring.',
     features: ['Online Banking', 'Fraud Detection', 'Real-Time Transactions'],
     Icon: Landmark,
-    image: '/images/products/Banking.png',
+    image: '/images/products/banking-software.jpeg',
   },
 ]
 
