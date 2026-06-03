@@ -39,7 +39,7 @@ const stats = [
 
 const reviews = [
   { name: 'Sachin Khandelwal.', role: 'CEO, TechStartup', text: 'Delivered in half the time we expected. Exceptional quality.' },
-  { name: 'Sarah K.', role: 'Founder, E-Shop', text: 'The AI chatbot they built increased our leads by 3x.' },
+  
 ]
 
 const services = [
@@ -83,10 +83,10 @@ function ConsultationModal({ isOpen, onClose }: { isOpen: boolean; onClose: () =
   return (
     <div className="fixed inset-0 z-[200] flex items-end sm:items-center justify-center p-0 sm:p-4">
       {/* Backdrop */}
-      <div className="absolute inset-0 bg-black/70" onClick={onClose} />
+      <div className="absolute inset-0 bg-black/70 backdrop-blur-md " onClick={onClose} />
 
       {/* Modal container */}
-      <div className="relative w-full sm:max-w-[740px] rounded-t-3xl sm:rounded-2xl shadow-[0_32px_80px_rgba(0,0,0,0.5)] overflow-hidden flex flex-col md:flex-row max-h-[92vh] sm:max-h-[95vh]">
+      <div className="relative w-full sm:max-w-[940px] rounded-t-3xl sm:rounded-2xl shadow-[0_32px_80px_rgba(0,0,0,0.5)] overflow-hidden flex flex-col md:flex-row max-h-[92vh] sm:max-h-[95vh]">
 
         {/* LEFT PANEL — hidden on mobile, visible md+ */}
         <div className="hidden md:flex relative bg-[#07101f] md:w-[42%] flex-shrink-0 flex-col justify-between p-8 overflow-hidden">
