@@ -56,7 +56,7 @@ const leftCategories = [
   {
     heading: 'Digital Marketing',
     items: [
-      { label: 'SEO Optimization', href: '/services/seo' },
+      { label: 'AEO & GEO Optimization', href: '/services/aeo-geo' },
       { label: 'Social Media Marketing', href: '/services/social-media' },
       { label: 'PPC Advertising', href: '/services/ppc' },
       { label: 'Content Marketing', href: '/services/content' },

@@ -1,6 +1,6 @@
 'use client'
 import Link from 'next/link'
-import { Monitor, MessageSquare, Mic, UtensilsCrossed, Wand2, UserSearch, ArrowRight, Zap } from 'lucide-react'
+import { Monitor, MessageSquare, Mic, UtensilsCrossed, Wand2, ArrowRight, Zap, Landmark } from 'lucide-react'
 
 const products = [
   {
@@ -11,7 +11,7 @@ const products = [
     description: 'Niche OTT solution with 4K video streaming, AI content recommendations, subscriptions, and creator panels.',
     features: ['AI Recommendations', '4K Streaming', 'Subscription Engine'],
     Icon: Monitor,
-    image: '/images/products/Aiott.png',
+    image: '/images/products/ai-powered-vertical-ott-platform.jpg.jpeg',
   },
   {
     id: 'ai-chatbot',
@@ -21,7 +21,7 @@ const products = [
     description: 'Smart support and sales chatbot with custom knowledge base training, lead capture, and CRM handoff.',
     features: ['Custom KB Training', 'CRM Integration', '90+ Languages'],
     Icon: MessageSquare,
-    image: '/images/products/chatbot.png',
+    image: '/images/products/ai-chatbot-web-app-suite.jpg.jpeg',
   },
   {
     id: 'voice-ai',
@@ -31,7 +31,7 @@ const products = [
     description: 'Real-time voice conversation AI for calls, bookings, FAQs, and follow-ups — human-like, 24/7.',
     features: ['<500ms Latency', 'Voice Cloning', 'Booking Workflows'],
     Icon: Mic,
-    image: '/images/products/voiceai.png',
+    image: '/images/products/voice-to-voice-ai-assistant.jpg.jpeg',
   },
   {
     id: 'food-delivery',
@@ -41,7 +41,7 @@ const products = [
     description: 'End-to-end food delivery with AI route optimization, rider tracking, restaurant portal, and analytics.',
     features: ['AI Route Optimizer', 'Live Tracking', '3 Apps Included'],
     Icon: UtensilsCrossed,
-    image: '/images/products/food.webp',
+    image: '/images/products/ai-food-delivery-platform.jpg.jpeg',
   },
   {
     id: 'ai-image-generation',
@@ -54,14 +54,14 @@ const products = [
     image: '/images/products/imagegenaration.jpeg',
   },
   {
-    id: 'job-seeker',
-    tag: 'AI JOB SEEKER',
+    id: 'banking-software',
+    tag: 'Banking Software',
     accentColor: '#14b8a6',
-    title: 'AI Job Seeker & Career Platform',
-    description: 'Career platform with AI resume builder, smart job matching, mock interviews, and recruiter ATS.',
-    features: ['AI Matching', 'Mock Interviews', 'ATS Ready'],
-    Icon: UserSearch,
-    image: '/images/products/job.webp',
+    title: 'Banking Software',
+    description: 'Modern banking platform with online banking, payment processing, customer management, fraud detection, and real-time transaction monitoring.',
+    features: ['Online Banking', 'Fraud Detection', 'Real-Time Transactions'],
+    Icon: Landmark,
+    image: '/images/products/Banking.png',
   },
 ]
 
@@ -80,15 +80,13 @@ export default function ProductsSection() {
               </span>
             </div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#0a1628] leading-snug max-w-lg">
-              Ready-to-Launch{' '}
-              <span className="text-[#f5a623]">AI Product Suites</span>
+              Ready-to-Launch <span className="text-[#f5a623]">AI Product Suites</span>
             </h2>
             <p className="text-slate-500 text-sm md:text-base mt-3 max-w-md leading-relaxed">
               Fully built, customisable AI-powered products — OTT, chatbots, voice AI, food delivery, image generation, and more.
             </p>
           </div>
 
-          {/* Tags + CTA */}
           <div className="flex flex-col items-start sm:items-end gap-3 flex-shrink-0">
             <div className="flex gap-2 flex-wrap sm:justify-end">
               {['6 AI Suites', 'Web + App', '4–6 Week Launch'].map((t) => (
@@ -118,7 +116,7 @@ export default function ProductsSection() {
                 className="group rounded-2xl overflow-hidden bg-white border border-slate-100 hover:border-slate-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col"
               >
                 {/* Image */}
-                <div className="relative h-48 overflow-hidden bg-slate-100">
+                <div className="relative h-[240px] overflow-hidden bg-slate-100">
                   <img
                     src={product.image}
                     alt={product.title}
@@ -135,9 +133,7 @@ export default function ProductsSection() {
                   </span>
 
                   {/* Icon */}
-                  <div
-                    className="absolute top-4 right-4 w-9 h-9 rounded-xl bg-white shadow-md flex items-center justify-center"
-                  >
+                  <div className="absolute top-4 right-4 w-9 h-9 rounded-xl bg-white shadow-md flex items-center justify-center">
                     <Icon size={16} style={{ color: product.accentColor }} />
                   </div>
                 </div>

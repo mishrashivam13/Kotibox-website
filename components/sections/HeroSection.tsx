@@ -10,6 +10,7 @@ const suites = [
   { label: 'Food Delivery',  color: '#22c55e' },
   { label: 'Image Gen AI',   color: '#a855f7' },
   { label: 'Job Platform',   color: '#14b8a6' },
+  { label: 'Banking Software', color: '#aac55e' },
 ]
 
 function scrollToProducts() {
@@ -104,7 +105,7 @@ export default function HeroSection() {
           <div className="flex-shrink-0 flex items-center gap-2 px-5 py-3.5 border-r border-white/[0.08]">
             <Zap size={12} className="fill-[#f5a623] text-[#f5a623]" />
             <span className="text-[#f5a623] text-[10px] font-bold uppercase tracking-[0.22em] whitespace-nowrap">
-              Ready-made
+              Best-Selling
             </span>
           </div>
 
