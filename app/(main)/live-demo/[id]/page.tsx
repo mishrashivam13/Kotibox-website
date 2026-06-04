@@ -1498,9 +1498,9 @@ const products: Product[] = [
     description: 'Real-time voice conversations, virtual gifting, live music sharing, and monetized creator moments.',
     longDescription: 'Build the next Clubhouse or Stereo — a social platform built around live audio and real-time community experiences. Users join themed live rooms, participate in voice conversations, send virtual gifts to speakers, and share music together. Creators monetize through virtual gifts, fan subscriptions, and sponsored room events. Built for Web, iOS, and Android with sub-100ms audio latency.',
     features: ['Live Audio Rooms with Stage & Audience', 'Virtual Gift & Coin Economy', 'Synchronized Music Listening Rooms', 'Creator Fan Subscriptions & Tipping', 'Room Discovery & Interest-based Feed', 'Moderation Tools & Community Management'],
-    image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=1200',
+    image: 'https://blog.zegocloud.com/wp-content/uploads/2022/08/voice-chat-room.png',
     gallery: [
-      'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80',
+      'https://www.mirrorfly.com/blog/wp-content/uploads/2022/03/Best-Voice-Chat-App-1024x503-1.webp',
       'https://images.unsplash.com/photo-1543269664-647163e1dcf4?w=800&q=80',
       'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80',
     ],
@@ -2362,6 +2362,356 @@ const products: Product[] = [
       { title: 'Ledger Audit', desc: 'All transactions are immutably written to the PostgreSQL ledger, ensuring complete audit compliance.' },
     ],
     deliverables: ['Admin Ledger Dashboard', 'Escrow Management REST APIs', 'Dispute Resolution Module', 'Payment Gateway Sync Engine', 'Automated Commission Splitter', 'Full Source Code'],
+  },
+
+  // ── AI Video & Media ─────────────────────────────────────────────────────────
+  {
+    id: 'ai-video-generation',
+    tag: 'AI VIDEO',
+    accentColor: '#ec4899', // Pink
+    title: 'AI Video & Rendering Engine',
+    description: 'Text-to-video generation, auto-captioning, and seamless B-roll rendering for content teams and agencies.',
+    longDescription: 'A powerhouse for content creators and marketing agencies. This engine takes raw text scripts and generates high-definition B-roll video, automated dynamic captions, and seamless transitions. The interface is purely timeline and render-focused, providing a distraction-free dark mode environment for video editors without any UI clutter.',
+    features: ['Text-to-Video Generation', 'Dynamic Auto-Captioning', 'Cloud HD Rendering', 'AI Voiceovers', 'Timeline Editor', 'Direct Social Export'],
+    image: 'https://images.unsplash.com/photo-1536240478700-b869ad10e2e8?auto=format&fit=crop&q=80&w=1200', // Abstract digital render/light streaks
+    gallery: [
+      'https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&q=80', // Digital tech/retro synthwave aesthetic
+      'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&q=80', // Abstract fluid render
+      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80', // Clean data dashboard
+    ],
+    faqs: [
+      { question: 'Rendering speed kitni fast hai?', answer: 'Kyunki ye cloud GPU cluster (AWS/GCP) par chalta hai, 1080p video rendering almost real-time hoti hai. Local machine ke resources use nahi hote.' },
+      { question: 'Kya hum apne brand ke fonts aur colors use kar sakte hain?', answer: 'Bilkul. Aap apni brand kit (logos, fonts, custom hex codes) upload kar sakte hain, aur AI automatically captions aur overlays usipe style karega.' },
+      { question: 'Auto-captioning kitni accurate hai?', answer: 'Built-in Whisper AI model use hota hai jo 98% accuracy deta hai, aur Hinglish/regional accents ko bhi easily samajh leta hai.' },
+    ],
+    techStack: ['Python', 'Next.js', 'FFmpeg', 'OpenAI Whisper', 'AWS MediaConvert', 'React'],
+    stats: [{ value: '1080p/4K', label: 'Cloud Render' }, { value: '98%', label: 'Caption Accuracy' }, { value: 'Zero', label: 'Local CPU Load' }],
+    useCases: [
+      { icon: 'agency', title: 'Marketing Agencies', desc: 'Generate hundreds of short-form video ads for clients in minutes from simple text prompts.' },
+      { icon: 'startup', title: 'Content Creators', desc: 'Automate YouTube Shorts and Instagram Reels editing with instant captions and B-rolls.' },
+      { icon: 'enterprise', title: 'News Portals', desc: 'Convert written news articles into broadcast-ready video snippets instantly.' },
+    ],
+    userFlow: [
+      { title: 'Script Input', desc: 'Paste your text script or article URL into the dashboard.' },
+      { title: 'AI Processing', desc: 'The AI fetches relevant B-roll, generates voiceovers, and syncs the captions perfectly.' },
+      { title: 'Review & Timeline', desc: 'Editor reviews the generated video on the web timeline and adjusts clips if needed.' },
+      { title: 'Cloud Render', desc: 'Hit render and download the final 4K/1080p MP4 file in seconds.' },
+    ],
+    deliverables: ['Web Video Editor Interface', 'Python AI Rendering Engine', 'Asset Library Integration', 'Cloud GPU Rendering Setup', 'Export & Sync Module', 'Full Source Code'],
+  },
+
+  // ── Cybersecurity & DevOps ───────────────────────────────────────────────────
+  {
+    id: 'pentest-cybersecurity',
+    tag: 'CYBERSECURITY',
+    accentColor: '#ef4444', // Red
+    title: 'Vulnerability & Pentest Tracker',
+    description: 'Automated vulnerability scanning, compliance audits, and real-time threat intelligence dashboard for SecOps.',
+    longDescription: 'An uncompromising command center for your Security Operations (SecOps) team. Automate scheduled vulnerability scans across your infrastructure, track penetration testing reports, and map threats against ISO/SOC2 compliance matrices. The UI is a strict, unclustered dark-mode terminal style, focused entirely on CVE data, risk scoring, and mitigation logs.',
+    features: ['Automated Server Scanning', 'CVE Threat Intelligence', 'Compliance Mapping (SOC2/ISO)', 'Pentest Report Vault', 'CI/CD Pipeline Integration', 'Remediation Workflows'],
+    image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1200', // Code matrix / dark mode screen
+    gallery: [
+      'https://images.unsplash.com/photo-1614064641913-6b70a32eff53?w=800&q=80', // Server connections
+      'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80', // Server racks
+      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80', // Security dashboard
+    ],
+    faqs: [
+      { question: 'Kya ye mere existing CI/CD pipeline se connect hoga?', answer: 'Haan, GitHub Actions, GitLab CI, aur Jenkins ke liye webhooks integrated hain taaki code deploy hone se pehle auto-scan ho jaye.' },
+      { question: 'Compliance audits mein ye kaise help karta hai?', answer: 'System automatically threats ko SOC2 aur ISO27001 controls ke sath map karta hai, jisse auditors ko direct exportable report mil jati hai.' },
+      { question: 'False positives kaise handle hote hain?', answer: 'Dashboard mein "Mark as False Positive" ya "Risk Accepted" ka toggle hai, jisse same alert aage scan hone par ignore ho jata hai.' },
+    ],
+    techStack: ['React', 'Node.js', 'Elasticsearch', 'Python (Scanners)', 'Docker', 'PostgreSQL'],
+    stats: [{ value: 'Automated', label: 'Vulnerability Scans' }, { value: 'SOC2/ISO', label: 'Compliance Ready' }, { value: 'Live', label: 'Threat Intel' }],
+    useCases: [
+      { icon: 'enterprise', title: 'Corporate IT Teams', desc: 'Maintain a centralized ledger of all server vulnerabilities and track remediation progress across departments.' },
+      { icon: 'agency', title: 'MSSPs', desc: 'Manage penetration testing reports and automated scans for multiple client infrastructures.' },
+      { icon: 'startup', title: 'FinTech Startups', desc: 'Ensure strict code and server compliance to meet banking regulations before product launches.' },
+    ],
+    userFlow: [
+      { title: 'Asset Discovery', desc: 'Connect cloud accounts (AWS/GCP); the system maps all active IPs, instances, and endpoints.' },
+      { title: 'Automated Scanning', desc: 'The engine runs daily vulnerability scans against the latest CVE databases.' },
+      { title: 'Triage & Alerting', desc: 'Critical vulnerabilities trigger Slack/Email alerts to the DevOps team with mitigation steps.' },
+      { title: 'Remediation Log', desc: 'Developers push patches, and the system auto-verifies the fix, closing the ticket securely.' },
+    ],
+    deliverables: ['SecOps Command Center Web App', 'Automated Scanning Engine', 'CI/CD Pipeline Hooks', 'Compliance Reporting Module', 'Elasticsearch Log DB', 'Full Source Code'],
+  },
+  {
+    id: 'uptime-status-page',
+    tag: 'DEVTOOLS',
+    accentColor: '#10b981', // Emerald Green
+    title: 'API Uptime & Status Pages',
+    description: 'Monitor global API endpoints, manage incident communication, and host customizable status pages with 99.99% SLA.',
+    longDescription: 'Keep your customers informed when things go wrong. This platform provides highly accurate global endpoint monitoring (pinging your APIs from 5+ regions) and automatically updates public or private status pages. Designed with a stark, minimal aesthetic that loads instantly even during massive outages.',
+    features: ['Global Endpoint Pinging', 'Public/Private Status Pages', 'Automated Incident Creation', 'Slack & SMS Alerts', 'Historical SLA Reporting', 'Custom Domain Support'],
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200', // Clean data dashboard
+    gallery: [
+      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80', // Digital charts
+      'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&q=80', // Code
+      'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80', // Network
+    ],
+    faqs: [
+      { question: 'Monitor kitni frequently ping karta hai?', answer: 'Aap interval configure kar sakte hain. Premium setup mein endpoints har 30 seconds mein global nodes se ping hote hain.' },
+      { question: 'Agar meri main website down hai, toh kya status page chalega?', answer: 'Haan, status pages completely alag AWS/Vercel infrastructure par hosted hote hain, taaki aapke main server ke crash hone par bhi ye 100% up rahein.' },
+      { question: 'Kya customers subscribe kar sakte hain?', answer: 'Bilkul, end-users email ya SMS alerts ke liye subscribe kar sakte hain. Jab bhi koi incident post hoga, unhe auto-notification chali jayegi.' },
+    ],
+    techStack: ['Next.js', 'Redis', 'PostgreSQL', 'Node.js (Pingers)', 'Twilio/SendGrid', 'Vercel Edge'],
+    stats: [{ value: '99.99%', label: 'Status Page SLA' }, { value: '30s', label: 'Ping Intervals' }, { value: 'Global', label: 'Node Network' }],
+    useCases: [
+      { icon: 'startup', title: 'SaaS Companies', desc: 'Build trust by showing transparent uptime history and communicating incidents clearly to users.' },
+      { icon: 'enterprise', title: 'API Providers', desc: 'Showcase your API reliability to enterprise clients and notify developers of scheduled maintenance.' },
+      { icon: 'agency', title: 'Web Hosting Agencies', desc: 'Monitor all client websites from one master dashboard and provide them with private status links.' },
+    ],
+    userFlow: [
+      { title: 'Endpoint Setup', desc: 'Admin adds API URLs, websites, or database IPs to monitor.' },
+      { title: 'Global Pinging', desc: 'Distributed nodes constantly check endpoints for 200 OK status and latency times.' },
+      { title: 'Incident Trigger', desc: 'If a ping fails 3 times, an incident is auto-drafted and alerts are sent to the on-call engineer.' },
+      { title: 'Status Page Update', desc: 'The public status page updates to "Partial Outage" and notifies subscribed customers.' },
+    ],
+    deliverables: ['Admin Monitoring Dashboard', 'Public Status Page Frontend', 'Global Pinger Node Network', 'Notification Subscription Engine', 'Incident Management Module', 'Full Source Code'],
+  },
+
+  // ── Advanced Logistics & IoT ─────────────────────────────────────────────────
+  {
+    id: 'drone-fleet-os',
+    tag: 'DRONE TECH',
+    accentColor: '#3b82f6', // Blue
+    title: 'Autonomous Drone Fleet OS',
+    description: 'Manage drone delivery logistics, flight path optimization, and real-time telemetry data over a secure network.',
+    longDescription: 'The logistics control room of the future. This OS is built to monitor autonomous drone fleets, tracking live GPS coordinates, altitude, battery telemetry, and payload drops. The interface is a dark-mode, high-contrast map dashboard—strictly designed for operations engineers without any distracting elements.',
+    features: ['Live Flight Telemetry', 'AI Flight Path Optimizer', 'No-Fly Zone Geofencing', 'Battery & Health Analytics', 'Weather API Integration', 'Automated Landing Protocols'],
+    image: 'https://images.unsplash.com/photo-1527443154391-42722bc13d5a?auto=format&fit=crop&q=80&w=1200', // Drone lens/tech overlay
+    gallery: [
+      'https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=800&q=80', // Digital map lines
+      'https://images.unsplash.com/photo-1508614589041-895b88991e3e?w=800&q=80', // Sky/Abstract view
+      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80', // Data dashboard
+    ],
+    faqs: [
+      { question: 'Telemetry data kitna fast sync hota hai?', answer: 'WebSockets ke through telemetry data (GPS, altitude, battery) sub-second latency ke sath live map par update hota hai.' },
+      { question: 'Agar drone no-fly zone ke paas ho toh?', answer: 'System mein dynamic geofencing integrated hai. Agar drone restricted area ke paas jata hai, toh AI route ko automatically re-calculate kar deta hai.' },
+      { question: 'Mausam kharab hone par kya protocol hai?', answer: 'Weather APIs live wind speed aur rain data fetch karte hain. Unsafe conditions mein missions auto-pause ho jate hain aur drones base par return kar aate hain.' },
+    ],
+    techStack: ['React', 'WebSockets', 'Node.js', 'MongoDB', 'Mapbox GL', 'Python (Route AI)'],
+    stats: [{ value: 'Real-time', label: 'Telemetry Sync' }, { value: 'AI', label: 'Route Engine' }, { value: 'Strict', label: 'Geofencing' }],
+    useCases: [
+      { icon: 'startup', title: 'Medical Delivery', desc: 'Monitor urgent blood and organ drone deliveries to remote hospitals with absolute precision.' },
+      { icon: 'enterprise', title: 'E-commerce Giants', desc: 'Manage massive autonomous fleets for last-mile residential package drops.' },
+      { icon: 'agency', title: 'Industrial Inspection', desc: 'Track drones conducting automated visual inspections of pipelines or solar farms.' },
+    ],
+    userFlow: [
+      { title: 'Mission Planning', desc: 'Operator inputs the drop coordinate. AI calculates the most efficient, legally compliant flight path.' },
+      { title: 'Pre-flight Check', desc: 'System verifies weather APIs, battery levels, and payload weight before granting takeoff clearance.' },
+      { title: 'Live Tracking', desc: 'Operator watches the drone icon move on the dark-mode 3D map with live camera feeds.' },
+      { title: 'Payload Drop & Return', desc: 'Drone drops the package, logs the delivery coordinate, and returns to the charging pad.' },
+    ],
+    deliverables: ['Operations Command Center Web App', 'WebSocket Telemetry Server', 'AI Route Optimizer Module', 'Geofencing & Weather Engine', 'Fleet Analytics DB', 'Full Source Code'],
+  },
+  {
+    id: 'ev-charging-os',
+    tag: 'CLEANTECH',
+    accentColor: '#14b8a6', // Teal
+    title: 'EV Charging Station Network',
+    description: 'Smart grid management, real-time charger availability, dynamic pricing, and automated billing for EV infrastructure.',
+    longDescription: 'Power up your EV infrastructure. This platform connects physical charging hardware to the cloud using OCPP protocols. Station owners can monitor real-time power draw, set dynamic pricing based on peak grid hours, and handle digital payments seamlessly. Features a consumer app for locating chargers and a stark, industrial web dashboard for grid operators.',
+    features: ['OCPP Protocol Integration', 'Real-Time Charger Status', 'Dynamic Pricing Engine', 'Wallet & RFID Billing', 'Grid Power Load Balancing', 'Consumer Locator App'],
+    image: 'https://images.unsplash.com/photo-1593941707882-a5bba14938cb?auto=format&fit=crop&q=80&w=1200', // EV plug / abstract energy
+    gallery: [
+      'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&q=80', // Clean energy abstract
+      'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80', // Clean architecture
+      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80', // Dashboard
+    ],
+    faqs: [
+      { question: 'OCPP support ka kya fayda hai?', answer: 'OCPP (Open Charge Point Protocol) ek global standard hai, jiska matlab aap kisi bhi hardware vendor ki EV machine khareed kar is software ke sath plug-and-play kar sakte hain.' },
+      { question: 'Dynamic pricing kaise kaam karti hai?', answer: 'Aap rules set kar sakte hain ki peak electricity hours (e.g., 6 PM - 10 PM) mein per-kWh price automatically badh jaye.' },
+      { question: 'Payment kaise deduct hoti hai?', answer: 'User app wallet mein paise add karta hai ya RFID card tap karta hai. Charging rukte hi exact units consumed ke hisaab se balance deduct ho jata hai.' },
+    ],
+    techStack: ['Flutter', 'Node.js', 'MQTT / WebSockets', 'MongoDB', 'Redis', 'Stripe/Razorpay'],
+    stats: [{ value: 'OCPP', label: 'Hardware Agnostic' }, { value: 'Live', label: 'Grid Monitoring' }, { value: 'Instant', label: 'Wallet Billing' }],
+    useCases: [
+      { icon: 'startup', title: 'EV Startups', desc: 'Build a branded network of public charging stations with a seamless consumer locator app.' },
+      { icon: 'enterprise', title: 'Commercial Real Estate', desc: 'Monetize parking spaces by offering smart EV charging to tenants and visitors.' },
+      { icon: 'agency', title: 'Fleet Operators', desc: 'Manage private charging depots for electric buses or delivery vans with load balancing.' },
+    ],
+    userFlow: [
+      { title: 'Locate & Reserve', desc: 'Consumer uses the mobile app to find an available charger and reserve it for the next 15 minutes.' },
+      { title: 'Plug & Authenticate', desc: 'User plugs in the vehicle and authenticates the session via app QR scan or RFID card tap.' },
+      { title: 'Live Charging', desc: 'App shows real-time kW flow, battery percentage, and accumulating cost.' },
+      { title: 'Auto-Billing', desc: 'Session ends, power stops, and the exact amount is auto-deducted from the digital wallet.' },
+    ],
+    deliverables: ['Grid Operator Web Dashboard', 'Consumer Mobile App (iOS/Android)', 'OCPP Hardware Gateway Backend', 'Dynamic Pricing Module', 'Wallet & Payment Engine', 'Full Source Code'],
+  },
+
+  // ── FinOps & Data Engineering ────────────────────────────────────────────────
+  {
+    id: 'cloud-cost-management',
+    tag: 'FINOPS',
+    accentColor: '#f59e0b', // Amber
+    title: 'Cloud FinOps & Cost Tracker',
+    description: 'Consolidate AWS, GCP, and Azure billing. Detect idle resources, forecast expenses, and optimize cloud infrastructure costs.',
+    longDescription: 'Stop burning money on forgotten cloud servers. This FinOps dashboard pulls billing APIs from AWS, Azure, and GCP into one unified pane of glass. It uses anomaly detection to flag sudden cost spikes and identifies "zombie" resources (idle databases, unattached IPs). The UI is strictly financial data—charts, tables, and cost metrics with zero visual distraction.',
+    features: ['Multi-Cloud Billing API Sync', 'Zombie Resource Detection', 'Cost Anomaly Alerts', 'Budget Forecasting', 'Tag-Based Allocation', 'Automated Shutdown Scripts'],
+    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=1200', // Server racks / infrastructure
+    gallery: [
+      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80', // Financial data
+      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80', // Clean charts
+      'https://images.unsplash.com/photo-1614064641913-6b70a32eff53?w=800&q=80', // Infrastructure
+    ],
+    faqs: [
+      { question: 'Multi-cloud data kaise sync hota hai?', answer: 'Aap bas AWS, GCP, aur Azure ke Read-Only Billing API keys add karte hain. System daily raw cost data fetch karke usko uniform format mein normalize karta hai.' },
+      { question: 'Anomaly alerts kab aate hain?', answer: 'Agar system detect karta hai ki aapka daily average cloud spend achanak 15% badh gaya hai, toh turant Slack ya email alert trigger hota hai.' },
+      { question: 'Kya ye apne aap servers band kar dega?', answer: 'By default ye sirf recommendations deta hai. Par aap automated scripts enable kar sakte hain jo "idle" staging servers ko raat ko auto-shutdown kar dein.' },
+    ],
+    techStack: ['Next.js', 'Express', 'PostgreSQL', 'Python (Analytics)', 'Redis', 'AWS/GCP/Azure APIs'],
+    stats: [{ value: 'Unified', label: 'Multi-Cloud View' }, { value: 'AI', label: 'Anomaly Detection' }, { value: 'Zero', label: 'Wasted Resources' }],
+    useCases: [
+      { icon: 'enterprise', title: 'Tech Enterprises', desc: 'Allocate cloud costs accurately to different departments or microservices using resource tagging.' },
+      { icon: 'startup', title: 'Scaling Startups', desc: 'Keep track of fast-growing infrastructure costs before they burn through your runway.' },
+      { icon: 'agency', title: 'Managed Service Providers', desc: 'Monitor and optimize cloud spending for dozens of client accounts from one portal.' },
+    ],
+    userFlow: [
+      { title: 'API Integration', desc: 'Admin connects cloud accounts via secure, read-only IAM roles.' },
+      { title: 'Data Normalization', desc: 'The backend crunches millions of billing lines into a clean, normalized PostgreSQL database.' },
+      { title: 'Analysis & Detection', desc: 'Python scripts run nightly to detect unattached storage volumes or over-provisioned servers.' },
+      { title: 'Actionable Dashboard', desc: 'Finance and DevOps review the dashboard, viewing cost forecasts and executing recommended cost-savings.' },
+    ],
+    deliverables: ['FinOps Web Dashboard', 'Multi-Cloud Ingestion Backend', 'Anomaly & AI Forecasting Engine', 'Slack/Email Alert Module', 'Database Schema', 'Full Source Code'],
+  },
+  {
+    id: 'data-etl-pipeline',
+    tag: 'DATA OPS',
+    accentColor: '#6366f1', // Indigo
+    title: 'No-Code ETL & Data Pipeline',
+    description: 'Extract, transform, and load massive datasets visually. Connect APIs, databases, and third-party SaaS without writing scripts.',
+    longDescription: 'The nervous system for your data. Extract data from any source (MySQL, Salesforce, Shopify), transform it visually using drag-and-drop nodes, and load it into your data warehouse (Snowflake, BigQuery). The UI is a pure, unclustered node-based canvas built for data engineers and analysts to orchestrate massive data flows flawlessly.',
+    features: ['Visual Drag-and-Drop Flow Builder', '50+ API/DB Connectors', 'Python Scripting Nodes', 'Cron Job Scheduling', 'Real-Time Sync Logs', 'Data Cleansing Tools'],
+    image: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&q=80&w=1200', // Abstract data connections
+    gallery: [
+      'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&q=80', // Matrix code
+      'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80', // Servers
+      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80', // Clean UI
+    ],
+    faqs: [
+      { question: 'Millions of rows of data handle ho jayega?', answer: 'Haan, architecture horizontally scalable hai aur stream processing use karta hai (chunking), taaki memory crash na ho aur massive datasets easily process hon.' },
+      { question: 'Agar mujhe custom logic lagana ho toh?', answer: 'Visual builder ke andar "Python Node" ka option hai. Aap apna custom script likh sakte hain jo us specific step par execute hoga.' },
+      { question: 'Data sync ki scheduling kaise hoti hai?', answer: 'Aap cron-based schedule set kar sakte hain (e.g., har raat 2 baje). System auto-run hoga aur success/error logs dashboard mein dikhayega.' },
+    ],
+    techStack: ['React Flow', 'Node.js', 'Python', 'Redis (BullMQ)', 'PostgreSQL', 'Docker'],
+    stats: [{ value: 'No-Code', label: 'Flow Builder' }, { value: '50+', label: 'Connectors' }, { value: 'Massive', label: 'Data Scale' }],
+    useCases: [
+      { icon: 'enterprise', title: 'Data Teams', desc: 'Move raw data from multiple SaaS tools into a central Snowflake/BigQuery warehouse for BI reporting.' },
+      { icon: 'agency', title: 'Marketing Operations', desc: 'Sync customer data automatically between Shopify, HubSpot, and Google Analytics.' },
+      { icon: 'startup', title: 'FinTech Apps', desc: 'Ingest raw transaction data, sanitize it, and load it into analytical databases securely.' },
+    ],
+    userFlow: [
+      { title: 'Source Connection', desc: 'User authenticates the source (e.g., Stripe API) and the destination (e.g., PostgreSQL).' },
+      { title: 'Pipeline Building', desc: 'Drag lines between nodes. Add transformation nodes to filter, map fields, or sanitize data.' },
+      { title: 'Testing', desc: 'Run a sample test of 100 rows to ensure the transformation logic is correct.' },
+      { title: 'Deployment & Cron', desc: 'Set the sync schedule. The pipeline runs autonomously, pushing alerts if an API rate limit is hit.' },
+    ],
+    deliverables: ['Visual Canvas Web App', 'Data Extraction & Loading Backend', 'Python Transformation Engine', 'Cron Job Scheduler', 'Log & Error Tracking Module', 'Full Source Code'],
+  },
+  {
+    id: 'supply-chain-traceability',
+    tag: 'SUPPLY CHAIN',
+    accentColor: '#8b5cf6', // Purple
+    title: 'Supply Chain Ledger',
+    description: 'Immutable tracking of high-value goods from manufacturing to delivery using secure, cryptographic data logging.',
+    longDescription: 'Bring absolute transparency to your logistics. Track high-value items (pharmaceuticals, luxury goods, industrial parts) through every step of the supply chain. Every scan adds an immutable, cryptographically hashed record to the ledger. Designed with a stark, data-heavy interface for compliance officers and supply chain managers.',
+    features: ['Immutable Cryptographic Ledger', 'QR/RFID Scanning Integration', 'Chain of Custody Tracking', 'Automated Compliance Audits', 'Vendor Access Portals', 'Tamper-Proof Timestamps'],
+    image: 'https://images.unsplash.com/photo-1494412580934-3815ae00c6cb?auto=format&fit=crop&q=80&w=1200', // Cargo containers / industrial lines
+    gallery: [
+      'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=80', // Warehouse boxes
+      'https://images.unsplash.com/photo-1553413077-190dd305871c?w=800&q=80', // Industrial racks
+      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80', // Clean data dashboard
+    ],
+    faqs: [
+      { question: 'Immutable ledger ka matlab kya hai?', answer: 'Matlab ek baar entry system me record ho gayi (jaise factory scan), toh use modify ya delete nahi kiya ja sakta. Ye anti-counterfeit operations ke liye perfect hai.' },
+      { question: 'Hardware scanners connect hote hain?', answer: 'Haan, mobile app se mobile camera scan hota hai, aur enterprise setup ke liye Bluetooth RFID/Barcode scanners directly APIs se sync hote hain.' },
+      { question: 'Kya third-party vendors access kar sakte hain?', answer: 'Aap vendors ko limited portal access de sakte hain jahan wo sirf apne assigned batches ka dispatch/receive status update kar sakte hain.' },
+    ],
+    techStack: ['Node.js', 'React Native (Scanner App)', 'MongoDB', 'Crypto (Hashing)', 'React', 'Express'],
+    stats: [{ value: '100%', label: 'Tamper-Proof' }, { value: 'End-to-End', label: 'Traceability' }, { value: 'Secure', label: 'Vendor Portals' }],
+    useCases: [
+      { icon: 'enterprise', title: 'Pharmaceuticals', desc: 'Track medicine batches to ensure temperature compliance and prevent counterfeit drugs in the market.' },
+      { icon: 'agency', title: 'Luxury Brands', desc: 'Provide customers with a QR code to verify the authentic journey of their high-end products.' },
+      { icon: 'startup', title: 'Agri-Food Export', desc: 'Log every step of organic produce from the farm to the international shipping container.' },
+    ],
+    userFlow: [
+      { title: 'Batch Creation', desc: 'Factory produces goods, assigns a unique QR/RFID batch ID, and logs it into the immutable database.' },
+      { title: 'Transit Logging', desc: 'At every warehouse or checkpoint, logistics staff scan the QR. A tamper-proof timestamp and location are added.' },
+      { title: 'Final Delivery', desc: 'The retailer scans upon receipt, completing the chain of custody.' },
+      { title: 'Audit Check', desc: 'Compliance teams review the full lifecycle of the product on the admin dashboard instantly.' },
+    ],
+    deliverables: ['Admin Supply Chain Dashboard', 'Vendor Portal', 'Scanner Mobile App (iOS/Android)', 'Immutable Logging Engine', 'QR Generation & Validation API', 'Full Source Code'],
+  },
+
+  // ── Virtual Events & IT Infra ────────────────────────────────────────────────
+  {
+    id: 'virtual-3d-expo',
+    tag: 'VIRTUAL REALITY',
+    accentColor: '#d946ef', // Fuchsia
+    title: 'Virtual 3D Expo & Events',
+    description: 'Host interactive B2B exhibitions with 3D booths, spatial audio networking, and real-time attendee analytics.',
+    longDescription: 'Reimagine digital conferences. Build fully interactive, 3D virtual exhibition halls directly in the web browser—no heavy downloads required. Attendees walk around using WASD keys, visit sponsor booths to download PDFs, and talk to nearby avatars using spatial proximity audio. The admin UI provides real-time heatmaps of attendee movement.',
+    features: ['In-Browser 3D Rendering', 'Spatial Audio Networking', 'Interactive Sponsor Booths', 'Live Keynote Streaming', 'Real-Time Heatmaps', 'Digital Business Card Exchange'],
+    image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1200', // 3D render / abstract geometry
+    gallery: [
+      'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80', // Clean architectural space
+      'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&q=80', // Digital code/tech
+      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80', // Data dashboard
+    ],
+    faqs: [
+      { question: 'Kya attendees ko koi software install karna padega?', answer: 'Nahi, ye pure WebGL aur Three.js par based hai. Google Chrome ya Safari browser pe direct chalega bina kisi plugin ke.' },
+      { question: 'Spatial audio kaise kaam karta hai?', answer: 'Jaise hi aapka avatar kisi dusre avatar ke paas jata hai, unki aawaz clear ho jati hai. Jab aap door jayenge, aawaz fade ho jayegi—just like real life.' },
+      { question: 'Ek hall mein kitne log aa sakte hain?', answer: 'Server architecture horizontally scalable hai. Standard room instances 200 concurrent users ko handle karte hain bina lag ke.' },
+    ],
+    techStack: ['Three.js', 'WebRTC (Agora)', 'React', 'Node.js', 'Socket.io', 'AWS'],
+    stats: [{ value: 'Zero', label: 'App Installs' }, { value: 'Spatial', label: 'Voice Chat' }, { value: 'Interactive', label: '3D Environments' }],
+    useCases: [
+      { icon: 'agency', title: 'Event Organizers', desc: 'Host massive global B2B trade shows virtually without travel and venue costs.' },
+      { icon: 'enterprise', title: 'Corporate HR', desc: 'Conduct engaging onboarding sessions or global town halls in a fun, gamified 3D environment.' },
+      { icon: 'startup', title: 'EdTech', desc: 'Create immersive virtual campus tours or interactive science exhibitions for students.' },
+    ],
+    userFlow: [
+      { title: 'Event Configuration', desc: 'Admin sets up the 3D map, assigns booth spaces to sponsors, and uploads keynote schedules.' },
+      { title: 'Attendee Onboarding', desc: 'Users log in via browser, customize their simple avatar, and enter the main 3D lobby.' },
+      { title: 'Networking & Exploring', desc: 'Users walk around, talk to people nearby, and click on booth panels to view videos or download brochures.' },
+      { title: 'Analytics Export', desc: 'Post-event, organizers export data showing exactly which booths had the most dwell time and interactions.' },
+    ],
+    deliverables: ['Web 3D Render Engine (Three.js)', 'Spatial Audio Server', 'Event Admin Dashboard', 'Sponsor Booth Content Manager', 'Real-time Analytics DB', 'Full Source Code'],
+  },
+  {
+    id: 'remote-server-management',
+    tag: 'IT INFRASTRUCTURE',
+    accentColor: '#1e293b', // Slate
+    title: 'Remote RDP & Terminal OS',
+    description: 'Secure, browser-based remote desktop access and SSH terminal management for distributed IT and engineering teams.',
+    longDescription: 'Secure zero-trust access to your entire server fleet. Connect to any Windows (RDP), Linux (SSH), or VNC machine directly through a web browser without complex VPN setups. Designed purely for DevOps and IT admins, featuring a dark-mode interface, strict role-based access, and complete video recording of all remote sessions for security audits.',
+    features: ['Browser-Based SSH & RDP', 'Zero-Trust Access Control', 'Session Video Recording', 'Audit & Keystroke Logs', 'Multi-Server Fleet View', 'Automated IP Whitelisting'],
+    image: 'https://images.unsplash.com/photo-1614064641913-6b70a32eff53?auto=format&fit=crop&q=80&w=1200', // Dark server environment
+    gallery: [
+      'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80', // Servers
+      'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&q=80', // Terminal code
+      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80', // Clean UI
+    ],
+    faqs: [
+      { question: 'VPN ke bina access secure kaise hai?', answer: 'Platform ek secure intermediate WebSocket proxy gateway use karta hai. Servers public internet se hidden rehte hain, traffic encrypted gateway se pass hota hai.' },
+      { question: 'Kya sessions record hote hain?', answer: 'Haan, enterprise security ke liye har RDP or SSH session ka video aur keystroke log automatically encrypted bucket me save hota hai.' },
+      { question: 'Kya hum contractors ko temporary access de sakte hain?', answer: 'Bilkul. Aap access permissions me time limit set kar sakte hain (e.g., valid only for 2 hours), aur expired hone par session auto-disconnect ho jayega.' },
+    ],
+    techStack: ['React', 'Node.js', 'Apache Guacamole (RDP/SSH Proxy)', 'WebSockets', 'PostgreSQL', 'Docker'],
+    stats: [{ value: '100%', label: 'Browser-based' }, { value: 'Zero-Trust', label: 'Security Model' }, { value: 'Recorded', label: 'Audit Trails' }],
+    useCases: [
+      { icon: 'enterprise', title: 'DevOps Teams', desc: 'Manage hundreds of Linux servers securely without sharing static SSH keys across the team.' },
+      { icon: 'agency', title: 'Managed IT Services', desc: 'Provide remote IT support to client Windows machines directly from a unified browser portal.' },
+      { icon: 'startup', title: 'Remote Workforces', desc: 'Allow employees secure access to internal corporate desktops without heavy VPN software installations.' },
+    ],
+    userFlow: [
+      { title: 'Server Registration', desc: 'Admin adds target machines (IP, credentials/keys) to the secure vault.' },
+      { title: 'Role Assignment', desc: 'Admin assigns specific users/contractors access to specific machines with time-bound rules.' },
+      { title: 'Browser Connection', desc: 'User clicks a machine icon. A terminal or desktop UI opens natively within the Chrome/Safari tab.' },
+      { title: 'Audit & Review', desc: 'Session ends. The admin can review the recorded video playback or terminal keystroke logs on the dashboard.' },
+    ],
+    deliverables: ['Admin Access Dashboard', 'Guacamole Proxy Server Setup', 'Browser SSH/RDP Client UI', 'Session Recording & Audit Module', 'Role-Based Policy Engine', 'Full Source Code'],
   }
 ]
 
