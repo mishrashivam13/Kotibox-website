@@ -1524,6 +1524,845 @@ const products: Product[] = [
     ],
     deliverables: ['iOS & Android Social App', 'Creator Dashboard & Earnings Management', 'Admin & Moderation Panel', 'Virtual Gift & Coin Economy System', 'Live Room Infrastructure (Agora)', 'Full Source Code & Documentation'],
   },
+  // ── AI-Powered LMS & EdTech ──────────────────────────────────────────────────
+  {
+    id: 'lms-edtech',
+    tag: 'EDTECH',
+    accentColor: '#10b981', // Premium Emerald Green
+    title: 'AI-Powered LMS & EdTech',
+    description: 'Complete e-learning infrastructure with virtual classrooms, AI auto-grading, and course monetization.',
+    longDescription: 'Launch a fully branded, scalable e-learning platform that moves beyond basic video hosting. Our AI-Powered LMS is designed for modern educators and institutions, featuring interactive virtual classrooms, AI-driven auto-grading for assignments, robust DRM to protect your premium content, and seamless course monetization. Built with a clean, distraction-free digital aesthetic optimized for both laptop and mobile viewing, ensuring zero visual clutter for your students.',
+    features: [
+      'AI Auto-Grading & Quizzes', 
+      'Virtual Classrooms (WebRTC)', 
+      'Video DRM Protection', 
+      'Course Monetization & Bundles', 
+      'Student Analytics Dashboard', 
+      'Certificates & Gamification'
+    ],
+    image: 'https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&q=80&w=1200', // Clean desk/laptop
+    gallery: [
+      'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&q=80', // Notebook, desk, tech
+      'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80', // Laptop and digital screen
+      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80', // Clean data dashboard for analytics
+    ],
+    faqs: [
+      { question: 'AI auto-grading kaise kaam karta hai?', answer: 'System NLP aur machine learning ka use karke objective aur short subjective answers ko automatically grade karta hai, jisse instructors ka hazaro ghanto ka manual work bachta hai.' },
+      { question: 'Kya video content download hone se protected hai?', answer: 'Haan, platform enterprise-grade DRM (Digital Rights Management) ke sath aata hai jo unauthorized downloading aur screen recording ko block karta hai.' },
+      { question: 'Kya UI/UX mein distraction-free environment hai?', answer: 'Bilkul. Humne strictly premium digital aesthetics use kiye hain bina kisi human stock photography ke, taaki students ka focus sirf course material aur unke personal dashboards par rahe.' },
+    ],
+    techStack: ['React.js', 'React Native', 'Node.js', 'WebRTC', 'MongoDB', 'AWS MediaConvert'],
+    stats: [
+      { value: 'AI', label: 'Auto-grading' }, 
+      { value: 'DRM', label: 'Content Protection' }, 
+      { value: 'Zero', label: 'Visual Clutter' }
+    ],
+    useCases: [
+      { icon: 'startup', title: 'EdTech Startups', desc: 'Launch a branded course marketplace with subscription models and one-time purchases seamlessly.' },
+      { icon: 'enterprise', title: 'Universities & Schools', desc: 'Digitize your entire curriculum, conduct secure online exams, and manage thousands of student records.' },
+      { icon: 'agency', title: 'Independent Creators', desc: 'Host and sell your premium masterclasses independently without losing 30% revenue to third-party platforms.' },
+    ],
+    userFlow: [
+      { title: 'Course Creation & Protection', desc: 'Instructors upload DRM-protected videos, structure modules, and set up AI-graded quizzes without any coding.' },
+      { title: 'Enrollment & Monetization', desc: 'Students browse the catalog, pay via integrated gateways, and unlock course content instantly.' },
+      { title: 'Virtual Learning Environment', desc: 'Students attend live WebRTC classes or watch VODs on a clean, distraction-free multi-device player.' },
+      { title: 'Analytics & Certification', desc: 'Track completion rates, pass automated exams, and auto-generate verifiable digital certificates upon completion.' },
+    ],
+    deliverables: [
+      'Student Web & Mobile App (iOS & Android)', 
+      'Instructor & Creator Dashboard', 
+      'Admin & Revenue Panel', 
+      'Virtual Classroom Infrastructure', 
+      'AI Grading & Analytics Module', 
+      'Full Source Code & Documentation'
+    ],
+  },
+  // ── Logistics & Fleet OS ─────────────────────────────────────────────────────
+  {
+    id: 'logistics-fleet',
+    tag: 'LOGISTICS',
+    accentColor: '#2563eb', // Premium Trust Blue
+    title: 'Logistics & Fleet OS',
+    description: 'Real-time GPS vehicle tracking, AI route optimization, and digital proof-of-delivery management.',
+    longDescription: 'Transform your supply chain with our enterprise-grade Logistics & Fleet OS. Track your entire fleet in real-time on clean, high-performance digital maps, optimize delivery routes using AI to save fuel, and manage digital proof-of-delivery (e-POD) without paper. Designed exclusively with a premium, zero-clutter aesthetic for both laptop dispatchers and mobile drivers. No distracting human stock imagery—just pure telemetry data, map views, and actionable operational metrics.',
+    features: [
+      'Live GPS Tracking & Geofencing', 
+      'AI Route Optimization Engine', 
+      'Digital e-POD (Signatures & Photos)', 
+      'Fleet Maintenance & Fuel Tracking', 
+      'Automated Dispatch & Auto-Assignment', 
+      'Driver Behavior & Scoring Analytics'
+    ],
+    image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1200', // Warehouse/Boxes
+    gallery: [
+      'https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=800&q=80', // Abstract map/digital grid lines
+      'https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=800&q=80', // Fleet of trucks lined up
+      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80', // Clean data dashboard for analytics
+    ],
+    faqs: [
+      { question: 'AI route optimization kaise kaam karta hai?', answer: 'AI engine real-time traffic, delivery time windows, aur vehicle capacity ko analyze karke sabse fast aur fuel-efficient route generate karta hai.' },
+      { question: 'Kya driver app poor network areas mein kaam karegi?', answer: 'Haan, driver app offline-first architecture par bani hai. Jab network nahi hota, tab e-POD aur status local device par save hote hain aur connection aate hi auto-sync ho jate hain.' },
+      { question: 'Kya isko hamare existing ERP (jaise SAP ya Tally) se connect kar sakte hain?', answer: 'Bilkul. Is platform mein secure REST APIs hain jo aapke existing inventory ya ERP software ke sath order data aur delivery status sync karne ke liye ready hain.' },
+    ],
+    techStack: ['React.js', 'Flutter (Driver App)', 'Node.js', 'Google Maps API', 'MongoDB', 'Redis'],
+    stats: [
+      { value: 'Real-time', label: 'Live GPS Tracking' }, 
+      { value: 'AI', label: 'Route Engine' }, 
+      { value: '100%', label: 'Paperless e-POD' }
+    ],
+    useCases: [
+      { icon: 'startup', title: '3PL & Courier Startups', desc: 'Launch a tech-driven logistics company with automated dispatch and customer tracking links.' },
+      { icon: 'enterprise', title: 'Large Distribution Networks', desc: 'Monitor hundreds of vehicles across multiple cities from a single, centralized command center.' },
+      { icon: 'agency', title: 'E-commerce Platforms', desc: 'Integrate the fleet API to handle your own last-mile deliveries and ensure seamless post-purchase tracking.' },
+    ],
+    userFlow: [
+      { title: 'Order Ingestion & Routing', desc: 'Orders are imported into the system, and the AI engine instantly calculates the most optimized delivery sequence.' },
+      { title: 'Automated Dispatch', desc: 'The route is pushed to the driver\'s mobile app with turn-by-turn navigation and delivery instructions.' },
+      { title: 'Live Tracking & Delivery', desc: 'Dispatchers and end-customers track the vehicle in real-time. The driver collects digital signatures or photos upon delivery.' },
+      { title: 'Reconciliation & Analytics', desc: 'Data flows back to the dashboard instantly, updating inventory logs and generating driver performance reports.' },
+    ],
+    deliverables: [
+      'Admin Dispatch Web Dashboard', 
+      'Driver Mobile App (iOS & Android)', 
+      'Live Tracking Link Generator for Customers', 
+      'AI Routing & Geofencing Module', 
+      'Analytics & Reporting Engine', 
+      'Full Source Code & API Documentation'
+    ],
+  },
+
+  // ── Smart Warehouse Management ───────────────────────────────────────────────
+  {
+    id: 'warehouse-erp',
+    tag: 'WAREHOUSE OS',
+    accentColor: '#f97316', // Premium Industrial Orange
+    title: 'Smart Warehouse Management',
+    description: 'Barcode scanning, automated inventory reconciliation, and multi-hub stock transfer workflows.',
+    longDescription: 'Upgrade your fulfillment operations with our enterprise-grade Warehouse Management System (WMS). Built for scale, this platform handles multi-hub inventory tracking, seamless Barcode/RFID scanning, and predictive auto-reordering. The UI is strictly designed with a premium, zero-clutter aesthetic—featuring a robust Next.js web dashboard for managers and a specialized tablet app for floor workers. No distracting imagery, just pure inventory data, bin-level tracking, and high-speed operational workflows.',
+    features: [
+      'Barcode & RFID Integration', 
+      'Real-Time Bin & Rack Mapping', 
+      'Multi-Hub Stock Transfers', 
+      'AI Auto-Reorder Alerts', 
+      'Tablet-Optimized Floor App', 
+      'Automated Inventory Reconciliation'
+    ],
+    image: 'https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&q=80&w=1200', // Clean warehouse racks
+    gallery: [
+      'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=80', // Industrial boxes and pallets
+      'https://images.unsplash.com/photo-1553413077-190dd305871c?w=800&q=80', // Clean industrial storage lines
+      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80', // Clean data dashboard for managers
+    ],
+    faqs: [
+      { question: 'Kya ye hardware scanners (Barcode/RFID) ke sath kaam karta hai?', answer: 'Haan, platform custom APIs aur Bluetooth integrations support karta hai taaki standard industrial scanners seedha tablet app se sync ho sakein.' },
+      { question: 'Ek warehouse se dusre warehouse mein stock transfer kaise track hota hai?', answer: 'Multi-hub module ke through aap stock transfer initiate kar sakte hain. Jab tak stock receive nahi hota, tab tak wo "In-Transit" status mein map par track hota hai.' },
+      { question: 'Kya isko B2B ya E-commerce portals ke sath integrate kiya ja sakta hai?', answer: 'Bilkul. Isme Python-based backend aur REST APIs hain jo Shopify, WooCommerce, ya custom B2B portals se real-time stock sync karte hain.' },
+    ],
+    techStack: ['Next.js', 'React Native (Tablet App)', 'Python (FastAPI)', 'PostgreSQL', 'Redis', 'Docker'],
+    stats: [
+      { value: '100%', label: 'Barcode/RFID Sync' }, 
+      { value: 'Multi', label: 'Hub Tracking' }, 
+      { value: 'Real-time', label: 'Reconciliation' }
+    ],
+    useCases: [
+      { icon: 'enterprise', title: 'E-Commerce Fulfillment', desc: 'Manage high-volume order picking, packing, and dispatch with bin-level accuracy.' },
+      { icon: 'agency', title: 'B2B Distribution Centers', desc: 'Track bulk pallets, manage expiry dates (FIFO/LIFO), and automate purchase orders.' },
+      { icon: 'startup', title: 'Manufacturing Plants', desc: 'Control raw material inventory and sync finished goods instantly across multiple storage units.' },
+    ],
+    userFlow: [
+      { title: 'Inbound & Receiving', desc: 'Scan incoming shipments using the tablet app. The system automatically reconciles received items against the purchase order.' },
+      { title: 'Putaway & Mapping', desc: 'The app directs floor workers to the exact rack and bin for optimal space utilization and fast storage.' },
+      { title: 'Picking & Packing', desc: 'Generate optimized picking paths for workers. Scan items as they are picked to ensure zero dispatch errors.' },
+      { title: 'Dispatch & Transfer', desc: 'Deduct stock instantly upon dispatch or mark items as in-transit for multi-hub transfers, updating the central dashboard in real-time.' },
+    ],
+    deliverables: [
+      'Admin Web Dashboard (Next.js)', 
+      'Floor Worker Tablet App (React Native)', 
+      'Barcode/RFID Hardware API Gateway', 
+      'Multi-Hub Transfer & Reconciliation Module', 
+      'Auto-Reorder & Analytics Engine', 
+      'Full Source Code & Database Schema'
+    ],
+  },
+  // ── Restaurant POS & KDS ─────────────────────────────────────────────────────
+  {
+    id: 'restaurant-pos',
+    tag: 'FOODTECH',
+    accentColor: '#ef4444', // Premium Dining Red
+    title: 'Restaurant POS & Kitchen Display System',
+    description: 'Cloud-based point of sale, Kitchen Display System (KDS), QR table ordering, and inventory tracking.',
+    longDescription: 'Modernize your restaurant operations with our cloud-native POS and KDS suite. Built for high-volume dining, quick-service restaurants, and cloud kitchens, this platform eliminates paper tickets, reduces order errors, and tracks ingredient-level inventory in real-time. Designed with a clean, distraction-free aesthetic optimized for iPads and touchscreens, ensuring your staff focuses entirely on speed and service without UI clutter.',
+    features: [
+      'Cloud-Based iPad POS', 
+      'Kitchen Display System (KDS)', 
+      'QR Dine-in Table Ordering', 
+      'Ingredient-Level Inventory', 
+      'Dynamic Table Management', 
+      'Offline-First Sync Architecture'
+    ],
+    image: 'https://images.unsplash.com/photo-1556742044-3c52d6e88c62?auto=format&fit=crop&q=80&w=1200', // POS Terminal close-up
+    gallery: [
+      'https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=800&q=80', // Digital payment terminal
+      'https://images.unsplash.com/photo-1580981469591-689e3f01f054?w=800&q=80', // Clean stainless steel kitchen tech
+      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80', // Clean data dashboard for revenue
+    ],
+    faqs: [
+      { question: 'Internet down ho jaye toh kya POS kaam karega?', answer: 'Haan, POS offline-first architecture par bana hai. Orders aur bills local cache mein save hote hain, aur jaise hi internet wapas aata hai, data cloud par auto-sync ho jata hai.' },
+      { question: 'Kya KDS screens order preparation time track karti hain?', answer: 'Bilkul. KDS mein har ticket ka ek timer hota hai. Agar koi order set time se zyada delay hota hai, toh wo screen par red highlight ho jata hai taaki kitchen efficiency maintain rahe.' },
+      { question: 'Inventory deduct kaise hoti hai?', answer: 'Isme recipe-level costing aur inventory in-built hai. Example ke liye, agar ek burger bikta hai, toh bun, patty, aur cheese automatically stock ledger se deduct ho jate hain.' },
+    ],
+    techStack: ['React Native (iPad POS)', 'React.js (Web Admin)', 'Node.js', 'MongoDB', 'Redis (KDS Sync)', 'WebSockets'],
+    stats: [
+      { value: '100%', label: 'Offline Sync' }, 
+      { value: 'Zero', label: 'Paper Tickets' }, 
+      { value: 'Real-time', label: 'KDS Updates' }
+    ],
+    useCases: [
+      { icon: 'enterprise', title: 'Fine Dining', desc: 'Manage complex table layouts, course-wise order firing, and split billing from a sleek iPad interface.' },
+      { icon: 'startup', title: 'QSR & Fast Food', desc: 'High-speed billing interface with dual-screen customer displays to process hundreds of orders quickly.' },
+      { icon: 'agency', title: 'Cloud Kitchens', desc: 'Aggregate orders from multiple delivery apps directly into one unified Kitchen Display System.' },
+    ],
+    userFlow: [
+      { title: 'Order Punching & QR', desc: 'Waiters punch orders via the iPad POS, or customers scan table QR codes to order directly from their phones.' },
+      { title: 'KDS Routing', desc: 'Orders instantly appear on the Kitchen Display System via WebSockets, categorized by station (e.g., Grill, Drinks).' },
+      { title: 'Preparation & Bump', desc: 'Chefs view the digital ticket, prepare the item, and tap "Bump" to mark it ready, instantly notifying the service staff.' },
+      { title: 'Billing & Inventory Sync', desc: 'The bill is generated, payment is processed, and recipe-level inventory is deducted automatically in the backend.' },
+    ],
+    deliverables: [
+      'iPad POS App (React Native)', 
+      'Kitchen Display App (Tablet/Smart TV)', 
+      'Admin & Inventory Web Dashboard', 
+      'QR Ordering Web App', 
+      'WebSocket Infrastructure Setup', 
+      'Full Source Code & Documentation'
+    ],
+  },
+  // ── Event Ticketing & Management ─────────────────────────────────────────────
+  {
+    id: 'event-ticketing',
+    tag: 'TICKETING OS',
+    accentColor: '#d946ef', // Premium Fuchsia/Neon Pink for entertainment
+    title: 'Event Ticketing & Management Suite',
+    description: 'Create events, manage digital QR ticketing, interactive seat mapping, and real-time entry scanning.',
+    longDescription: 'Scale your events with a high-performance ticketing and access control platform. Whether hosting a stadium concert, a B2B conference, or a local theater show, this platform handles interactive seat mapping, secure QR code generation, and rapid box office sales. Designed with a sleek, dark-mode premium aesthetic to ensure ticketing managers and gate scanners can operate flawlessly in low-light venue environments without any visual clutter.',
+    features: [
+      'Interactive Seat Mapping', 
+      'Secure QR Ticketing', 
+      'Real-Time Entry Scanning', 
+      'Box Office POS System', 
+      'White-Label Event Pages', 
+      'Sales & Attendance Analytics'
+    ],
+    image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200', // Stage lights/tech
+    gallery: [
+      'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&q=80', // Event lights and stage equipment
+      'https://images.unsplash.com/photo-1506157786151-b8491531f063?w=800&q=80', // Audio/visual mixer board
+      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80', // Clean data dashboard for analytics
+    ],
+    faqs: [
+      { question: 'Ek sath kitne log QR scan kar sakte hain?', answer: 'Platform highly scalable Redis-backed architecture par based hai. Multi-gate setup mein aap multiple scanners use kar sakte hain, aur data real-time mein sync hota hai taaki koi duplicate entry pass na ho sake.' },
+      { question: 'Kya user khud apni seat select kar sakta hai?', answer: 'Haan, interactive seat mapping feature ke through users live venue layout dekh kar apni preferred row aur seat select kar sakte hain.' },
+      { question: 'Kya gate scanner app internet ke bina kaam karega?', answer: 'Scanner app offline caching support karta hai. Agar venue par internet issue hai, toh app local database se validate karta hai aur connection aate hi cloud ke sath records auto-sync kar deta hai.' },
+    ],
+    techStack: ['Vue.js (Web Admin)', 'React Native (Scanner App)', 'Node.js', 'Express', 'MongoDB', 'Redis'],
+    stats: [
+      { value: 'Sub-1s', label: 'Scan Speed' }, 
+      { value: 'Dynamic', label: 'Seat Mapping' }, 
+      { value: 'Zero', label: 'Duplicate Entries' }
+    ],
+    useCases: [
+      { icon: 'startup', title: 'Concerts & Festivals', desc: 'Handle massive traffic spikes during ticket drops and process thousands of attendees quickly at the gates.' },
+      { icon: 'agency', title: 'Theaters & Auditoriums', desc: 'Provide buyers with a visual seat map to select exact rows and seats for stage plays and movie screenings.' },
+      { icon: 'enterprise', title: 'B2B Conferences', desc: 'Manage multi-day passes, VIP access zones, and workshop registrations from a single centralized dashboard.' },
+    ],
+    userFlow: [
+      { title: 'Event Setup & Seating', desc: 'Admin creates the event, uploads the venue floor plan, maps the seats visually, and assigns pricing tiers.' },
+      { title: 'Ticket Purchase', desc: 'Attendees visit the white-labeled portal, pick their seats, complete payment, and receive an encrypted QR ticket.' },
+      { title: 'Gate Scanning', desc: 'Security staff use the Scanner App to scan QR codes. The app flashes green for valid entries and red for duplicates.' },
+      { title: 'Live Dashboard Tracking', desc: 'Organizers monitor live gate flow rates, total check-ins, and box office revenue on the real-time analytics dashboard.' },
+    ],
+    deliverables: [
+      'Admin Web Dashboard (Vue.js)', 
+      'Ticket Buyer Portal', 
+      'Gate Scanner App (iOS & Android)', 
+      'Interactive Seat Mapping Tool', 
+      'Box Office POS Module', 
+      'Full Source Code & API Docs'
+    ],
+  },
+  // ── Legal Contract Management ────────────────────────────────────────────────
+  {
+    id: 'legal-tech',
+    tag: 'LEGALTECH',
+    accentColor: '#1e3a8a', // Premium Corporate Deep Blue
+    title: 'Legal Contract Management Suite',
+    description: 'Draft, review, and e-sign legal documents with AI-assisted clause highlighting and expiry tracking.',
+    longDescription: 'Streamline your legal operations with a highly secure, AI-powered Contract Lifecycle Management (CLM) platform. Designed specifically for law firms, corporate legal teams, and enterprise HR departments. This platform eliminates endless email threads and scattered PDFs by centralizing drafting, AI-assisted review, version control, and legally binding e-signatures. The interface is strictly designed with a premium, zero-clutter aesthetic—focusing purely on document data, redlining tools, and compliance dashboards without any visual distractions.',
+    features: [
+      'AI Clause Analysis & Redlining', 
+      'Legally Binding E-Signatures', 
+      'Automated Expiry & Renewal Alerts', 
+      'Strict Version Control & History', 
+      'Encrypted Document Vault', 
+      'Custom Approval Workflows'
+    ],
+    image: 'https://images.unsplash.com/photo-1450101499163-c8848c66cb85?auto=format&fit=crop&q=80&w=1200', // Clean paperwork/desk setup
+    gallery: [
+      'https://images.unsplash.com/photo-1589829085413-56de8ae18c73?w=800&q=80', // Scales of justice / abstract legal
+      'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80', // Clean desk with digital devices
+      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80', // Clean data dashboard
+    ],
+    faqs: [
+      { question: 'AI review kaise kaam karta hai?', answer: 'Python-based NLP engine uploaded contract ko analyze karke risky clauses, missing terms aur standard deviations ko automatically highlight karta hai, taaki legal team ka waqt bache.' },
+      { question: 'Kya e-signatures legally binding hain?', answer: 'Haan, is platform ke e-signatures fully compliant hain. Har signature ke sath ek secure cryptographic audit trail generate hota hai jo IP, timestamp aur browser data capture karta hai.' },
+      { question: 'Documents ki security kaise maintain hoti hai?', answer: 'Saare contracts aur sensitive data AWS KMS (Key Management Service) ke through AES-256 encryption se encrypted rehte hain, ensuring military-grade security for your legal vault.' },
+    ],
+    techStack: ['React.js', 'Python (NLP Engine)', 'Node.js', 'MongoDB', 'AWS KMS', 'Docker'],
+    stats: [
+      { value: 'AES-256', label: 'Vault Encryption' }, 
+      { value: 'AI', label: 'Clause Review' }, 
+      { value: '100%', label: 'Audit Trail' }
+    ],
+    useCases: [
+      { icon: 'enterprise', title: 'Corporate Legal Teams', desc: 'Centralize vendor agreements, NDAs, and compliance documents in a single secure vault.' },
+      { icon: 'agency', title: 'Law Firms', desc: 'Collaborate with clients on contract redlining and approvals seamlessly without messy email chains.' },
+      { icon: 'startup', title: 'HR Departments', desc: 'Automate offer letters, employment contracts, and policy acknowledgments with bulk e-signing workflows.' },
+    ],
+    userFlow: [
+      { title: 'Drafting & Upload', desc: 'Create a contract from dynamic templates or upload an existing third-party PDF/Word document.' },
+      { title: 'AI Review & Redlining', desc: 'The AI flags non-standard clauses. Teams collaborate in real-time to redline and finalize the text.' },
+      { title: 'Approval & E-Signature', desc: 'The document goes through a custom hierarchical approval chain and is sent to all parties for secure e-signatures.' },
+      { title: 'Vault Storage & Tracking', desc: 'The signed contract is securely stored in the encrypted vault, with automated email alerts set for upcoming renewal or expiry dates.' },
+    ],
+    deliverables: [
+      'Admin & Legal Web Dashboard', 
+      'AI Contract Review Engine (Python)', 
+      'Secure E-Signature Module', 
+      'Encrypted Document Vault', 
+      'Role-Based Access Control', 
+      'Full Source Code & API Docs'
+    ],
+  },
+  // ── Influencer Campaign Tracker ──────────────────────────────────────────────
+  {
+    id: 'influencer-analytics',
+    tag: 'MARTECH',
+    accentColor: '#f43f5e', // Vibrant Rose/Pink for social media vibe
+    title: 'Influencer Campaign & ROI Tracker',
+    description: 'Track influencer ROI, monitor real-time engagement metrics, and automate creator payouts.',
+    longDescription: 'Ditch the messy Excel sheets and track your influencer marketing campaigns with absolute precision. This premium MarTech dashboard connects directly with social media APIs to fetch live engagement data, calculate real-time ROI, and track conversions. Designed specifically for agencies and D2C brands, the interface is strictly data-driven—featuring clean laptop and mobile views without any distracting human stock imagery. Just pure metrics, engagement graphs, and automated payout ledgers.',
+    features: [
+      'Live Instagram & YouTube API Sync', 
+      'Real-Time ROI & CPA Tracking', 
+      'Automated Creator Payouts', 
+      'Fraud & Fake Follower Detection', 
+      'Affiliate Link & Promo Code Mapping', 
+      'White-Labeled Creator Portal'
+    ],
+    image: 'https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?auto=format&fit=crop&q=80&w=1200', // Social media icons on screen
+    gallery: [
+      'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80', // Digital networks / global connectivity
+      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80', // Clean laptop showing charts
+      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80', // Clean data dashboard
+    ],
+    faqs: [
+      { question: 'Social media stats live kaise update hote hain?', answer: 'Platform officially Instagram Graph API aur YouTube Data API se connected hai, jisse views, likes, comments aur shares real-time mein fetch hote hain bina kisi manual entry ke.' },
+      { question: 'Kya ye fake followers aur botted engagement detect kar sakta hai?', answer: 'Haan, isme in-built AI anomaly detection hai jo engagement-to-follower ratio aur sudden activity spikes ko analyze karke fake or botted engagement ko flag karta hai.' },
+      { question: 'Creator payouts automate kaise hote hain?', answer: 'Aap milestone set kar sakte hain (e.g., 100K views reached). Milestone hit hote hi integrated payment gateway (Stripe/Razorpay) ke through creator ki invoice auto-clear ho jati hai.' },
+    ],
+    techStack: ['Next.js', 'Node.js', 'Instagram Graph API', 'YouTube API', 'MongoDB', 'Razorpay/Stripe API'],
+    stats: [
+      { value: 'Live', label: 'API Data Sync' }, 
+      { value: '100%', label: 'Payout Automation' }, 
+      { value: 'Real-time', label: 'ROI Tracking' }
+    ],
+    useCases: [
+      { icon: 'agency', title: 'Marketing Agencies', desc: 'Manage hundreds of micro-influencers, track campaign deliverables, and generate automated performance reports for clients.' },
+      { icon: 'startup', title: 'D2C Brands', desc: 'Track exact sales, clicks, and Customer Acquisition Cost (CPA) driven by specific creator promo codes or affiliate links.' },
+      { icon: 'enterprise', title: 'Talent Management', desc: 'Provide your roster of creators with a white-labeled portal to track their own analytics, upcoming campaigns, and payments.' },
+    ],
+    userFlow: [
+      { title: 'Campaign Setup', desc: 'Brands define campaign goals, budgets, and deliverables. Creators accept terms via the digital portal.' },
+      { title: 'Content Live & API Sync', desc: 'Creators post their content. The system immediately starts fetching live engagement metrics via official social APIs.' },
+      { title: 'Performance Tracking', desc: 'Managers view a centralized dashboard showing aggregated views, engagement rates, and real-time ROI.' },
+      { title: 'Settlement & Payout', desc: 'Once deliverables are met and verified, the system automatically triggers payouts to the creators\' registered bank accounts.' },
+    ],
+    deliverables: [
+      'Brand & Agency Admin Dashboard', 
+      'White-Labeled Creator Portal', 
+      'Social API Integration Module', 
+      'Automated Payout & Ledger Engine', 
+      'Fraud Detection Analytics', 
+      'Full Source Code & API Documentation'
+    ],
+  },
+
+  {
+    id: 'car-rental',
+    tag: 'MOBILITY',
+    accentColor: '#3b82f6',
+    title: 'Digital Car Rental System',
+    description: 'Fleet inventory management, customer KYC uploads, digital damage tracking, and payment gateways.',
+    longDescription: 'Digitize your entire car rental fleet operations. This platform eliminates manual paperwork with digital KYC verification, real-time vehicle status tracking, and automated digital damage mapping. Designed with a clean, high-performance UI suitable for desktop branch managers and mobile field staff, ensuring maximum fleet utilization without UI clutter.',
+    features: ['Digital KYC Verification', 'Damage Mapping Tool', 'Real-Time Fleet Inventory', 'Payment & Deposit Gateway', 'Automated Maintenance Alerts', 'Dynamic Pricing Engine'],
+    image: 'https://images.unsplash.com/photo-1562426509-5044a121aa49?auto=format&fit=crop&q=80&w=1200', // Car dashboard
+    gallery: [
+      'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&q=80', // Clean car exterior
+      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80', // Clean dashboard data
+      'https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=800&q=80', // Abstract automotive focus
+    ],
+    faqs: [
+      { question: 'KYC documents verify kaise hote hain?', answer: 'Users app ke through documents upload karte hain. Admin panel par OCR technology data extract karti hai aur quick manual approval/rejection ka option deti hai.' },
+      { question: 'Damage tracking digital kaise hoti hai?', answer: 'Pick-up aur drop-off ke time, staff app mein 3D car model par tap karke scratches/dents mark kar sakte hain aur photos attach kar sakte hain.' },
+      { question: 'Security deposits kaise handle hote hain?', answer: 'Stripe/Razorpay ke through payment authorization hoti hai jahan deposit amount hold par rehta hai aur return ke baad automatically release ho jata hai.' },
+    ],
+    techStack: ['React Native', 'Node.js', 'MySQL', 'Stripe API', 'AWS S3', 'Express'],
+    stats: [{ value: '100%', label: 'Digital KYC' }, { value: 'Zero', label: 'Paperwork' }, { value: 'Real-time', label: 'Fleet Tracking' }],
+    useCases: [
+      { icon: 'enterprise', title: 'Large Rental Agencies', desc: 'Manage hundreds of vehicles across multiple city branches from one admin portal.' },
+      { icon: 'startup', title: 'Boutique Car Rentals', desc: 'Provide a premium, app-based booking experience for luxury car fleets.' },
+      { icon: 'agency', title: 'Corporate Leasing', desc: 'Manage long-term B2B vehicle leases with automated monthly invoicing.' },
+    ],
+    userFlow: [
+      { title: 'User Registration & KYC', desc: 'Customer creates an account, uploads driving license, and waits for digital approval.' },
+      { title: 'Vehicle Selection & Payment', desc: 'Browse available fleet, select dates, and pay the rental fee + security deposit online.' },
+      { title: 'Digital Handover', desc: 'Branch staff verifies the customer via QR code and logs initial vehicle condition via the app.' },
+      { title: 'Return & Settlement', desc: 'Vehicle is returned, condition is re-checked, and the security deposit is auto-released.' },
+    ],
+    deliverables: ['Customer Mobile App (iOS/Android)', 'Branch Manager Dashboard', 'Digital Handover Tablet App', 'KYC & Payment Module', 'Fleet Inventory Engine', 'Full Source Code'],
+  },
+
+  // ── Cloud Kitchen OS ─────────────────────────────────────────────────────────
+  {
+    id: 'cloud-kitchen-os',
+    tag: 'FOODTECH',
+    accentColor: '#ef4444',
+    title: 'Cloud Kitchen Operating System',
+    description: 'Manage multiple virtual brands, aggregate Swiggy/Zomato orders, and track ingredient-level inventory.',
+    longDescription: 'A centralized operating system built specifically for dark kitchens. Manage 10+ virtual brands from a single kitchen display. It aggregates incoming orders from Swiggy, Zomato, and direct channels, eliminating the need for multiple tablets. Features automated recipe-costing and real-time inventory depletion to maintain absolute control over your food costs.',
+    features: ['Multi-Brand Dashboard', 'Aggregator Order Sync', 'Ingredient-Level Inventory', 'Kitchen Display System (KDS)', 'Recipe Costing & Yield', 'Delivery Rider Dispatch'],
+    image: 'https://images.unsplash.com/photo-1590846406792-0adc7f928a18?auto=format&fit=crop&q=80&w=1200', // Professional stainless kitchen
+    gallery: [
+      'https://images.unsplash.com/photo-1580981469591-689e3f01f054?w=800&q=80', // Clean kitchen tech
+      'https://images.unsplash.com/photo-1556742044-3c52d6e88c62?w=800&q=80', // Digital POS
+      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80', // Admin dashboard graphs
+    ],
+    faqs: [
+      { question: 'Kya Swiggy aur Zomato ke orders ek hi screen par aayenge?', answer: 'Haan, platform aggregator APIs ke through integrate hota hai. Saare platforms ke orders ek hi unified KDS screen par aate hain.' },
+      { question: 'Multiple virtual brands kaise manage hote hain?', answer: 'Aap ek hi dashboard se different brands (e.g., Burger brand, Pizza brand) ke menus, pricing aur inventory control kar sakte hain bina system switch kiye.' },
+      { question: 'Recipe costing automatically update hoti hai?', answer: 'Bilkul. Jab raw materials ka purchase price change hota hai, toh har dish ka final food cost percentage automatically recalculate ho jata hai.' },
+    ],
+    techStack: ['React', 'Node.js', 'MongoDB', 'Redis (KDS)', 'WebSockets', 'AWS'],
+    stats: [{ value: 'Unified', label: 'Aggregator Dashboard' }, { value: '10+', label: 'Brands Managed' }, { value: 'Real-time', label: 'Food Costing' }],
+    useCases: [
+      { icon: 'startup', title: 'Independent Dark Kitchens', desc: 'Launch multiple virtual food brands from one physical location with unified operations.' },
+      { icon: 'enterprise', title: 'Multi-Location Cloud Kitchens', desc: 'Monitor food prep times, inventory, and revenue across 50+ dark kitchens centrally.' },
+      { icon: 'agency', title: 'QSR Chains', desc: 'Optimize delivery-only outposts with automated rider dispatch and KDS.' },
+    ],
+    userFlow: [
+      { title: 'Order Aggregation', desc: 'Orders from third-party apps and direct channels land directly on the Kitchen Display System (KDS).' },
+      { title: 'Preparation & Routing', desc: 'Chefs view orders separated by brand/station and mark items as prepared via touchscreen.' },
+      { title: 'Inventory Depletion', desc: 'As orders are marked complete, the exact raw materials (e.g., 200g flour, 1 patty) are deducted from digital inventory.' },
+      { title: 'Rider Handoff', desc: 'Packaged orders are staged, and automated alerts are sent to delivery riders for quick pickup.' },
+    ],
+    deliverables: ['Unified Admin Dashboard', 'Kitchen Display System (Tablet App)', 'Aggregator Sync APIs', 'Inventory & Costing Module', 'Rider Dispatch App', 'Full Source Code'],
+  },
+
+  // ── AgriTech B2B Mandi ───────────────────────────────────────────────────────
+  {
+    id: 'agritech-platform',
+    tag: 'AGRITECH',
+    accentColor: '#10b981',
+    title: 'AgriTech B2B Mandi & Marketplace',
+    description: 'Connect farmers directly with wholesale buyers. Includes live weather APIs, crop tracking, and logistics coordination.',
+    longDescription: 'Empower the agricultural supply chain with a B2B digital marketplace. This platform connects crop producers directly with wholesalers and distributors. Designed with a clean, low-bandwidth optimized mobile interface for rural accessibility, it includes real-time bidding, integrated logistics booking, and secure escrow payments to build trust between unknown parties.',
+    features: ['B2B Bidding System', 'Low-Bandwidth Mobile UI', 'Live Weather & Yield Data', 'Escrow Payment Gateway', 'Transport & Logistics Booking', 'Quality Check (QC) Workflows'],
+    image: 'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&q=80&w=1200', // Tractor/Farm tech
+    gallery: [
+      'https://images.unsplash.com/photo-1586771107445-d3af9e145859?w=800&q=80', // Digital agriculture/drone abstract
+      'https://images.unsplash.com/photo-1592982537447-6f2a6a0a0b63?w=800&q=80', // Packed cargo/boxes
+      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80', // Clean mobile dashboard
+    ],
+    faqs: [
+      { question: 'Gaon mein slow internet par app chalega?', answer: 'Haan, Flutter based mobile app ko low-bandwidth aur offline-first caching ke sath design kiya gaya hai taaki remote areas mein bhi seamless chale.' },
+      { question: 'Payments secure kaise hoti hain?', answer: 'Buyer se payment pehle escrow account mein aati hai. Jab buyer delivery aur QC (Quality Check) approve karta hai, tabhi farmer ke account mein paise release hote hain.' },
+      { question: 'Logistics ka kya process hai?', answer: 'Platform ke andar integrated third-party transport booking module hai, jisse buyers directly trucks book karke farm se pickup arrange kar sakte hain.' },
+    ],
+    techStack: ['Flutter', 'Django (Python)', 'PostgreSQL', 'Google Maps API', 'Razorpay Route', 'Redis'],
+    stats: [{ value: 'Secure', label: 'Escrow Payments' }, { value: 'Offline', label: 'First Mobile UI' }, { value: 'B2B', label: 'Live Bidding' }],
+    useCases: [
+      { icon: 'startup', title: 'AgriTech Startups', desc: 'Create a digital Mandi to remove middlemen and increase margins for both farmers and buyers.' },
+      { icon: 'enterprise', title: 'FMCG Companies', desc: 'Procure raw materials directly from verified farms with complete traceability and quality logs.' },
+      { icon: 'agency', title: 'FPO Collectives', desc: 'Digitize inventory and sales operations for Farmer Producer Organizations.' },
+    ],
+    userFlow: [
+      { title: 'Listing & QC', desc: 'Farmers list their upcoming harvest, attaching digital Quality Check reports and expected pricing.' },
+      { title: 'Bidding & Booking', desc: 'Wholesale buyers place bids or accept fixed prices, depositing funds into the platform\'s escrow.' },
+      { title: 'Logistics Dispatch', desc: 'Buyer books transport through the platform; trucks arrive at the farm for pickup with GPS tracking enabled.' },
+      { title: 'Settlement', desc: 'Goods arrive, buyer confirms quality, and escrow automatically releases funds to the farmer.' },
+    ],
+    deliverables: ['Farmer Mobile App', 'Wholesaler Web & Mobile App', 'Admin Trade Dashboard', 'Escrow Payment Engine', 'Logistics API Integration', 'Full Source Code'],
+  },
+
+  // ── AI Voice Agent & Call Automation ─────────────────────────────────────────
+  {
+    id: 'ai-voice-agent',
+    tag: 'AI OPS',
+    accentColor: '#8b5cf6',
+    title: 'AI Voice Agent & Call Automation',
+    description: 'Cost-effective STT/TTS voice architecture for inbound/outbound calls, replacing expensive plug-and-play APIs.',
+    longDescription: 'Bypass high-cost third-party voice APIs by owning your own AI speech infrastructure. This suite handles Speech-to-Text (STT) and Text-to-Speech (TTS) natively to automate inbound customer queries and outbound lead qualification. With an unclustered dark-mode dashboard, operations teams can monitor live call transcripts, analyze sentiment, and map conversational workflows visually.',
+    features: ['Custom STT/TTS Pipeline', 'Visual Conversation Builder', 'Outbound Campaign Dialer', 'Live Call Transcription', 'Sentiment Analysis ML', 'SIP/VoIP Integration'],
+    image: 'https://images.unsplash.com/photo-1589254065878-42c9da997008?auto=format&fit=crop&q=80&w=1200', // Microphone/Soundwaves
+    gallery: [
+      'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&q=80', // Digital audio waves
+      'https://images.unsplash.com/photo-1614064641913-6b70a32eff53?w=800&q=80', // Server connections
+      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80', // Dashboard data
+    ],
+    faqs: [
+      { question: 'Isme aur Twilio/Vapi mein kya difference hai?', answer: 'Twilio ya Vapi per-minute heavy charge karte hain. Ye solution aapke servers par host hota hai jisse large-scale operations par variable API cost 70% tak kam ho jati hai.' },
+      { question: 'Kya ye custom workflows handle kar sakta hai?', answer: 'Haan, isme visual drag-and-drop node builder hai jahan aap AI ka logic, API lookups (e.g., checking order status), aur human handoff set kar sakte hain.' },
+      { question: 'Kya ye Indian accents samajh sakta hai?', answer: 'Bilkul. STT engine ko regional English accents aur Hinglish terms ko accurately transcribe karne ke liye fine-tune kiya ja sakta hai.' },
+    ],
+    techStack: ['Node.js', 'Python', 'WebRTC', 'React Flow', 'Redis', 'SIP/Asterisk'],
+    stats: [{ value: '70%', label: 'Lower API Costs' }, { value: '<500ms', label: 'Audio Latency' }, { value: 'Visual', label: 'Workflow Builder' }],
+    useCases: [
+      { icon: 'enterprise', title: 'Call Centers & BPOs', desc: 'Automate tier-1 support and order tracking queries, escalating only complex issues to human agents.' },
+      { icon: 'startup', title: 'Sales Teams', desc: 'Run automated outbound campaigns to pre-qualify leads before handing them over to closing reps.' },
+      { icon: 'agency', title: 'Healthcare Clinics', desc: 'Automate appointment reminders and basic symptom intake over standard phone calls.' },
+    ],
+    userFlow: [
+      { title: 'Workflow Design', desc: 'Ops team maps the AI conversation flow using the visual node builder, adding webhooks for CRM sync.' },
+      { title: 'Inbound Routing', desc: 'A customer calls the SIP number; the AI answers instantly, processing speech-to-text in milliseconds.' },
+      { title: 'AI Resolution', desc: 'The AI fetches data (e.g., delivery status), converts text-to-speech, and responds naturally to the caller.' },
+      { title: 'Analytics & Transcripts', desc: 'Every call is recorded, transcribed, and scored for sentiment on the admin dashboard.' },
+    ],
+    deliverables: ['Visual Workflow Builder Web App', 'SIP/Telephony Backend Gateway', 'Python AI STT/TTS Engine', 'Admin Analytics Dashboard', 'CRM Integration Webhooks', 'Full Source Code'],
+  },
+
+  // ── AI Interior & Landscape Design ───────────────────────────────────────────
+  {
+    id: 'ai-interior-landscape',
+    tag: 'GENERATIVE AI',
+    accentColor: '#14b8a6',
+    title: 'AI Interior & Landscape Design Suite',
+    description: 'Generate high-end interior layouts and exterior landscape concepts instantly from basic sketches or text prompts.',
+    longDescription: 'Supercharge architectural and interior design workflows. Upload a raw sketch, an empty room photo, or just type a prompt, and the AI engine generates photorealistic 4K renders in seconds. Designed with a sleek, creative-focused SaaS interface, this tool removes rendering bottlenecks for agencies, real estate developers, and independent designers.',
+    features: ['Sketch-to-Render AI', 'Empty Room Staging', 'Landscape Generation', 'Custom Style Transfers', '4K High-Res Export', 'Project Asset Gallery'],
+    image: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=1200', // Architectural interior
+    gallery: [
+      'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=80', // Modern architecture
+      'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80', // Empty room/office
+      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80', // Clean modern landscape/exterior
+    ],
+    faqs: [
+      { question: 'Kya hum apne reference images use kar sakte hain?', answer: 'Haan, aap specific furniture ya room structure ko as a ControlNet reference upload kar sakte hain, aur AI usi dimensions par render banayega.' },
+      { question: 'Resolution kitni detail me aati hai?', answer: 'Base generation ke baad integrated AI upscaler us image ko 4K resolution tak enhance karta hai taaki client presentations mein pixels sharp rahein.' },
+      { question: 'Kya isme koi usage limit hai?', answer: 'Kyunki ye platform aapke private AWS GPU servers par deploy hota hai, aap par koi external SaaS API limits nahi hoti, sirf aapki server running cost aati hai.' },
+    ],
+    techStack: ['React', 'Next.js', 'Stable Diffusion', 'Python (FastAPI)', 'AWS EC2 (GPUs)', 'S3 Storage'],
+    stats: [{ value: '<10s', label: 'Render Time' }, { value: '4K', label: 'Output Resolution' }, { value: 'Private', label: 'GPU Hosting' }],
+    useCases: [
+      { icon: 'agency', title: 'Architecture & Design Firms', desc: 'Rapidly prototype multiple mood boards and layout concepts during initial client pitches.' },
+      { icon: 'enterprise', title: 'Real Estate Developers', desc: 'Virtually stage empty apartments with different high-end furniture styles to attract online buyers.' },
+      { icon: 'startup', title: 'Furniture E-Commerce', desc: 'Automatically generate lifestyle shots of furniture products without expensive physical photoshoots.' },
+    ],
+    userFlow: [
+      { title: 'Upload & Prompt', desc: 'User uploads a base image (empty room/sketch) and selects a style (e.g., Minimalist, Scandinavian).' },
+      { title: 'AI Generation', desc: 'The private GPU cluster processes the image via Stable Diffusion and ControlNet, returning 4 variations.' },
+      { title: 'Upscaling & Refinement', desc: 'The user selects the best render, uses in-painting to fix small details, and clicks upscale for 4K output.' },
+      { title: 'Export & Present', desc: 'High-res images are saved to the project gallery, ready to be downloaded or shared via a presentation link.' },
+    ],
+    deliverables: ['Creator Web Application', 'Python GPU Inference API', 'Stable Diffusion ControlNet Setup', 'Admin Usage Dashboard', 'Image Upscaling Module', 'Full Source Code'],
+  },
+
+  // ── Local Delivery Fleet Engine ──────────────────────────────────────────────
+  {
+    id: 'local-delivery-api',
+    tag: 'LOGISTICS',
+    accentColor: '#f59e0b',
+    title: 'Local Delivery Fleet Engine',
+    description: 'Hyper-local dispatch system optimized for quick-commerce, featuring auto-assignment and unclustered map views.',
+    longDescription: 'A lightning-fast, hyper-local logistics engine built for 10-minute grocery runs, pharmacy deliveries, and quick-commerce. It uses advanced proximity algorithms to auto-assign riders, batch multiple orders along the same route, and provide customers with live GPS tracking. The dispatcher dashboard is strictly data and map-focused, guaranteeing zero visual clutter during peak order rushes.',
+    features: ['Auto-Assignment Algorithm', 'Multi-Order Batching', 'Live Map UI', 'Rider Earnings Wallet', 'Customer Live Tracking Link', 'Heatmap Analytics'],
+    image: 'https://images.unsplash.com/photo-1617868725893-9c8eb0106a20?auto=format&fit=crop&q=80&w=1200', // Map/logistics graphics
+    gallery: [
+      'https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=800&q=80', // Digital map lines
+      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80', // Clean dashboard
+      'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=80', // Packages
+    ],
+    faqs: [
+      { question: 'Order batching kaise kaam karti hai?', answer: 'System ek hi direction mein jaane wale orders ko automatically group (batch) kar deta hai, jisse ek rider ek trip mein 3-4 orders deliver kar sake, saving time and cost.' },
+      { question: 'Agar rider order accept na kare toh kya hoga?', answer: 'Auto-assignment engine agle sabse nazdeek rider ko ping karta hai. Agar 3 minutes tak koi accept na kare, toh wo manual dispatch queue mein highlight ho jata hai.' },
+      { question: 'Kya customer web link se track kar sakta hai?', answer: 'Haan, order dispatch hote hi customer ko ek SMS/WhatsApp link milta hai jahan wo bina koi app download kiye live map tracking dekh sakte hain.' },
+    ],
+    techStack: ['React Native (Rider App)', 'React.js', 'Node.js', 'Google Maps APIs', 'Redis (Live Tracking)', 'MongoDB'],
+    stats: [{ value: 'Real-time', label: 'Auto Dispatch' }, { value: 'Optimized', label: 'Order Batching' }, { value: 'Zero', label: 'App needed for Customers' }],
+    useCases: [
+      { icon: 'startup', title: 'Quick Commerce Apps', desc: 'Power your 10-minute delivery promise with an ultra-low latency routing and dispatch backend.' },
+      { icon: 'enterprise', title: 'Restaurant Chains', desc: 'Manage your in-house delivery fleet to avoid hefty aggregator commissions.' },
+      { icon: 'agency', title: 'Local Courier Services', desc: 'Digitize your neighborhood delivery operations with a professional rider app and live tracking.' },
+    ],
+    userFlow: [
+      { title: 'Order Creation', desc: 'Orders drop into the system via API from your storefront, instantly dropping a pin on the dispatcher map.' },
+      { title: 'Auto-Dispatch', desc: 'The engine finds the nearest available rider and pings their app. Rider accepts and heads to pickup.' },
+      { title: 'Live Tracking', desc: 'Customer receives a tracking link. The dispatcher views the rider moving on the live map in real-time.' },
+      { title: 'Proof of Delivery', desc: 'Rider drops the package, takes a photo or digital signature, and the order is marked complete.' },
+    ],
+    deliverables: ['Dispatcher Map Dashboard', 'Rider App (iOS/Android)', 'Customer Tracking Web App', 'Auto-Routing & Batching Engine', 'Admin Settings & Payouts', 'Full Source Code'],
+  },
+
+  // ── Medical Equipment Rental OS ──────────────────────────────────────────────
+  {
+    id: 'medical-equipment-rental',
+    tag: 'HEALTHCARE',
+    accentColor: '#0ea5e9',
+    title: 'Medical Equipment Rental OS',
+    description: 'Manage medical equipment leasing, diagnostic tool tracking, and home care logistics outside of traditional hospital workflows.',
+    longDescription: 'A specialized ERP designed strictly for the B2B and B2C medical equipment rental industry. Manage inventory for oxygen concentrators, hospital beds, and advanced diagnostic machinery. The platform handles digital lease agreements, recurring billing, sanitization workflows, and reverse logistics tracking. Designed with a clinical, high-contrast digital UI to ensure absolute clarity for operations teams.',
+    features: ['Asset Tracking & Serial Logging', 'Digital Lease Agreements', 'Recurring Payment Billing', 'Sanitization & QA Workflows', 'Reverse Logistics (Pickup)', 'Maintenance Scheduling'],
+    image: 'https://images.unsplash.com/photo-1584308666744-24d5e4a8b79b?auto=format&fit=crop&q=80&w=1200', // Clinical tech/clean room
+    gallery: [
+      'https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&q=80', // Digital tech desk
+      'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80', // Tech lab
+      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80', // Clean data dashboard
+    ],
+    faqs: [
+      { question: 'Kya ye platform recurring rent collect kar sakta hai?', answer: 'Haan, integrated billing system every week/month automatically customer ke card ya UPI mandate par charge laga deta hai jab tak equipment return nahi hota.' },
+      { question: 'Sanitization process track hota hai?', answer: 'Bilkul. Jab equipment wapas aata hai, wo directly "Available" nahi hota. Use pehle "Cleaning/QA" stage se guzarna padta hai digital sign-off ke baad.' },
+      { question: 'Kya har item ko individually track kiya jata hai?', answer: 'Haan, har machine ka apna unique serial number ya RFID profile hota hai, taaki uski service history aur lifecycle track ki ja sake.' },
+    ],
+    techStack: ['React', 'Node.js', 'PostgreSQL', 'Stripe/Razorpay Subscriptions', 'Express', 'Tailwind CSS'],
+    stats: [{ value: '100%', label: 'Serial Traceability' }, { value: 'Auto', label: 'Recurring Billing' }, { value: 'Strict', label: 'QA Workflows' }],
+    useCases: [
+      { icon: 'startup', title: 'Home Healthcare Providers', desc: 'Manage the delivery and long-term rental of home-use medical equipment seamlessly.' },
+      { icon: 'enterprise', title: 'B2B Equipment Leasing', desc: 'Track expensive diagnostic machines leased out to remote clinics and smaller hospitals.' },
+      { icon: 'agency', title: 'Rehab & Physiotherapy', desc: 'Rent out specialized recovery tech directly to patients post-surgery with automated billing.' },
+    ],
+    userFlow: [
+      { title: 'Inventory Allocation', desc: 'Customer requests equipment; system allocates a specific serial number and generates a digital lease.' },
+      { title: 'Dispatch & Billing', desc: 'Item is dispatched. Automated recurring billing starts based on the chosen weekly/monthly plan.' },
+      { title: 'Pickup Request', desc: 'Customer ends the lease; a reverse logistics task is generated for fleet pickup.' },
+      { title: 'QA & Restocking', desc: 'Equipment arrives, undergoes digital QA and sanitization checklist, and is added back to available inventory.' },
+    ],
+    deliverables: ['Admin ERP Dashboard', 'Delivery & Pickup Mobile App', 'Customer Billing Portal', 'Asset Lifecycle Management Module', 'Automated Invoicing Engine', 'Full Source Code'],
+  },
+
+  // ── IoT Smart Building Dashboard ─────────────────────────────────────────────
+  {
+    id: 'iot-smart-building',
+    tag: 'PROPTECH',
+    accentColor: '#6366f1',
+    title: 'IoT Smart Building Dashboard',
+    description: 'Monitor smart locks, HVAC systems, and energy consumption across multiple commercial real estate properties.',
+    longDescription: 'Bring commercial real estate into the future. This PropTech platform aggregates data from IoT sensors across your buildings into one unified command center. Monitor real-time energy consumption, control smart access locks remotely, and optimize HVAC usage. Designed with a dark-mode, server-grade UI that looks at home in a high-tech security operations center.',
+    features: ['Real-Time IoT Telemetry', 'Energy Consumption Analytics', 'Remote Access Control (Locks)', 'HVAC Automation Rules', 'Multi-Building Aggregation', 'Hardware Failure Alerts'],
+    image: 'https://images.unsplash.com/photo-1558384483-33e5abd0c8eb?auto=format&fit=crop&q=80&w=1200', // Smart thermostat/wall
+    gallery: [
+      'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80', // Modern empty office
+      'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80', // Server racks
+      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80', // High tech dashboard
+    ],
+    faqs: [
+      { question: 'Ye kon se IoT protocols support karta hai?', answer: 'Platform MQTT, WebSockets, aur REST APIs use karta hai, jisse lagbhag kisi bhi modern smart hardware (sensors, thermostats, locks) se connect ho sakta hai.' },
+      { question: 'Kya hum ek sath multiple buildings monitor kar sakte hain?', answer: 'Haan, superadmin view mein aap global map dekh sakte hain. Ek click mein aap specific city, phir specific building, aur phir specific floor ki detail me ja sakte hain.' },
+      { question: 'Automated rules kaise set hote hain?', answer: 'Aap IF/THEN logic set kar sakte hain. Jaise: "Agar room empty hai 30 mins tak (motion sensor data), toh AC turn off kar do."' },
+    ],
+    techStack: ['Vite (React)', 'Node.js', 'MQTT Broker', 'InfluxDB (Time-series data)', 'Redis', 'WebSockets'],
+    stats: [{ value: 'Live', label: 'MQTT Telemetry' }, { value: 'Central', label: 'Command Center' }, { value: 'Automated', label: 'Energy Savings' }],
+    useCases: [
+      { icon: 'enterprise', title: 'Commercial Office Spaces', desc: 'Reduce utility costs by automating HVAC and lighting based on real-time occupancy data.' },
+      { icon: 'startup', title: 'Co-Working Chains', desc: 'Provide app-based digital door unlocking for members and track desk utilization.' },
+      { icon: 'agency', title: 'Warehouse Management', desc: 'Monitor strict temperature zones for cold-storage facilities with instant mobile alerts on failure.' },
+    ],
+    userFlow: [
+      { title: 'Device Provisioning', desc: 'Install IoT sensors and connect them to the platform via secure Wi-Fi/MQTT credentials.' },
+      { title: 'Dashboard Mapping', desc: 'Map devices to their exact physical locations (e.g., Floor 3, Meeting Room B) on the digital twin UI.' },
+      { title: 'Live Monitoring & Rules', desc: 'Set energy thresholds and automated rules. The system begins logging time-series data seamlessly.' },
+      { title: 'Alerts & Intervention', desc: 'If a temperature spikes or a lock fails, operations managers receive instant push notifications.' },
+    ],
+    deliverables: ['Command Center Web App', 'Manager Mobile App', 'MQTT IoT Gateway Layer', 'Rule Engine & Automation Module', 'Time-Series Analytics DB', 'Full Source Code'],
+  },
+
+  // ── SaaS Billing & Revenue Ops ───────────────────────────────────────────────
+  {
+    id: 'subscription-billing',
+    tag: 'FINOPS',
+    accentColor: '#14b8a6',
+    title: 'SaaS Billing & Revenue Ops',
+    description: 'Manage recurring subscriptions, usage-based billing, invoicing, and automated tax compliance for digital platforms.',
+    longDescription: 'A headless billing engine designed to sit behind your B2B software or SaaS product. Stop writing complex payment logic. This platform handles tiered subscriptions, complex usage-based (metered) billing, pro-ration, and global tax compliance automatically. Features a pristine data dashboard for finance teams to track MRR, Churn, and ARPU without any visual noise.',
+    features: ['Metered/Usage Billing API', 'Tiered Subscription Logic', 'Automated Pro-Ration', 'Global Tax Calculation', 'MRR & Churn Analytics', 'Dunning (Failed Payment Recovery)'],
+    image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=1200', // Graphs/Financial data
+    gallery: [
+      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80', // Digital graphs
+      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80', // Clean data UI
+      'https://images.unsplash.com/photo-1614064641913-6b70a32eff53?w=800&q=80', // Tech backend
+    ],
+    faqs: [
+      { question: 'Metered billing API kaise kaam karti hai?', answer: 'Aapka backend simply ek API call hit karta hai (e.g., "User ne 50 emails bheje"). Billing engine end of month par total tally karke correct amount automatically invoice kar deta hai.' },
+      { question: 'Agar kisi ka card decline ho jaye toh?', answer: 'Isme automated "Dunning" management hai. System 3-4 days tak retry karta hai, aur customer ko card update karne ke automated email links bhejta hai. Fails pe SaaS account auto-suspend hota hai.' },
+      { question: 'Kya GST aur VAT calculation in-built hai?', answer: 'Haan, user ke billing address ke base par system automatically correct tax percent calculate karke compliant PDF invoice generate kar deta hai.' },
+    ],
+    techStack: ['Next.js', 'Node.js', 'PostgreSQL', 'Stripe API Integration', 'Redis', 'BullMQ (Cron jobs)'],
+    stats: [{ value: 'API-First', label: 'Architecture' }, { value: 'Automated', label: 'MRR Tracking' }, { value: 'Global', label: 'Tax Compliant' }],
+    useCases: [
+      { icon: 'startup', title: 'SaaS Startups', desc: 'Focus on building your core product while this engine handles all complex billing and upgrades.' },
+      { icon: 'enterprise', title: 'API & Infrastructure Providers', desc: 'Bill developers precisely based on gigabytes stored, bandwidth used, or API calls made.' },
+      { icon: 'agency', title: 'Content Platforms', desc: 'Manage tiered memberships and paywalls for digital communities effortlessly.' },
+    ],
+    userFlow: [
+      { title: 'Plan Configuration', desc: 'Finance teams set up base prices, usage tiers, and tax logic inside the admin dashboard.' },
+      { title: 'API Integration', desc: 'Developers plug the billing APIs into the main product to log usage and trigger subscription upgrades.' },
+      { title: 'Automated Invoicing', desc: 'At the end of the billing cycle, the engine calculates usage, adds tax, hits the payment gateway, and emails the PDF.' },
+      { title: 'Revenue Reporting', desc: 'Finance logs in to view clean charts tracking Monthly Recurring Revenue (MRR), upgrades, and churn.' },
+    ],
+    deliverables: ['Finance Admin Dashboard', 'Billing REST API Collection', 'Subscription & Usage Logic Engine', 'Invoice PDF Generator', 'Stripe Gateway Sync Module', 'Full Source Code'],
+  },
+
+  // ── API Gateway & Developer Hub ──────────────────────────────────────────────
+  {
+    id: 'developer-api-portal',
+    tag: 'DEV TOOLS',
+    accentColor: '#1e293b', // Deep Slate/Terminal Color
+    title: 'API Gateway & Developer Hub',
+    description: 'Monetize your proprietary APIs with built-in rate limiting, developer key generation, and real-time endpoint analytics.',
+    longDescription: 'Turn your backend data into a revenue stream. This platform provides a secure API Gateway to sit in front of your services, offering instant API key generation, robust rate limiting, and an interactive Developer Documentation hub. The aesthetic is purely developer-focused—dark mode, code snippets, and live latency charts with zero unnecessary graphics.',
+    features: ['API Key Management', 'Dynamic Rate Limiting', 'Monetization (Pay-per-call)', 'Interactive Docs (Swagger/OpenAPI)', 'Live Latency & Error Logs', 'IP Whitelisting & Security'],
+    image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200', // Code on dark screen
+    gallery: [
+      'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&q=80', // Code matrix
+      'https://images.unsplash.com/photo-1614064641913-6b70a32eff53?w=800&q=80', // Dark server infrastructure
+      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80', // Clean data analytics
+    ],
+    faqs: [
+      { question: 'Rate limiting kitni fast hai?', answer: 'Gateway Redis use karta hai in-memory processing ke liye, ensuring ki rate limiting sub-millisecond level par execute ho aur aapki core APIs protect rahein.' },
+      { question: 'Developers apna usage kaise dekhenge?', answer: 'Har developer ko ek clean dashboard milta hai jahan wo apni API keys manage kar sakte hain, billing dekh sakte hain, aur success/error rate track kar sakte hain.' },
+      { question: 'Kya ye platform API ko monetize karne me help karega?', answer: 'Haan, aap pricing tiers set kar sakte hain (e.g., Free: 1000 calls/mo, Pro: $0.01/call). System automatically stripe se connect ho kar bill generate kar dega.' },
+    ],
+    techStack: ['React', 'Node.js', 'Express Gateway', 'Redis (Rate Limiting)', 'Swagger UI', 'MongoDB'],
+    stats: [{ value: 'Sub-ms', label: 'Gateway Latency' }, { value: 'Automated', label: 'API Monetization' }, { value: 'Secure', label: 'Key Encryption' }],
+    useCases: [
+      { icon: 'enterprise', title: 'Data Providers', desc: 'Sell access to your proprietary financial, weather, or sports databases securely to third-party developers.' },
+      { icon: 'startup', title: 'AI/ML Startups', desc: 'Expose your custom AI inference models as a service and charge users per API call seamlessly.' },
+      { icon: 'agency', title: 'Corporate IT', desc: 'Secure internal microservices and provide structured access to different departments via a central hub.' },
+    ],
+    userFlow: [
+      { title: 'API Configuration', desc: 'Admin imports OpenAPI specs, sets rate limits, and defines pricing tiers on the Gateway.' },
+      { title: 'Developer Onboarding', desc: 'Third-party developers sign up, read the interactive documentation, and generate their API keys.' },
+      { title: 'API Consumption', desc: 'Developers hit your endpoints. The Gateway intercepts, checks rate limits/billing, and forwards the request.' },
+      { title: 'Analytics & Billing', desc: 'Admin and developers view real-time logs of traffic, latency, and automated invoice generation.' },
+    ],
+    deliverables: ['Admin Gateway Dashboard', 'Developer Portal & Docs UI', 'High-Speed Node.js Proxy Layer', 'Redis Rate Limiter Module', 'Monetization Engine', 'Full Source Code'],
+  },
+
+  // ── Enterprise Headless CMS ──────────────────────────────────────────────────
+  {
+    id: 'headless-cms',
+    tag: 'BACKEND OPS',
+    accentColor: '#8b5cf6',
+    title: 'Enterprise Headless CMS',
+    description: 'An unclustered content management system featuring webhook triggers, strict versioning, and premium dynamic data schemas.',
+    longDescription: 'Decouple your content from your frontend. This Enterprise Headless CMS provides a clean, schema-builder UI for managing complex data architectures. It serves content strictly via ultra-fast GraphQL or REST APIs to any frontend (Web, App, Smartwatch, or IoT). Built with a stark, premium digital aesthetic, offering developers absolute control without bloated WordPress-like UI themes.',
+    features: ['Visual Schema Builder', 'GraphQL & REST APIs', 'Webhooks & CI/CD Triggers', 'Content Version Control', 'Role-Based Editor Access', 'Global CDN Integration'],
+    image: 'https://images.unsplash.com/photo-1618761714954-0b8cd0026356?auto=format&fit=crop&q=80&w=1200', // Server rack networking
+    gallery: [
+      'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80', // Infrastructure
+      'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&q=80', // Digital code
+      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80', // Clean dashboard
+    ],
+    faqs: [
+      { question: 'Headless CMS regular CMS se better kyun hai?', answer: 'Headless CMS mein frontend bound nahi hota. Aap ek hi content base banate hain aur use API ke through website, mobile app, aur digital screens pe ek sath bhej sakte hain.' },
+      { question: 'Kya content versions revert kiye ja sakte hain?', answer: 'Haan, har save par ek nayi Git-style history branch banti hai. Agar koi galti ho jaye, toh admin instantly pichle version par revert kar sakta hai.' },
+      { question: 'Webhooks kaise kaam aate hain?', answer: 'Jab bhi content publish hota hai, CMS webhook trigger karta hai jo aapke Vercel/Netlify deployment ko bata deta hai ki static site ko wapas rebuild karna hai.' },
+    ],
+    techStack: ['React', 'Node.js', 'GraphQL', 'MongoDB', 'Redis', 'AWS S3'],
+    stats: [{ value: 'API-First', label: 'Delivery' }, { value: 'Dynamic', label: 'Schema Builder' }, { value: 'Version', label: 'Control Logs' }],
+    useCases: [
+      { icon: 'agency', title: 'Digital Agencies', desc: 'Build modern Next.js/React websites for clients while giving them a simple backend to update text and images.' },
+      { icon: 'enterprise', title: 'Media & Publishing', desc: 'Manage thousands of articles, tags, and authors, distributing content instantly across web, app, and newsletters.' },
+      { icon: 'startup', title: 'E-commerce Brands', desc: 'Manage promotional banners, blog posts, and landing page copy independently of the core transactional engine.' },
+    ],
+    userFlow: [
+      { title: 'Schema Definition', desc: 'Devs define content types (e.g., "Blog Post" with fields: Title, Rich Text, Cover Image) via the UI.' },
+      { title: 'Content Entry', desc: 'Editors log in, fill out the clean forms, collaborate, and save drafts or publish.' },
+      { title: 'API Delivery', desc: 'The frontend application fetches the published content seamlessly via a single GraphQL query.' },
+      { title: 'Webhook Execution', desc: 'Upon publishing, static site generators (like Next.js) are notified to rebuild the updated pages.' },
+    ],
+    deliverables: ['Admin CMS Dashboard', 'Dynamic Schema Builder Engine', 'GraphQL / REST API Layer', 'Role Access Management', 'Webhook Configuration Module', 'Full Source Code'],
+  },
+
+  // ── Digital Signage & DOOH CMS ───────────────────────────────────────────────
+  {
+    id: 'digital-signage',
+    tag: 'MARKETING',
+    accentColor: '#f43f5e',
+    title: 'Digital Signage & DOOH CMS',
+    description: 'Push cinematic reels, advertisements, and digital media to remote billboards and in-store displays globally.',
+    longDescription: 'Control thousands of screens from a single laptop. This Digital Out-Of-Home (DOOH) CMS allows marketing teams to schedule playlists, push media updates remotely, and monitor screen health across cities. The dashboard is purely operational—showing fleet status, media sync logs, and playback analytics without any graphical fluff. Perfect for modern retail and advertising networks.',
+    features: ['Remote Screen Management', 'Drag & Drop Playlist Builder', 'Offline Caching & Playback', 'Screen Health Monitoring', 'Automated Scheduling', 'Multi-Zone Screen Split'],
+    image: 'https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&q=80&w=1200', // Blank glowing screen/billboard
+    gallery: [
+      'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&q=80', // Digital light abstract
+      'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&q=80', // Tech matrix
+      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80', // Ops dashboard
+    ],
+    faqs: [
+      { question: 'Agar display ka internet disconnect ho jaye toh?', answer: 'Media player offline caching support karta hai. Jo content pehle download ho chuka hai, wo bina rukawat loop par chalta rahega jab tak internet wapas na aaye.' },
+      { question: 'Kya hum ek screen ko multiple parts mein divide kar sakte hain?', answer: 'Haan, Multi-zone feature ke sath aap screen ka ek hissa video ke liye, dusra live ticker ke liye aur teesra weather widget ke liye allocate kar sakte hain.' },
+      { question: 'Screen on/off status track ho sakta hai?', answer: 'Bilkul. Dashboard ping requests bhejta hai. Agar koi screen band ho jaye ya overheat ho, toh admin ko turant push notification mil jati hai.' },
+    ],
+    techStack: ['React', 'Electron (Media Player App)', 'Node.js', 'WebSockets', 'AWS S3', 'MongoDB'],
+    stats: [{ value: 'Global', label: 'Remote Sync' }, { value: 'Offline', label: 'Playback Support' }, { value: 'Live', label: 'Health Pings' }],
+    useCases: [
+      { icon: 'enterprise', title: 'Retail Chains', desc: 'Push synchronized promotional videos and daily offers to digital menus and windows across 500+ stores.' },
+      { icon: 'agency', title: 'Ad Networks', desc: 'Manage digital billboards across highways and cities, providing clients with exact playback analytics.' },
+      { icon: 'startup', title: 'Corporate Offices', desc: 'Display internal communications, KPI dashboards, and welcome videos on lobby screens centrally.' },
+    ],
+    userFlow: [
+      { title: 'Player Installation', desc: 'Install the lightweight media player app on Android TV, Raspberry Pi, or Windows display units.' },
+      { title: 'Media Upload & Playlist', desc: 'Marketing uploads videos/images and creates a timeline-based playlist in the cloud dashboard.' },
+      { title: 'Remote Deployment', desc: 'Assign the playlist to specific screens. The players download the media in the background.' },
+      { title: 'Playback & Monitoring', desc: 'Media plays seamlessly on loop. Ops team monitors uptime and connection status on the live map.' },
+    ],
+    deliverables: ['Cloud Admin Dashboard', 'Player App (Android/Windows)', 'WebSocket Sync Server', 'Media Encoding & Caching Module', 'Analytics & Uptime Tracker', 'Full Source Code'],
+  },
+
+  // ── Escrow & Milestone Gateway ───────────────────────────────────────────────
+  {
+    id: 'escrow-payment-api',
+    tag: 'FINTECH',
+    accentColor: '#10b981',
+    title: 'Escrow & Milestone Payment API',
+    description: 'Secure transaction holding engine for freelance platforms and agencies with automated milestone-based fund releases.',
+    longDescription: 'Build trust into your B2B marketplace. This API-first Escrow engine securely holds buyer funds and releases them to sellers only upon the completion of predefined, verifiable milestones. The web dashboard provides a stark, ultra-secure view of financial ledgers, active holding accounts, and dispute resolution workflows. Pure FinOps design, completely free of visual clutter.',
+    features: ['Multi-Milestone Escrow', 'Automated Fund Release APIs', 'Immutable Transaction Ledger', 'Dispute Resolution Workflow', 'KYC/AML Verification', 'Split Payouts & Commission'],
+    image: 'https://images.unsplash.com/photo-1638913662584-731da41f5a59?auto=format&fit=crop&q=80&w=1200', // Digital security/crypto lock
+    gallery: [
+      'https://images.unsplash.com/photo-1614064641913-6b70a32eff53?w=800&q=80', // Server connections
+      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80', // Financial data/charts
+      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80', // Clean ledger dashboard
+    ],
+    faqs: [
+      { question: 'Escrow API ko marketplace mein integrate karna easy hai?', answer: 'Haan, REST API architecture ki madad se aap ise kisi bhi custom marketplace, freelance portal ya real estate platform mein asani se embed kar sakte hain.' },
+      { question: 'Platform fees kaise deduct hoti hai?', answer: 'Aap commission percentage set kar sakte hain. Jab fund release hota hai, tab system automatically seller ko balance bhejta hai aur aapka commission admin wallet mein root kar deta hai.' },
+      { question: 'Dispute aane par kya hota hai?', answer: 'Agar buyer milestone approve nahi karta, toh funds locked rehte hain. Platform ek "Dispute" flag raise karta hai jahan admin dono parties ke documents verify karke manual override release kar sakta hai.' },
+    ],
+    techStack: ['Next.js', 'Node.js', 'PostgreSQL (ACID compliant)', 'Stripe Connect / Razorpay Route', 'Redis', 'Docker'],
+    stats: [{ value: '100%', label: 'Secure Holding' }, { value: 'Automated', label: 'Milestone Release' }, { value: 'Immutable', label: 'Ledger' }],
+    useCases: [
+      { icon: 'startup', title: 'Freelance Platforms', desc: 'Ensure freelancers get paid and clients get their work by holding project budgets in milestone escrow.' },
+      { icon: 'agency', title: 'Digital Agencies', desc: 'Build trust with enterprise clients by breaking massive development invoices into secure, phase-wise payments.' },
+      { icon: 'enterprise', title: 'B2B Wholesale Portals', desc: 'Secure large supply chain transactions, releasing funds only upon confirmed delivery and quality inspection.' },
+    ],
+    userFlow: [
+      { title: 'Contract & Deposit', desc: 'Buyer and seller agree on milestones. Buyer deposits the full or phase-1 amount into the API escrow wallet.' },
+      { title: 'Work & Delivery', desc: 'Seller completes the work and submits proof/deliverables through the platform.' },
+      { title: 'Approval & Release', desc: 'Buyer clicks approve. The API triggers a payout, routing funds to the seller minus platform commissions.' },
+      { title: 'Ledger Audit', desc: 'All transactions are immutably written to the PostgreSQL ledger, ensuring complete audit compliance.' },
+    ],
+    deliverables: ['Admin Ledger Dashboard', 'Escrow Management REST APIs', 'Dispute Resolution Module', 'Payment Gateway Sync Engine', 'Automated Commission Splitter', 'Full Source Code'],
+  }
 ]
 
 const useCaseIcons = { startup: Rocket, enterprise: Building2, agency: Users }

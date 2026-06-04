@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { Phone } from 'lucide-react';
 import Image from "next/image";
+import Link from 'next/link';
 
 // --- Custom Social Media SVG Icons ---
 const Facebook = ({ size = 24, fill = "none" }: { size?: number; fill?: string }) => (
@@ -298,10 +299,10 @@ export default function Footer() {
 
       {/* 2. MAIN FOOTER LINKS */}
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-12 lg:px-20 py-10 md:py-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 lg:gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 lg:gap-8">
 
-          {/* Column 1: Brand */}
-          <div className="flex flex-col items-start sm:col-span-2 lg:col-span-1">
+          {/* Column 1: Brand — full width + centered on mobile */}
+          <div className="col-span-2 lg:col-span-1 flex flex-col items-center lg:items-start text-center lg:text-left">
             <img
               src="/images/footer/footer_logo.png"
               alt="Kotibox"
@@ -317,47 +318,68 @@ export default function Footer() {
             />
           </div>
 
-          {/* Column 2: Services */}
-          <div>
+          {/* Column 2: Services — centered on mobile, left on desktop */}
+          <div className="col-span-1 flex flex-col items-center lg:items-start">
             <h4 className="text-white font-bold text-base md:text-lg mb-4 md:mb-6">Services</h4>
-            <ul className="space-y-3 md:space-y-4 flex flex-col">
-              {['Mobile Apps', 'Web Development', 'Digital Marketing', 'UI/UX Design', 'Game Development', 'Artificial Intelligence'].map((link) => (
-                <a key={link} href="#" className="text-slate-400 hover:text-[#f5a623] text-sm font-medium transition-colors w-fit">
-                  {link}
-                </a>
+            <ul className="space-y-3 md:space-y-4 flex flex-col items-center lg:items-start">
+              {[
+                { label: 'Mobile Apps',             href: '/services/flutter' },
+                { label: 'Web Development',          href: '/services/web-design' },
+                { label: 'Digital Marketing',        href: '/services/social-media' },
+                { label: 'UI/UX Design',             href: '/services/web-design' },
+                { label: 'Generative-Ai',         href: '/services/generative-ai' },
+                { label: 'Artificial Intelligence',  href: '/services/ai-automation' },
+              ].map(({ label, href }) => (
+                <Link key={label} href={href} className="text-slate-400 hover:text-[#f5a623] text-sm font-medium transition-colors">
+                  {label}
+                </Link>
               ))}
             </ul>
           </div>
 
-          {/* Column 3: Company */}
-          <div>
+          {/* Column 3: Company — centered on mobile, left on desktop */}
+          <div className="col-span-1 flex flex-col items-center lg:items-start">
             <h4 className="text-white font-bold text-base md:text-lg mb-4 md:mb-6">Company</h4>
-            <ul className="space-y-3 md:space-y-4 flex flex-col">
-              {['About Us', 'Industries', 'Career', 'Portfolio', 'Live Demo', 'Hire Developers', 'Contact Us'].map((link) => (
-                <a key={link} href="#" className="text-slate-400 hover:text-[#f5a623] text-sm font-medium transition-colors w-fit">
-                  {link}
-                </a>
+            <ul className="space-y-3 md:space-y-4 flex flex-col items-center lg:items-start">
+              {[
+                { label: 'About Us',        href: '/about' },
+                { label: 'Industries',      href: '/industries' },
+                { label: 'Career',          href: '/career' },
+                { label: 'Live Demo',       href: '/live-demo' },
+                { label: 'Hire Developers', href: '/career' },
+                { label: 'Contact Us',      href: '/#contact' },
+              ].map(({ label, href }) => (
+                <Link key={label} href={href} className="text-slate-400 hover:text-[#f5a623] text-sm font-medium transition-colors">
+                  {label}
+                </Link>
               ))}
             </ul>
           </div>
 
-          {/* Column 4: Social & Ventures */}
-          <div>
+          {/* Column 4: Follow Us — full width + centered on mobile */}
+          <div className="col-span-2 lg:col-span-1 flex flex-col items-center lg:items-start text-center lg:text-left">
             <h4 className="text-white font-bold text-base md:text-lg mb-4 md:mb-6">Follow Us</h4>
-            <div className="flex gap-2 sm:gap-3 mb-8 md:mb-10 flex-wrap">
-              {[Facebook, Twitter, Linkedin, Instagram].map((Icon, i) => (
+            <div className="flex gap-2 sm:gap-3 mb-8 md:mb-10 flex-wrap justify-center lg:justify-start">
+              {[
+                { Icon: Facebook,  href: 'https://www.facebook.com/kotiboxglobaltechnologieshttps://www.facebook.com/KotiboxGlobalTechnologies/',  fill: true },
+                // { Icon: Twitter,   href: 'https://x.com/kotibox',                               fill: true },
+                { Icon: Linkedin,  href: 'https://www.linkedin.com/company/kotibox/posts/?feedView=all',             fill: true },
+                { Icon: Instagram, href: 'https://www.instagram.com/kotibox_global_/',              fill: false },
+              ].map(({ Icon, href, fill }, i) => (
                 <a
                   key={i}
-                  href="#"
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-[#1a2f4e]/60 flex items-center justify-center text-slate-300 hover:bg-[#f5a623] hover:text-white transition-all flex-shrink-0"
                 >
-                  <Icon size={16} fill={i !== 3 ? "currentColor" : "none"} />
+                  <Icon size={16} fill={fill ? "currentColor" : "none"} />
                 </a>
               ))}
             </div>
 
             <h4 className="text-white font-bold text-base md:text-lg mb-4 md:mb-6">Our Ventures</h4>
-            <div className="flex gap-3 md:gap-4 flex-wrap">
+            <div className="flex gap-3 md:gap-4 flex-wrap justify-center lg:justify-start">
               <div className="bg-white p-2 rounded-sm w-28 sm:w-28 md:w-32 h-14 md:h-16 flex items-center justify-center">
                 <img src="/images/footer/logoksx.png" alt="Kotibox Skillx Academy" className="max-h-full object-contain" />
               </div>
@@ -371,20 +393,27 @@ export default function Footer() {
       </div>
 
       {/* 3. INTERACTIVE LARGE TEXT SECTION */}
-      <div className="w-full px-4 sm:px-6 md:px-12 lg:px-20 pt-6 md:pt-8 pb-8 md:pb-12 overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
-        <h1 className="w-max mx-auto text-2xl sm:text-3xl md:text-5xl lg:text-[4rem] xl:text-6xl font-bold text-white tracking-tight leading-loose whitespace-nowrap">
-          <InteractiveLetter char="K" role="Strategist" pos="bottom" img="https://i.pravatar.cc/100?img=11" />
-          OTIBOX{' '}
-          <InteractiveLetter char="G" role="Manager" pos="top" img="https://i.pravatar.cc/100?img=32" />
-          LOBAL{' '}
-          <InteractiveLetter char="T" role="Designer" pos="bottom" img="https://i.pravatar.cc/100?img=47" />
-          ECHNOLOG
-          <InteractiveLetter char="I" role="Developer" pos="top" img="https://i.pravatar.cc/100?img=15" />
-          ES (OPC){' '}
-          <InteractiveLetter char="P" role="Marketer" pos="bottom" img="https://i.pravatar.cc/100?img=5" />
-          VT L
-          <InteractiveLetter char="T" role="Investor" pos="top" img="https://i.pravatar.cc/100?img=68" />
-          D
+      <div className="w-full px-4 sm:px-6 md:px-12 lg:px-20 pt-6 md:pt-8 pb-8 md:pb-12">
+        <h1 className="text-center font-bold text-white tracking-tight leading-tight
+          text-[1.35rem] xs:text-2xl sm:text-3xl
+          md:text-[2rem] lg:text-[2.6rem] xl:text-[3.2rem] 2xl:text-[3.8rem]">
+          {/* Mobile: block (2 lines) | md+: inline (1 line) */}
+          <span className="block md:inline">
+            <InteractiveLetter char="K" role="Strategist" pos="bottom" img="https://i.pravatar.cc/100?img=11" />
+            OTIBOX{' '}
+            <InteractiveLetter char="G" role="Manager" pos="top" img="https://i.pravatar.cc/100?img=32" />
+            LOBAL{' '}
+          </span>
+          <span className="block md:inline">
+            <InteractiveLetter char="T" role="Designer" pos="bottom" img="https://i.pravatar.cc/100?img=47" />
+            ECHNOLOG
+            <InteractiveLetter char="I" role="Developer" pos="top" img="https://i.pravatar.cc/100?img=15" />
+            ES (OPC){' '}
+            <InteractiveLetter char="P" role="Marketer" pos="bottom" img="https://i.pravatar.cc/100?img=5" />
+            VT L
+            <InteractiveLetter char="T" role="Investor" pos="top" img="https://i.pravatar.cc/100?img=68" />
+            D
+          </span>
         </h1>
       </div>
 
