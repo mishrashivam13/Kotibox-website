@@ -13,52 +13,66 @@ const QuoteIcon = () => (
 const testimonials = [
   {
     id: 1,
-    name: 'Friya',
-    review: 'â€œBeautiful travel website design, fast booking experience, and smooth user navigation overall.â€',
-    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=200',
+    name: 'Mr. Shivam Tiwari',
+    review: 'Working with Kotibox Global Technologies was a great experience. They developed a seamless and efficient Sports Playground Booking App and Website for us. Their commitment to quality, timely delivery, and professional support made the entire process smooth and successful.',
+    image: '/images/Testimonial/3d-boy-avatar-cartoon-boy-character-with-smiling-face-Tb7CAEg3_t.jpg',
     rating: 5
   },
   {
     id: 2,
-    name: 'Amit Patel',
-    review: 'â€œQuick delivery and flawless execution. The custom E-commerce platform works like a charm and sales are up!â€',
-    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=200',
+    name: 'Rahul Jain',
+    review: 'We had a great experience working with Kotibox Global Technologies on our E-commerce Website and App. Their team delivered a modern, reliable, and easy-to-use solution that met all our expectations. The quality of work, professionalism, and ongoing support were outstanding.',
+    image: '/images/Testimonial/pngtree-cartoon-hand-drawn-handsome-boy-avatar-png-image_16798195.webp',
     rating: 5
   },
   {
     id: 3,
-    name: 'Elena Rostova',
-    review: 'â€œFrom UI/UX design to final deployment, they handled everything perfectly. Best digital agency we have worked with.â€',
-    image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200',
+    name: 'Manav Jeet Singh',
+    review: 'Kotibox Global Technologies delivered a powerful Real Estate Website with Smart Mortgage, Lead Management, and Commission Management systems. Their AI integration, including image transformation and image enhancement capabilities, has greatly improved our property listings and user experience. The team was professional, knowledgeable, and committed to delivering outstanding results.',
+    image: '/images/Testimonial/pngtree-creative-boys-avatar-png-image_17327785.png',
     rating: 5
   },
   {
     id: 4,
-    name: 'Rohan Sharma',
-    review: 'â€œThe AI automation dashboard they built saved us hours of manual work. Highly professional team!â€',
-    image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=200',
+    name: 'Rahul Kalal ',
+    review: 'Kotibox Global Technologies delivered an outstanding Social Voice Room platform with excellent performance, modern features, and a seamless user experience. Their professionalism, technical expertise, and dedication to quality made them a valuable technology partner.',
+    image: '/images/Testimonial/smiling-blonde-boy-hoodie_1308-174731.avif',
     rating: 5
   },
   {
     id: 5,
-    name: 'Sarah Jenkins',
-    review: 'â€œExceptional service! Their React Native app development is top-notch. Highly recommended for startups.â€',
-    image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=200',
+    name: 'Kaushalya Chandran',
+    review: 'We had an excellent experience working with Kotibox Global Technologies on our Food Delivery App. The team delivered a reliable, user-friendly, and scalable solution with all the features we needed. Their professionalism, timely delivery, and ongoing support exceeded our expectations.',
+    image: '/images/Testimonial/smiling-redhaired-boy-illustration_1308-176664.avif',
     rating: 5
-  }
+  },
+  {
+    id: 6,
+    name: 'Indresh Vala ',
+    review: 'Kotibox Global Technologies delivered an excellent Task Management and Milestone Tracking Software that has transformed the way we manage projects and teams. The solution is reliable, easy to use, and perfectly aligned with our business needs. Their team provided exceptional support and delivered a high-quality product.',
+    image: '/images/Testimonial/stylish-young-man-avatar-messy-600nw-2653781799.webp',
+    rating: 5
+  },
+  {
+    id: 7,
+    name: 'Fariya Ali',
+    review: 'Kotibox Global Technologies delivered a professional and user-friendly Travel Website that exceeded our expectations. Their attention to detail, technical expertise, and commitment to quality made the entire development process smooth and successful.',
+    image: '/images/Testimonial/360_F_728489827_qtQHjlMEeD53QhTdUEtdOvNPQw21pYjh.jpg',
+    rating: 5
+  },
 ];
 
 // Floating Background Avatars (Pushed far left and right to avoid the card)
-const cornerAvatars = [
-  // Extreme Left Side
-  { id: 1, top: '20%', left: '5%', size: 'w-16 h-16', delay: '0s', img: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=200' },
-  { id: 2, top: '50%', left: '12%', size: 'w-20 h-20', delay: '1.5s', img: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=200' },
-  { id: 3, top: '80%', left: '6%', size: 'w-14 h-14', delay: '0.8s', img: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&q=80&w=200' },
-  // Extreme Right Side
-  { id: 4, top: '15%', right: '8%', size: 'w-20 h-20', delay: '0.5s', img: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200' },
-  { id: 5, top: '45%', right: '15%', size: 'w-16 h-16', delay: '2.2s', img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200' },
-  { id: 6, top: '75%', right: '6%', size: 'w-24 h-24', delay: '1.2s', img: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=200' },
-];
+// const cornerAvatars = [
+//   // Extreme Left Side
+//   { id: 1, top: '20%', left: '5%', size: 'w-16 h-16', delay: '0s', img: '/images/Testimonial/stylish-young-man-avatar-messy-600nw-2653781799.webp' },
+//   { id: 2, top: '50%', left: '12%', size: 'w-20 h-20', delay: '1.5s', img: '/images/Testimonial/smiling-blonde-boy-hoodie_1308-174731.avif' },
+//   { id: 3, top: '80%', left: '6%', size: 'w-14 h-14', delay: '0.8s', img: '/images/Testimonial/smiling-redhaired-boy-illustration_1308-176664.avif' },
+//   // Extreme Right Side
+//   { id: 4, top: '15%', right: '8%', size: 'w-20 h-20', delay: '0.5s', img: '/images/Testimonial/360_F_728489827_qtQHjlMEeD53QhTdUEtdOvNPQw21pYjh.jpg' },
+//   { id: 5, top: '45%', right: '15%', size: 'w-16 h-16', delay: '2.2s', img: '/images/Testimonial/smiling-young-man-avatar_1308-174732.avif' },
+//   { id: 6, top: '75%', right: '6%', size: 'w-24 h-24', delay: '1.2s', img: '/images/Testimonial/young-man-avatar_1308-174733.avif' },
+// ];
 
 export default function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -98,7 +112,7 @@ export default function Testimonials() {
       <div className="relative w-full max-w-[1400px] flex-1 flex items-center justify-center mx-auto mt-4 px-4 lg:px-24">
         
         {/* Floating Corner Avatars (Hidden on mobile/tablet to keep UI perfectly clean) */}
-        <div className="absolute inset-0 hidden lg:block pointer-events-none z-0">
+        {/* <div className="absolute inset-0 hidden lg:block pointer-events-none z-0">
           {cornerAvatars.map((avatar) => (
             <div 
               key={avatar.id}
@@ -117,7 +131,7 @@ export default function Testimonials() {
               />
             </div>
           ))}
-        </div>
+        </div> */}
 
         {/* Center Navigation & Card Area */}
         <div className="relative z-20 w-full max-w-[700px] flex items-center justify-center pt-16 pb-8">

@@ -11,7 +11,7 @@ const products = [
     description: 'Niche OTT solution with 4K video streaming, AI content recommendations, subscriptions, and creator panels.',
     features: ['AI Recommendations', '4K Streaming', 'Subscription Engine'],
     Icon: Monitor,
-    image: '/images/products/ai-powered-vertical-ott-platform.jpg.jpeg',
+    image: '/images/products/ai-powered-ott-platform.jpeg',
   },
   {
     id: 'ai-chatbot',
@@ -31,7 +31,7 @@ const products = [
     description: 'Real-time voice conversation AI for calls, bookings, FAQs, and follow-ups — human-like, 24/7.',
     features: ['<500ms Latency', 'Voice Cloning', 'Booking Workflows'],
     Icon: Mic,
-    image: '/images/products/voice-to-voice-ai-assistant.jpg.jpeg',
+    image: '/images/products/voice-ai.jpeg',
   },
   {
     id: 'food-delivery',

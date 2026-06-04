@@ -9,6 +9,7 @@ import {
   CheckCircle2, ArrowRight, Bot, BrainCircuit,
   Sparkles, Wand2, Lightbulb, Monitor, TrendingUp,
   BarChart3, Shield, Eye, MessageSquare, LineChart,
+  Globe, Smartphone,
 } from 'lucide-react'
 
 // ─── Industries Data ──────────────────────────────────────────────────────────
@@ -22,7 +23,22 @@ const industries = [
     image: '/images/products/healthcare.png',
     tagline: 'AI-powered care that never sleeps',
     stat: { val: '70%', label: 'Admin burden reduced' },
-    intro: 'We build AI systems that streamline patient care, automate clinical workflows, and support medical professionals — while staying fully HIPAA-compliant.',
+    techTags: ['React Native', 'Node.js', 'WebRTC', 'AWS HIPAA', 'PostgreSQL', 'Firebase'],
+    intro: 'We build websites, mobile apps, and AI systems that streamline patient care, automate clinical workflows, and support medical professionals — while staying fully HIPAA-compliant.',
+    webWork: [
+      'Hospital & Clinic Website',
+      'Doctor Directory & Appointment Booking Portal',
+      'Online Pharmacy / Medical E-Commerce',
+      'Health Insurance Comparison Site',
+      'Patient Education & Health Blog',
+    ],
+    appWork: [
+      'Doctor Appointment Booking App',
+      'Telemedicine & Video Consultation App',
+      'Patient Health Record App',
+      'Medicine Delivery App',
+      'Hospital Management App',
+    ],
     whatWeBuild: [
       'AI Patient Support & Appointment Chatbot',
       'Medical Image Analysis (X-ray, MRI, CT)',
@@ -45,7 +61,22 @@ const industries = [
     image: '/images/products/technology.png',
     tagline: 'AI that makes your product smarter',
     stat: { val: '3x', label: 'Faster AI feature delivery' },
-    intro: 'We help SaaS companies embed AI into their products, reduce churn, and automate support — shipping production-ready ML features in weeks, not months.',
+    techTags: ['Next.js', 'Flutter', 'LangChain', 'AWS', 'PostgreSQL', 'GraphQL'],
+    intro: 'We help SaaS companies build web platforms, mobile apps, and embed AI — shipping production-ready features in weeks, not months.',
+    webWork: [
+      'SaaS Product Website & Landing Pages',
+      'Developer Documentation Portal',
+      'B2B Lead Generation Website',
+      'SaaS Dashboard Web Application',
+      'Tech Company Portfolio Site',
+    ],
+    appWork: [
+      'Mobile SaaS Application',
+      'Internal Employee Tools App',
+      'Customer Analytics Dashboard App',
+      'Product Onboarding App',
+      'API Management Mobile App',
+    ],
     whatWeBuild: [
       'In-Product AI Copilot & Assistant',
       'User Churn Prediction & Health Scoring',
@@ -68,7 +99,22 @@ const industries = [
     image: '/images/products/education.png',
     tagline: 'Personalised learning at infinite scale',
     stat: { val: '60%', label: 'Student drop-off reduced' },
-    intro: 'We build adaptive learning engines, AI tutors, and student analytics platforms that personalise education at scale — reducing drop-off and improving outcomes.',
+    techTags: ['React Native', 'WebRTC', 'Zoom SDK', 'Firebase', 'Next.js', 'PostgreSQL'],
+    intro: 'We build school websites, learning apps, and AI engines that personalise education at scale — reducing drop-off and improving outcomes.',
+    webWork: [
+      'School / College Official Website',
+      'Online Learning & Course Platform',
+      'Student Admission Portal',
+      'Ed-Tech Startup Landing Page',
+      'Parent-Teacher Communication Portal',
+    ],
+    appWork: [
+      'Student Learning App',
+      'Online Classroom & Live Classes App',
+      'Quiz & Exam App',
+      'Parent Monitoring App',
+      'Teacher & Attendance Management App',
+    ],
     whatWeBuild: [
       'Adaptive Learning Path Engine',
       'AI Doubt Resolution & Tutoring Chatbot',
@@ -91,7 +137,22 @@ const industries = [
     image: '/images/products/hospitality.png',
     tagline: 'Effortless guest experiences, automated',
     stat: { val: '28%', label: 'Increase in direct bookings' },
-    intro: 'We build AI guest concierges, dynamic pricing engines, and operations automation that increases revenue, reduces workload, and elevates the guest experience.',
+    techTags: ['Flutter', 'Google Maps', 'Stripe', 'Firebase', 'Node.js', 'React.js'],
+    intro: 'We build hotel booking websites, restaurant apps, and AI-driven operations that increase revenue, reduce workload, and elevate the guest experience.',
+    webWork: [
+      'Hotel Booking & Reservation Website',
+      'Restaurant Website with Online Menu',
+      'Resort & Tourism Portal',
+      'Event & Banquet Booking Site',
+      'Food Delivery Website',
+    ],
+    appWork: [
+      'Hotel Room Booking App',
+      'Restaurant Ordering & Delivery App',
+      'Guest Concierge App',
+      'Staff & Operations Management App',
+      'Loyalty & Rewards App',
+    ],
     whatWeBuild: [
       'AI Guest Concierge (WhatsApp & Web)',
       'Dynamic Pricing & Revenue Management',
@@ -114,7 +175,22 @@ const industries = [
     image: '/images/products/real-estate.png',
     tagline: 'Smarter valuations. Faster deals.',
     stat: { val: '4x', label: 'More qualified leads per month' },
-    intro: 'We engineer automated valuation models, AI lead qualification bots, and contract intelligence tools that help agencies, portals, and developers close more deals faster.',
+    techTags: ['Next.js', 'Google Maps', 'React Native', 'Three.js', 'PostgreSQL', 'AWS S3'],
+    intro: 'We build property portals, agent apps, and AI valuation tools that help agencies, developers, and portals close more deals faster.',
+    webWork: [
+      'Property Listing & Search Portal',
+      'Real Estate Agency Website',
+      'Developer Project Showcase Site',
+      'Commercial Real Estate Portal',
+      'Rental Management Website',
+    ],
+    appWork: [
+      'Property Search & Browse App',
+      'Virtual Property Tour App',
+      'Real Estate Agent CRM App',
+      'Home Loan & EMI Calculator App',
+      'Tenant & Rental Management App',
+    ],
     whatWeBuild: [
       'Automated Valuation Model (AVM) — <4% Error',
       'Lead Qualification & Scoring Chatbot',
@@ -137,7 +213,22 @@ const industries = [
     image: '/images/products/finance.png',
     tagline: 'Risk intelligence at transaction speed',
     stat: { val: '97%', label: 'Fraud detection precision' },
-    intro: 'We build fraud detection systems, credit risk models, AML engines, and AI financial assistants that help banks, NBFCs, and fintechs make smarter decisions in real time.',
+    techTags: ['Java Spring Boot', 'React Native', 'PostgreSQL', 'Redis', 'Razorpay', 'Kafka'],
+    intro: 'We build banking portals, fintech apps, and AI fraud detection systems that help banks, NBFCs, and fintechs make smarter decisions in real time.',
+    webWork: [
+      'Banking & Fintech Web Portal',
+      'Loan Application Website',
+      'Investment & Trading Platform',
+      'Financial Services Company Website',
+      'Personal Finance Management Portal',
+    ],
+    appWork: [
+      'Mobile Banking App',
+      'Digital Wallet & Payment App',
+      'Investment & Mutual Fund App',
+      'Loan Management App',
+      'Personal Finance Tracker App',
+    ],
     whatWeBuild: [
       'Real-Time Fraud & Anomaly Detection (<20ms)',
       'Credit Scoring & Loan Default Prediction',
@@ -160,7 +251,22 @@ const industries = [
     image: '/images/products/retail-e-commerce.png',
     tagline: 'Convert more, stock smarter, serve faster',
     stat: { val: '+32%', label: 'Revenue from recommendations' },
-    intro: 'We build personalised recommendation engines, demand forecasting systems, dynamic pricing tools, and AI customer support — so retailers sell more with less overhead.',
+    techTags: ['Next.js', 'Flutter', 'Elasticsearch', 'Redis', 'Razorpay', 'AWS'],
+    intro: 'We build e-commerce stores, shopping apps, and AI-powered recommendation engines so retailers sell more with less overhead.',
+    webWork: [
+      'E-Commerce Store (Single or Multi-vendor)',
+      'B2B Wholesale Marketplace',
+      'D2C Brand Website',
+      'Product Catalogue & Showroom Site',
+      'Flash Sale & Deals Portal',
+    ],
+    appWork: [
+      'Online Shopping App',
+      'Seller / Vendor Management App',
+      'Order Tracking App',
+      'Loyalty & Coupon Rewards App',
+      'Inventory & POS App',
+    ],
     whatWeBuild: [
       'Product Recommendation Engine (Hybrid)',
       'Demand Forecasting & Auto-Replenishment',
@@ -183,7 +289,22 @@ const industries = [
     image: '/images/products/manufacturing.png',
     tagline: 'Zero unplanned downtime. Zero defects.',
     stat: { val: '67%', label: 'Less unplanned downtime' },
-    intro: 'We deploy IoT predictive maintenance systems, computer vision quality inspection, and supply chain AI that eliminate costly downtime and defects on the factory floor.',
+    techTags: ['React.js', 'Node.js', 'Python ML', 'IoT APIs', 'PostgreSQL', 'Docker'],
+    intro: 'We build B2B corporate websites, factory management apps, and AI predictive systems that eliminate costly downtime and defects on the factory floor.',
+    webWork: [
+      'Corporate & B2B Manufacturing Website',
+      'Product Catalogue & Dealer Portal',
+      'Export / Import Business Website',
+      'Industrial Services Company Site',
+      'Factory Visit Booking Portal',
+    ],
+    appWork: [
+      'Factory Floor Management App',
+      'Inventory & Stock Control App',
+      'Worker Attendance & Safety App',
+      'Quality Inspection App',
+      'Dealer & Distributor App',
+    ],
     whatWeBuild: [
       'Predictive Maintenance from IoT Sensors',
       'Computer Vision Quality Inspection (99.2%)',
@@ -206,7 +327,22 @@ const industries = [
     image: '/images/products/logistics-delivery.png',
     tagline: 'Every shipment, perfectly predicted',
     stat: { val: '94%', label: 'ETA prediction accuracy' },
-    intro: 'We build route optimisation engines, ETA predictors, warehouse AI, and shipment chatbots that cut costs, improve on-time delivery, and reduce WISMO calls.',
+    techTags: ['Flutter', 'Google Maps', 'Node.js', 'Firebase', 'WebSocket', 'PostgreSQL'],
+    intro: 'We build logistics websites, driver apps, and AI route optimisation tools that cut costs, improve on-time delivery, and reduce WISMO calls.',
+    webWork: [
+      'Logistics Company Website',
+      'Shipment Tracking & Management Portal',
+      'Freight Booking Website',
+      'Warehouse Management Dashboard',
+      'Courier & Delivery Services Site',
+    ],
+    appWork: [
+      'Delivery Tracking App',
+      'Rider / Driver App',
+      'Fleet & Vehicle Management App',
+      'Shipment Booking App',
+      'Warehouse Operations App',
+    ],
     whatWeBuild: [
       'Dynamic Route & Load Optimisation',
       'Delivery ETA Predictor (XGBoost)',
@@ -229,7 +365,22 @@ const industries = [
     image: '/images/products/entertainment.png',
     tagline: 'Keep audiences watching. Keep content flowing.',
     stat: { val: '2.5x', label: 'Content engagement increase' },
-    intro: 'We build personalised content feeds, subscriber churn models, AI moderation pipelines, and generative tools that help media companies grow and retain their audience.',
+    techTags: ['React Native', 'AWS CloudFront', 'HLS Streaming', 'WebRTC', 'Stripe', 'Firebase'],
+    intro: 'We build OTT platforms, streaming apps, and AI-powered content tools that help media companies grow and retain their audience.',
+    webWork: [
+      'OTT / Video Streaming Platform',
+      'News & Media Portal',
+      'Event Ticketing & Booking Website',
+      'Fan Community Portal',
+      'Entertainment Agency Website',
+    ],
+    appWork: [
+      'Video Streaming App',
+      'Music Player App',
+      'Event Booking & Ticketing App',
+      'Podcast App',
+      'Social Fan Club App',
+    ],
     whatWeBuild: [
       'Personalised Content Recommendation Feed',
       'Subscriber Churn Prediction & Retention',
@@ -252,7 +403,22 @@ const industries = [
     image: '/images/products/agriculture.png',
     tagline: 'Precision farming powered by data',
     stat: { val: '31%', label: 'Crop yield improvement' },
-    intro: 'We build crop yield predictors, drone image analysis systems, smart irrigation AI, and price forecasting models that maximise output and minimise waste.',
+    techTags: ['Flutter', 'Python ML', 'Satellite APIs', 'Firebase', 'Node.js', 'PostgreSQL'],
+    intro: 'We build agri marketplaces, farmer advisory apps, and AI crop prediction tools that maximise output and minimise waste.',
+    webWork: [
+      'AgriTech Company Website',
+      'Farmer Marketplace & Product Store',
+      'Agricultural Advisory Portal',
+      'Commodity Price & Weather Portal',
+      'Government Scheme Information Site',
+    ],
+    appWork: [
+      'Farmer Advisory & Crop Monitoring App',
+      'Agri Market Price App',
+      'Farm Equipment Rental App',
+      'Agri-Input E-Commerce App',
+      'Weather & Soil Health App',
+    ],
     whatWeBuild: [
       'Crop Yield Prediction (Satellite + Sensors)',
       'Drone Image Disease & Pest Detection',
@@ -275,7 +441,22 @@ const industries = [
     image: '/images/products/automotive.png',
     tagline: 'Intelligent vehicles. Smarter dealerships.',
     stat: { val: '44%', label: 'Dealer service conversion lift' },
-    intro: 'We build predictive maintenance, dealer chatbots, driver behaviour analytics, and parts forecasting systems that improve safety, service revenue, and operations.',
+    techTags: ['Flutter', 'Google Maps', 'Firebase', 'Node.js', 'PostgreSQL', 'WebSocket'],
+    intro: 'We build car dealership websites, vehicle service apps, and AI predictive systems that improve safety, service revenue, and operations.',
+    webWork: [
+      'Car Dealership & Showroom Website',
+      'Vehicle Marketplace & Listing Site',
+      'Auto Service Center Website',
+      'Car Rental & Subscription Site',
+      'Spare Parts E-Commerce Website',
+    ],
+    appWork: [
+      'Car Booking & Test Drive App',
+      'Vehicle Service & Maintenance App',
+      'Car Rental App',
+      'Dealer Management App',
+      'GPS Vehicle Tracking App',
+    ],
     whatWeBuild: [
       'Predictive Vehicle Maintenance (Telematics)',
       'Smart Dealer Lead Qualification Bot',
@@ -298,7 +479,22 @@ const industries = [
     image: '/images/products/energy.png',
     tagline: 'Smarter grids. Lower costs. Fewer faults.',
     stat: { val: '22%', label: 'Energy waste reduced' },
-    intro: 'We build smart meter analytics, grid fault prediction, renewable energy forecasting, and customer AI tools that help utilities cut waste and improve reliability.',
+    techTags: ['React.js', 'Python', 'SCADA APIs', 'Node.js', 'PostgreSQL', 'AWS IoT'],
+    intro: 'We build energy company websites, utility apps, and AI smart meter tools that help utilities cut waste and improve reliability.',
+    webWork: [
+      'Energy Company Corporate Website',
+      'Solar & Renewable Energy Site',
+      'Utility Bill Payment Portal',
+      'Energy Monitoring Dashboard',
+      'EV Charging Station Finder Website',
+    ],
+    appWork: [
+      'Energy Consumption Monitoring App',
+      'Utility Bill Payment App',
+      'Solar Panel Management App',
+      'Smart Meter App',
+      'EV Charging Booking App',
+    ],
     whatWeBuild: [
       'Smart Meter Fraud & Anomaly Detection',
       'Grid Load Forecasting & Balancing AI',
@@ -321,7 +517,22 @@ const industries = [
     image: '/images/products/telecommunications.png',
     tagline: 'Retain customers before the signal drops',
     stat: { val: '71%', label: 'Customer churn reduced' },
-    intro: 'We build churn prediction models, network anomaly detection, AI support agents, and revenue assurance tools that help telcos retain subscribers and protect revenue.',
+    techTags: ['React Native', 'Node.js', 'PostgreSQL', 'Redis', 'Twilio', 'AWS'],
+    intro: 'We build telecom portals, self-service apps, and AI churn tools that help telcos retain subscribers and protect revenue.',
+    webWork: [
+      'Telecom Provider Website',
+      'Recharge & Bill Payment Portal',
+      'Plan Comparison & Selection Site',
+      'Business Broadband & Enterprise Portal',
+      'Customer Self-Service Portal',
+    ],
+    appWork: [
+      'Telecom Self-Service App',
+      'Recharge & Bill Payment App',
+      'Network Status & Support App',
+      'SIM & Account Management App',
+      'Business Telecom Management App',
+    ],
     whatWeBuild: [
       'Customer Churn Prediction & Retention AI',
       'Network Anomaly & Degradation Detection',
@@ -344,7 +555,22 @@ const industries = [
     image: '/images/products/legal.png',
     tagline: 'Review contracts in minutes, not days',
     stat: { val: '80%', label: 'Faster document review' },
-    intro: 'We build contract intelligence platforms, AI legal assistants, compliance monitoring tools, and document automation systems that multiply fee earner productivity.',
+    techTags: ['Next.js', 'LangChain', 'OpenAI GPT-4', 'React Native', 'PostgreSQL', 'AWS S3'],
+    intro: 'We build law firm websites, legal case management apps, and AI contract tools that multiply fee earner productivity.',
+    webWork: [
+      'Law Firm & Legal Services Website',
+      'Legal Document Management Portal',
+      'Legal Services Marketplace',
+      'Lawyer Directory & Booking Site',
+      'Legal Research & Resource Hub',
+    ],
+    appWork: [
+      'Legal Case Management App',
+      'Document Review & Signing App',
+      'Client-Lawyer Communication App',
+      'Legal Consultation Booking App',
+      'Court Case Tracker App',
+    ],
     whatWeBuild: [
       'Contract Review & Clause Extraction (94%)',
       'Legal Research AI Assistant (RAG-powered)',
@@ -367,7 +593,22 @@ const industries = [
     image: '/images/products/construction.png',
     tagline: 'Build safer. Deliver faster. Waste less.',
     stat: { val: '58%', label: 'Fewer safety incidents' },
-    intro: 'We deploy site safety CV systems, schedule prediction models, automated cost estimators, and progress tracking tools that reduce risk and keep projects on time.',
+    techTags: ['Flutter', 'React.js', 'Google Maps', 'Firebase', 'Node.js', 'PostgreSQL'],
+    intro: 'We build construction company websites, site management apps, and AI safety tools that reduce risk and keep projects on time.',
+    webWork: [
+      'Construction Company Website',
+      'Project Showcase & Portfolio Site',
+      'Material Supplier & Procurement Website',
+      'Contractor Directory Portal',
+      'Building Permit & Compliance Site',
+    ],
+    appWork: [
+      'Site & Project Management App',
+      'Worker Attendance & Safety App',
+      'Construction Progress Tracking App',
+      'Material Procurement App',
+      'Equipment Rental App',
+    ],
     whatWeBuild: [
       'Site Safety Computer Vision (CCTV)',
       'Project Schedule Delay Prediction',
@@ -427,7 +668,6 @@ export default function IndustriesPage() {
 
   const handleSelect = (id: string) => {
     setActiveId(id)
-    // scroll to detail section smoothly
     const el = document.getElementById('industry-detail')
     if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }
@@ -689,33 +929,69 @@ export default function IndustriesPage() {
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col lg:flex-row items-start gap-16">
 
-            {/* Left — Image + stat card */}
-            <div className="w-full lg:w-1/2 flex-shrink-0 relative">
-              <div className="rounded-2xl overflow-hidden shadow-xl">
+            {/* Left — Image + content below */}
+            <div className="w-full lg:w-1/2 flex-shrink-0">
+
+              {/* Image */}
+              <div className="relative rounded-2xl overflow-hidden shadow-xl">
                 <img
                   key={active.id}
                   src={active.image}
                   alt={active.title}
-                  className="w-full h-[460px] object-cover hover:scale-105 transition-transform duration-700"
+                  className="w-full h-[340px] object-cover hover:scale-105 transition-transform duration-700"
                 />
-              </div>
-              {/* Floating stat card */}
-              <div className="absolute -bottom-5 -left-5 bg-white rounded-2xl shadow-xl border border-gray-100 px-6 py-4 flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style={{ background: `${active.color}18` }}>
-                  <TrendingUp size={20} style={{ color: active.color }} />
+                {/* Floating stat card */}
+                <div className="absolute bottom-4 left-4 bg-white/95 backdrop-blur-sm rounded-xl shadow-lg border border-white/60 px-4 py-3 flex items-center gap-3">
+                  <div className="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0" style={{ background: `${active.color}18` }}>
+                    <TrendingUp size={16} style={{ color: active.color }} />
+                  </div>
+                  <div>
+                    <div className="text-lg font-black leading-none" style={{ color: active.color }}>{active.stat.val}</div>
+                    <div className="text-gray-500 text-[10px] font-medium mt-0.5">{active.stat.label}</div>
+                  </div>
                 </div>
-                <div>
-                  <div className="text-2xl font-bold text-[#0a1628] leading-none" style={{ color: active.color }}>{active.stat.val}</div>
-                  <div className="text-gray-500 text-xs font-medium mt-0.5">{active.stat.label}</div>
+                {/* Industry badge */}
+                <div className="absolute top-4 right-4">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-white text-xs font-bold shadow-lg" style={{ background: active.color }}>
+                    <ActiveIcon size={11} />
+                    {active.title}
+                  </span>
                 </div>
               </div>
-              {/* Industry badge */}
-              <div className="absolute top-5 right-5">
-                <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-white text-xs font-bold shadow-lg" style={{ background: active.color }}>
-                  <ActiveIcon size={12} />
-                  {active.title}
-                </span>
+
+              {/* Tech Stack */}
+              <div className="mt-5 bg-white rounded-2xl border border-gray-100 p-5 shadow-sm">
+                <p className="text-[10px] font-black uppercase tracking-widest text-gray-400 mb-3">Technologies & Platforms</p>
+                <div className="flex flex-wrap gap-2">
+                  {active.techTags.map(tag => (
+                    <span
+                      key={tag}
+                      className="text-[11px] font-semibold px-3 py-1.5 rounded-full border"
+                      style={{ background: `${active.color}08`, borderColor: `${active.color}30`, color: active.color }}
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               </div>
+
+              {/* Service type cards */}
+              <div className="mt-3 grid grid-cols-3 gap-3">
+                {[
+                  { Icon: Globe, label: 'Custom Websites', sub: 'Responsive & SEO-ready' },
+                  { Icon: Smartphone, label: 'Mobile Apps', sub: 'iOS & Android' },
+                  { Icon: Bot, label: 'AI Solutions', sub: 'ML & Automation' },
+                ].map(({ Icon, label, sub }) => (
+                  <div key={label} className="bg-white rounded-xl border border-gray-100 p-3 text-center hover:shadow-sm hover:border-gray-200 transition-all">
+                    <div className="w-8 h-8 rounded-lg flex items-center justify-center mx-auto mb-2" style={{ background: `${active.color}12` }}>
+                      <Icon size={15} style={{ color: active.color }} />
+                    </div>
+                    <div className="text-[11px] font-bold text-[#0a1628] leading-tight">{label}</div>
+                    <div className="text-[10px] text-gray-400 mt-0.5 leading-tight">{sub}</div>
+                  </div>
+                ))}
+              </div>
+
             </div>
 
             {/* Right — Content */}
@@ -737,15 +1013,61 @@ export default function IndustriesPage() {
                 {active.intro}
               </p>
 
-              {/* What we build checklist */}
-              <p className="text-[#0a1628] font-bold text-sm uppercase tracking-widest mb-4">What We Build</p>
-              <div className="space-y-3 mb-8">
-                {active.whatWeBuild.map((item) => (
-                  <div key={item} className="flex items-center gap-3">
-                    <CheckCircle2 size={18} className="flex-shrink-0" style={{ color: active.color }} />
-                    <span className="text-gray-600 text-sm font-medium">{item}</span>
+              {/* Websites + Apps — side by side */}
+              <div className="grid grid-cols-2 gap-3 mb-3">
+                {/* Websites */}
+                <div className="rounded-2xl border border-gray-100 bg-white p-4 hover:shadow-sm transition-all">
+                  <div className="flex items-center gap-2 mb-3">
+                    <div className="w-7 h-7 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: `${active.color}15` }}>
+                      <Globe size={14} style={{ color: active.color }} />
+                    </div>
+                    <span className="text-[10px] font-black uppercase tracking-widest text-gray-400">Websites</span>
                   </div>
-                ))}
+                  <div className="space-y-2">
+                    {active.webWork.map((item) => (
+                      <div key={item} className="flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full flex-shrink-0 mt-[5px]" style={{ background: active.color }} />
+                        <span className="text-gray-600 text-xs font-medium leading-snug">{item}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Mobile Apps */}
+                <div className="rounded-2xl border border-gray-100 bg-white p-4 hover:shadow-sm transition-all">
+                  <div className="flex items-center gap-2 mb-3">
+                    <div className="w-7 h-7 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: `${active.color}15` }}>
+                      <Smartphone size={14} style={{ color: active.color }} />
+                    </div>
+                    <span className="text-[10px] font-black uppercase tracking-widest text-gray-400">Mobile Apps</span>
+                  </div>
+                  <div className="space-y-2">
+                    {active.appWork.map((item) => (
+                      <div key={item} className="flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full flex-shrink-0 mt-[5px]" style={{ background: active.color }} />
+                        <span className="text-gray-600 text-xs font-medium leading-snug">{item}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* AI Solutions — full width */}
+              <div className="rounded-2xl border p-4 mb-6" style={{ background: `${active.color}07`, borderColor: `${active.color}25` }}>
+                <div className="flex items-center gap-2 mb-3">
+                  <div className="w-7 h-7 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: `${active.color}20` }}>
+                    <Bot size={14} style={{ color: active.color }} />
+                  </div>
+                  <span className="text-[10px] font-black uppercase tracking-widest" style={{ color: active.color }}>AI Solutions</span>
+                </div>
+                <div className="grid grid-cols-2 gap-x-4 gap-y-2">
+                  {active.whatWeBuild.map((item) => (
+                    <div key={item} className="flex items-start gap-2">
+                      <CheckCircle2 size={13} className="flex-shrink-0 mt-[2px]" style={{ color: active.color }} />
+                      <span className="text-gray-700 text-xs font-medium leading-snug">{item}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
 
               {/* Service tags */}
@@ -769,7 +1091,7 @@ export default function IndustriesPage() {
                 className="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-bold text-white text-base hover:opacity-90 transition-all hover:scale-[1.02] hover:shadow-lg"
                 style={{ background: active.color }}
               >
-                Build AI for {active.title.split(' ')[0]}
+                Start Your {active.title.split(' ')[0]} Project
                 <svg width="16" height="16" viewBox="0 0 14 14" fill="none">
                   <path d="M1 7h12M8 2l5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>

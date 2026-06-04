@@ -1,7 +1,12 @@
 'use client'
 import { use, useState } from 'react'
 import Link from 'next/link'
-import { ArrowLeft, CheckCircle2, ChevronDown, ChevronUp, Code2, ArrowRight, Users, Building2, Rocket, Package } from 'lucide-react'
+import {
+  ArrowLeft, CheckCircle2, ChevronDown, ChevronUp, Code2, ArrowRight,
+  Users, Building2, Rocket, Package, Zap, Shield, Activity, Settings,
+  Globe, TrendingUp, BarChart3, Star, Monitor, Award, Database, XCircle,
+  Clock, Layers,
+} from 'lucide-react'
 import { useModal } from '@/components/providers/ModalContext'
 
 type Product = {
@@ -907,13 +912,641 @@ const products: Product[] = [
     ],
     deliverables: ['Customer App (iOS & Android)', 'Delivery Agent App', 'Facility Operations Dashboard', 'Order Tracking & Status Management', 'Subscription & Loyalty Management Module', 'Full Source Code & Documentation'],
   },
+
+  // ── AI Image Generation ──────────────────────────────────────────────────
+  {
+    id: 'ai-image-generation',
+    tag: 'AI IMAGE SUITE',
+    accentColor: '#a855f7',
+    title: 'AI Image Generation & Transformation Suite',
+    description: 'Generate high-quality, on-brand images from text prompts with custom LoRA model fine-tuning.',
+    longDescription: 'Your marketing and design teams spend thousands on photoshoots for content that needs refreshing every week. Our AI Image Suite ends that. Generate professional product photos, lifestyle imagery, and ad creatives from text prompts in seconds — in your exact brand style, featuring your actual products via LoRA fine-tuning. Process thousands of images in bulk for background removal, quality upscaling, and brand filter application — all via API.',
+    features: ['Text-to-Image Generation (DALL-E 3 / SDXL)', 'Custom LoRA Fine-tuning on Your Products', 'Bulk Background Removal (99.2% accuracy)', 'Brand Style Transfer & Lock', '4× High-Resolution Upscaling', 'REST API + Python & Node.js SDKs'],
+    image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=1200',
+    gallery: [
+      'https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=800&q=80',
+      'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&q=80',
+      'https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?w=800&q=80',
+    ],
+    faqs: [
+      { question: 'Can I train the AI on my specific products?', answer: 'Yes. LoRA fine-tuning trains the model on 20–50 photos of your physical products so it generates images featuring your actual products in any setting.' },
+      { question: 'Who owns the copyright of generated images?', answer: 'You do. All images generated through your licensed instance belong entirely to your brand for commercial use without restriction.' },
+      { question: 'Is there a bulk processing API?', answer: 'Yes. Every feature — generation, background removal, upscaling, style transfer — is available as a REST API endpoint with Python and Node.js SDKs.' },
+    ],
+    techStack: ['Python (FastAPI)', 'Stable Diffusion XL', 'DALL-E 3', 'PyTorch', 'AWS EC2 (GPU)', 'Next.js'],
+    stats: [{ value: '4×', label: 'Image upscaling quality' }, { value: '99.2%', label: 'BG removal accuracy' }, { value: 'LoRA', label: 'Custom product training' }],
+    useCases: [
+      { icon: 'startup', title: 'E-Commerce Brands', desc: 'Generate professional product photos and lifestyle shots at a fraction of photoshoot costs.' },
+      { icon: 'enterprise', title: 'Marketing Teams', desc: 'Create 20 ad creative variants in the time it used to take to brief one designer.' },
+      { icon: 'agency', title: 'Creative Agencies', desc: 'Offer AI-powered visual creation as a managed service and process entire client catalogues in bulk.' },
+    ],
+    userFlow: [
+      { title: 'Configure Brand Style', desc: 'Define your colour palette, composition rules, and visual tone. Provide 20–30 reference images.' },
+      { title: 'LoRA Fine-Tuning', desc: 'Upload 20–50 product photos. The AI trains a custom model that places your actual products in any scene.' },
+      { title: 'Generate & Transform', desc: 'Type a text prompt or upload a batch CSV. Images generate in seconds at 4K resolution.' },
+      { title: 'Download or Push via API', desc: 'Download images directly or integrate the REST API into your e-commerce platform or CMS workflow.' },
+    ],
+    deliverables: ['Private AI Image Studio Web App', 'Brand Style Engine (Configured)', 'Custom LoRA Model (Trained on Your Products)', 'Bulk Processing Pipeline (BG Removal + Upscaling)', 'REST API + Python & Node.js SDKs', 'Full Source Code & Documentation'],
+  },
+
+  // ── AI Image Enhancer ────────────────────────────────────────────────────
+  {
+    id: 'ai-image-enhancer',
+    tag: 'IMAGE TOOLS',
+    accentColor: '#7c3aed',
+    title: 'AI Image Enhancer & Editor',
+    description: 'Upscale low-res images, bulk remove backgrounds, and apply automated brand style transfers.',
+    longDescription: 'Rescue old product photos, batch-process thousands of catalogue images overnight, and deliver print-quality assets without a single manual edit. Our AI Image Enhancer runs entirely via API — upload a CSV of image URLs, configure your output settings, and receive processed images in hours. Ideal for e-commerce catalogues, marketing teams, and agencies managing high-volume visual content.',
+    features: ['4× AI Super-Resolution Upscaling', 'Bulk Background Removal & Replacement', 'Brand Style Transfer (One-click)', 'Image Quality Restoration & Denoising', 'Batch Processing via CSV or API', 'Output Formatting for All Platforms (Instagram, Amazon, Print)'],
+    image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=1200',
+    gallery: [
+      'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&q=80',
+      'https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=800&q=80',
+      'https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?w=800&q=80',
+    ],
+    faqs: [
+      { question: 'How many images can be processed in a batch?', answer: 'Background removal processes 300–500 images per hour per GPU. A batch of 10,000 images typically completes in 20–35 hours.' },
+      { question: 'Does it work on complex edges like jewellery or hair?', answer: 'Yes. Our model handles fine jewellery, hair, fur, and transparent objects significantly better than older matting approaches.' },
+      { question: 'Can it resize images for different platforms?', answer: 'Yes. Output profiles for Instagram, Amazon, Flipkart, print, and custom dimensions are all configurable from the dashboard.' },
+    ],
+    techStack: ['Python (FastAPI)', 'Real-ESRGAN (Upscaling)', 'REMBG (BG Removal)', 'PyTorch', 'Celery (Queue)', 'AWS S3'],
+    stats: [{ value: '10K+', label: 'Images per batch' }, { value: '99.2%', label: 'BG removal accuracy' }, { value: '4×', label: 'Upscaling quality' }],
+    useCases: [
+      { icon: 'startup', title: 'E-Commerce Sellers', desc: 'Clean up your entire product catalogue overnight — white backgrounds, consistent sizing, print quality.' },
+      { icon: 'enterprise', title: 'Catalogue Managers', desc: 'Process 10,000+ SKU images in bulk via API and push directly to your PIM or CMS.' },
+      { icon: 'agency', title: 'Design Agencies', desc: 'Offer bulk image enhancement as a managed retainer service to clients.' },
+    ],
+    userFlow: [
+      { title: 'Upload or Connect', desc: 'Upload images directly, share a CSV of image URLs, or connect via API to your product management system.' },
+      { title: 'Choose Operations', desc: 'Select which enhancements to apply — upscale, background removal, style transfer, format conversion.' },
+      { title: 'Batch Process', desc: 'The pipeline processes all images in the queue. A progress dashboard shows completion status in real time.' },
+      { title: 'Download or Push', desc: 'Download the processed ZIP or let the API push images directly to your S3 bucket, Shopify, or CDN.' },
+    ],
+    deliverables: ['Web Processing Dashboard', 'Batch Processing Pipeline', 'Background Removal Engine', '4× Upscaling Module', 'REST API + SDKs', 'Full Source Code & Documentation'],
+  },
+
+  // ── AI Chatbot ───────────────────────────────────────────────────────────
+  {
+    id: 'ai-chatbot',
+    tag: 'AI CHATBOT',
+    accentColor: '#3b82f6',
+    title: 'AI Chatbot & Lead Generator',
+    description: 'Smart WhatsApp & Web chatbot trained on your data to answer queries, capture leads, and sync with CRM.',
+    longDescription: 'Your customers ask the same 50 questions 1,000 times a month. Our AI Chatbot ends that permanently. Trained on your company\'s documents, FAQs, and product pages, it answers accurately, captures leads with qualifying questions, and hands off complex cases to human agents with full context. Deploy on your website, WhatsApp, and Instagram DM from one unified dashboard.',
+    features: ['RAG-Powered Knowledge Base Training', 'Lead Capture & CRM Qualification', 'Human-Agent Handoff with Context', '90+ Language Auto-Detection', 'Web Widget + WhatsApp + Instagram DM', 'Analytics: Resolution Rate, CSAT, Lead Conversion'],
+    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1200',
+    gallery: [
+      'https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&q=80',
+      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
+      'https://images.unsplash.com/photo-1555421689-491a97ff2040?w=800&q=80',
+    ],
+    faqs: [
+      { question: 'Can I train it on my own documents and website?', answer: 'Yes. Provide PDFs, Word docs, website URLs, and product catalogues. The bot answers strictly from this content — it never makes up information.' },
+      { question: 'Does it integrate with my CRM?', answer: 'Yes. HubSpot, Salesforce, Zoho CRM, Freshdesk, and Intercom integrations are built in. Custom webhook integrations are also supported.' },
+      { question: 'How does the human handoff work?', answer: 'You configure triggers (sentiment, explicit request, failed attempts). When triggered, the full conversation and AI summary transfer to your live agent instantly.' },
+    ],
+    techStack: ['LangChain', 'OpenAI GPT-4o', 'Pinecone (Vector DB)', 'Node.js', 'WhatsApp Cloud API', 'PostgreSQL'],
+    stats: [{ value: '80%', label: 'Queries resolved without human' }, { value: '<500ms', label: 'Response time' }, { value: '90+', label: 'Languages supported' }],
+    useCases: [
+      { icon: 'startup', title: 'E-Commerce & D2C', desc: 'Answer product questions, check order status, recover abandoned carts — 24/7 without extra staff.' },
+      { icon: 'enterprise', title: 'SaaS Companies', desc: 'Deflect repetitive support, qualify inbound leads, and provide in-app onboarding assistance.' },
+      { icon: 'agency', title: 'Service Businesses', desc: 'Book appointments, collect intake information, and send follow-up reminders automatically.' },
+    ],
+    userFlow: [
+      { title: 'Knowledge Base Ingestion', desc: 'Share your FAQs, docs, and website URLs. We embed everything into a private vector database in 2–3 days.' },
+      { title: 'Conversation Flow Design', desc: 'We design greetings, lead capture flows, escalation triggers, and handoff rules for your business.' },
+      { title: 'Deploy on All Channels', desc: 'One JS snippet on your site, WhatsApp Business API connected, Instagram DM linked — all in one dashboard.' },
+      { title: 'Monitor & Improve', desc: 'Review conversation logs weekly. We update the knowledge base to improve accuracy over the first 30 days.' },
+    ],
+    deliverables: ['Embeddable Web Chat Widget', 'WhatsApp Business API Integration', 'Instagram DM Integration', 'Admin Analytics Dashboard', 'CRM & Helpdesk Integration', 'Full Source Code & Documentation'],
+  },
+
+  // ── Job Seeker Platform ──────────────────────────────────────────────────
+  {
+    id: 'job-seeker',
+    tag: 'AI JOB PLATFORM',
+    accentColor: '#6366f1',
+    title: 'AI Job Seeker & Recruitment Platform',
+    description: 'Smart job portal with semantic matching, AI resume builder, and an advanced employer ATS.',
+    longDescription: 'The job market is more competitive than ever but most job portals are stuck in 2010. Our platform gives candidates an AI that rewrites their resume to match any job description, a voice-based interview coach, and a matching engine that surfaces only the roles they qualify for. Employers get an ATS with AI resume scoring, structured interview scheduling, and hiring analytics — all in one platform.',
+    features: ['AI Resume Builder & JD Optimiser', 'Semantic Job Matching Engine', 'AI Mock Interview Coach (Voice & Text)', 'Employer ATS with Resume Scoring', 'Skill Gap Analysis & Upskilling', 'Application Tracker & Status Hub'],
+    image: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&q=80&w=1200',
+    gallery: [
+      'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80',
+      'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&q=80',
+      'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&q=80',
+    ],
+    faqs: [
+      { question: 'Can the AI really optimise a resume to pass ATS systems?', answer: 'Yes. When the job seeker pastes a JD, the AI rewrites their resume using the exact keywords — AI-optimised resumes had 3× more callbacks in testing.' },
+      { question: 'How does job matching work?', answer: 'Semantic matching converts both the candidate profile and job descriptions into vector embeddings ranked by cosine similarity — meaning "built Python pipelines" matches "data engineering experience."' },
+      { question: 'Can employers manage their own hiring pipeline?', answer: 'Yes. Employers get a self-service ATS with AI resume scoring, Google Calendar interview sync, and automated rejection/follow-up sequences.' },
+    ],
+    techStack: ['Next.js', 'Python (FastAPI)', 'OpenAI GPT-4o', 'Elasticsearch', 'PostgreSQL', 'React Native'],
+    stats: [{ value: '3×', label: 'More callbacks with AI resume' }, { value: '60%', label: 'Faster time-to-hire' }, { value: '2-sided', label: 'Seeker + Employer marketplace' }],
+    useCases: [
+      { icon: 'startup', title: 'Niche Job Boards', desc: 'Launch a focused job board for a specific industry with AI matching that serves both specialised candidates and employers.' },
+      { icon: 'enterprise', title: 'Recruitment Agencies', desc: 'Give recruiters an ATS that auto-screens and ranks resumes, cutting time-to-hire by 60%.' },
+      { icon: 'agency', title: 'Universities & Placement Cells', desc: 'Connect students with recruiters, track placement status, and prepare every student with AI resume and interview tools.' },
+    ],
+    userFlow: [
+      { title: 'Profile & Resume Setup', desc: 'Job seeker creates a profile. AI generates an optimised resume from their work history description.' },
+      { title: 'Smart Job Discovery', desc: 'The matching engine shows jobs ranked by fit score with explanation of why each role was recommended.' },
+      { title: 'Practice Interviews', desc: 'AI coach asks role-specific questions and gives instant feedback on content, clarity, and confidence.' },
+      { title: 'Apply & Track', desc: 'One-click apply with AI-optimised resume. Track all applications and interview stages from a single dashboard.' },
+    ],
+    deliverables: ['Job Seeker Web Portal & Mobile App', 'Employer / Recruiter ATS Dashboard', 'AI Resume Builder & JD-Optimisation Engine', 'AI Mock Interview Coach', 'Smart Matching & Skill Gap Engine', 'Full Source Code & Documentation'],
+  },
+
+  // ── Astrology Platform ───────────────────────────────────────────────────
+  {
+    id: 'astrology-platform',
+    tag: 'ASTROTECH',
+    accentColor: '#7c3aed',
+    title: 'Astrology & Consultation App',
+    description: 'Live astrologer consultations, daily horoscopes, kundli generation, and in-app wallet calling.',
+    longDescription: 'Build your own Astrotalk or AstroSage. Our Astrology Platform connects users with verified astrologers for live voice, video, and chat consultations — powered by a coin/wallet system. Users get personalised daily horoscopes, kundli generation, and compatibility reports. Astrologers manage their availability, earnings, and reviews from a dedicated dashboard. Built to scale from 50 to 50,000 concurrent sessions.',
+    features: ['Live Voice, Video & Chat Consultations', 'Kundli Generation & Birth Chart Engine', 'Daily Horoscope & Personalised Feed', 'In-App Wallet & Coin Recharge System', 'Astrologer Verification & Onboarding', 'Earnings Dashboard & Automated Payouts'],
+    image: 'https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&q=80&w=1200',
+    gallery: [
+      'https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=800&q=80',
+      'https://images.unsplash.com/photo-1518709414768-a88981a4515d?w=800&q=80',
+      'https://images.unsplash.com/photo-1516339901601-2e1b62dc0c45?w=800&q=80',
+    ],
+    faqs: [
+      { question: 'How does the wallet/coin system work?', answer: 'Users recharge their wallet with coins (₹1 = 1 coin typically). Consultations deduct coins per minute. Astrologers earn a share of each session automatically.' },
+      { question: 'How are astrologers verified?', answer: 'Astrologers go through document verification, skill assessment, and a profile review before going live. Admin can approve/reject/suspend from the dashboard.' },
+      { question: 'Can we add free first-consultation offers?', answer: 'Yes. Promo mechanics like "first 5 minutes free," referral coins, and daily login bonuses are all configurable from the admin panel.' },
+    ],
+    techStack: ['Flutter (iOS & Android)', 'Node.js', 'WebRTC (Agora)', 'Firebase', 'Razorpay', 'PostgreSQL'],
+    stats: [{ value: 'Live', label: 'Voice, Video & Chat' }, { value: 'Wallet', label: 'Coin System' }, { value: 'Auto', label: 'Astrologer Payouts' }],
+    useCases: [
+      { icon: 'startup', title: 'Astrology Startups', desc: 'Launch your own branded Astrotalk-style platform with all tech built and ready.' },
+      { icon: 'enterprise', title: 'Media & Content Brands', desc: 'Monetise your astrology audience with live consultation features beyond daily horoscope content.' },
+      { icon: 'agency', title: 'Astrologer Networks', desc: 'Give your network of astrologers a professional platform to grow their client base and earnings.' },
+    ],
+    userFlow: [
+      { title: 'Register & Enter Birth Details', desc: 'User signs up, enters name, birth date, time, and place for personalised horoscope and kundli generation.' },
+      { title: 'Recharge Wallet & Browse', desc: 'Add coins to wallet, browse astrologer profiles by speciality, language, rating, and per-minute rate.' },
+      { title: 'Start a Live Consultation', desc: 'Tap to start a voice/video/chat session. Coins are deducted per minute and shown in real time.' },
+      { title: 'Review & Revisit', desc: 'Rate the astrologer, save the session notes, and book follow-up sessions directly from the app.' },
+    ],
+    deliverables: ['User App (iOS & Android)', 'Astrologer App & Earnings Dashboard', 'Admin Panel with Verification & Analytics', 'Kundli Engine & Horoscope Module', 'Wallet & Payout Management System', 'Full Source Code & Documentation'],
+  },
+
+  // ── Universal Booking Engine ─────────────────────────────────────────────
+  {
+    id: 'booking-engine',
+    tag: 'BOOKING SUITE',
+    accentColor: '#0891b2',
+    title: 'Universal Booking & Appointments',
+    description: 'Versatile booking engine for salons, consultants, and clinics with calendar sync and POS billing.',
+    longDescription: 'One booking platform that works for any service business — salons, clinics, tutors, consultants, gyms, or spas. Customers book slots online 24/7, receive automated reminders, and pay in advance. Service providers manage their calendar, staff schedules, and billing from one admin panel. Syncs with Google Calendar and eliminates double-bookings completely.',
+    features: ['Multi-service Slot Management', 'Google & Outlook Calendar Sync', 'POS Billing & Invoice Generation', 'Staff Schedule & Availability Management', 'Automated SMS/WhatsApp Reminders', 'Loyalty Points & Membership Plans'],
+    image: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=1200',
+    gallery: [
+      'https://images.unsplash.com/photo-1560066984-138daaa0e9f9?w=800&q=80',
+      'https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=800&q=80',
+      'https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=800&q=80',
+    ],
+    faqs: [
+      { question: 'Can multiple staff members have separate booking calendars?', answer: 'Yes. Each staff member gets their own schedule and availability. Customers can choose a specific provider or accept "first available."' },
+      { question: 'Does it support advance payment or deposits?', answer: 'Yes. You can require full prepayment, a deposit percentage, or offer pay-at-venue — configurable per service type.' },
+      { question: 'Can it be customised for a medical clinic?', answer: 'Yes. The platform is configurable for any service type — clinic appointments, tutor sessions, legal consultations, and more.' },
+    ],
+    techStack: ['React.js', 'Node.js', 'PostgreSQL', 'Google Calendar API', 'Razorpay', 'Firebase'],
+    stats: [{ value: '24/7', label: 'Online Booking' }, { value: 'Zero', label: 'Double Bookings' }, { value: 'Auto', label: 'Reminders' }],
+    useCases: [
+      { icon: 'startup', title: 'Salons & Spas', desc: 'Replace phone bookings. Let customers self-book, choose their stylist, and pay in advance.' },
+      { icon: 'enterprise', title: 'Clinics & Hospitals', desc: 'Manage doctor availability, patient appointments, and teleconsultation slots from one panel.' },
+      { icon: 'agency', title: 'Consultants & Tutors', desc: 'Share a booking link, set your available hours, and let clients schedule sessions without back-and-forth.' },
+    ],
+    userFlow: [
+      { title: 'Select Service & Provider', desc: 'Customer browses services, picks a staff member, and sees real-time available slots.' },
+      { title: 'Book & Pay', desc: 'Choose a time slot, enter details, and pay online or select pay-at-venue. Confirmation sent instantly.' },
+      { title: 'Automated Reminders', desc: 'WhatsApp and SMS reminders fire 24 hours and 1 hour before the appointment automatically.' },
+      { title: 'Attend & Feedback', desc: 'Service is delivered. Customer gets a digital invoice and is invited to leave a rating.' },
+    ],
+    deliverables: ['Customer Booking Web Portal & App (iOS & Android)', 'Staff & Admin Management Dashboard', 'POS Billing & Invoice Module', 'Google Calendar Sync Integration', 'Loyalty & Membership Management', 'Full Source Code & Documentation'],
+  },
+
+  // ── Food Delivery ────────────────────────────────────────────────────────
+  {
+    id: 'food-delivery',
+    tag: 'FOOD DELIVERY',
+    accentColor: '#ef4444',
+    title: 'Food Delivery Platform',
+    description: 'End-to-end food delivery with AI routing, restaurant portal, live tracking, and multi-payment support.',
+    longDescription: 'Build your own Swiggy or Zomato for your city, food niche, or restaurant chain. A complete three-sided marketplace — customer app with personalised AI food recommendations, a restaurant portal for order management, and a rider app with AI-optimised delivery routes. Everything connected in real time so customers see exact ETAs and riders get dynamic routing that avoids traffic.',
+    features: ['Customer Ordering App (iOS & Android)', 'Restaurant Management Portal', 'Rider Delivery App with AI Routing', 'Live GPS Order Tracking', 'Personalised Menu Recommendations', 'Multi-payment: UPI, COD, Wallet, Stripe'],
+    image: 'https://images.unsplash.com/photo-1526367790999-0150786686a2?auto=format&fit=crop&q=80&w=1200',
+    gallery: [
+      'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80',
+      'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&q=80',
+      'https://images.unsplash.com/photo-1617347454431-f49cd7e4c1f6?w=800&q=80',
+    ],
+    faqs: [
+      { question: 'Are the restaurant and rider apps included?', answer: 'Yes. The full suite includes Customer App, Restaurant Portal (Web), and Rider App — all branded under your identity.' },
+      { question: 'Does it support multiple cities?', answer: 'Yes. Multi-city with separate delivery zones, restaurant catalogues, pricing rules, and rider pools per city is supported.' },
+      { question: 'Can restaurant chains own their delivery instead of using Swiggy?', answer: 'Yes. This is one of the primary use cases — own your delivery channel and save the 25–35% aggregator commission.' },
+    ],
+    techStack: ['Flutter (3 Apps)', 'Node.js', 'MongoDB', 'Google Maps API', 'Redis', 'Razorpay'],
+    stats: [{ value: '4 Apps', label: 'Customer, Restaurant, Rider, Admin' }, { value: '22%', label: 'Faster delivery via AI routing' }, { value: 'Multi-city', label: 'Support built-in' }],
+    useCases: [
+      { icon: 'startup', title: 'Cloud Kitchens', desc: 'Launch delivery from multiple kitchen brands under one app without paying aggregator commissions.' },
+      { icon: 'enterprise', title: 'Restaurant Chains', desc: 'Own your delivery channel, collect customer data, and run loyalty programmes aggregators block.' },
+      { icon: 'agency', title: 'City-Level Aggregators', desc: 'Launch a Swiggy-style aggregator for your city, cuisine niche, or premium restaurant segment.' },
+    ],
+    userFlow: [
+      { title: 'Browse & Order', desc: 'Customer opens the app, browses menus with personalised recommendations, and places an order.' },
+      { title: 'Restaurant Confirms', desc: 'Restaurant app receives the order with an alert, confirms it, and sets the preparation time.' },
+      { title: 'Rider Picks Up', desc: 'An available rider is auto-assigned via the routing engine and picks up the packed order.' },
+      { title: 'Delivered to Door', desc: 'Customer tracks the rider live on the map and receives the order with a digital receipt.' },
+    ],
+    deliverables: ['Customer Ordering App (iOS & Android)', 'Restaurant Management App & Web Portal', 'Rider Delivery App (iOS & Android)', 'Super Admin Dashboard', 'AI Routing & Recommendation Engines', 'Full Source Code & Documentation'],
+  },
+
+  // ── Single-Vendor Grocery ────────────────────────────────────────────────
+  {
+    id: 'grocery-single-vendor',
+    tag: 'GROCERY STORE',
+    accentColor: '#16a34a',
+    title: 'Single-Vendor Grocery Store App',
+    description: 'Dedicated supermarket app with inventory management, slot booking, and home delivery tracking.',
+    longDescription: 'Give your supermarket or grocery store a complete online presence. Customers browse your full catalogue, add items to cart, choose a delivery slot, and track delivery in real time. Your team manages inventory levels, processes orders, and handles delivery from the admin panel — eliminating stockouts, reducing manual calls, and growing repeat orders through loyalty points.',
+    features: ['Real-time Inventory Sync & Alerts', 'Home Delivery Slot Booking', 'Live Order Tracking', 'Barcode Scanning for Stock Management', 'Loyalty Points & Coupons', 'Weekly Subscription Baskets'],
+    image: 'https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&q=80&w=1200',
+    gallery: [
+      'https://images.unsplash.com/photo-1608686207856-001b95cf60ca?w=800&q=80',
+      'https://images.unsplash.com/photo-1506617420156-8e4536971650?w=800&q=80',
+      'https://images.unsplash.com/photo-1578916171728-46686eac8d58?w=800&q=80',
+    ],
+    faqs: [
+      { question: 'Can customers subscribe to a weekly grocery basket?', answer: 'Yes. Customers can create recurring baskets with weekly or monthly auto-ordering at a discounted rate.' },
+      { question: 'Does it support multiple store locations?', answer: 'Yes. Multi-store inventory with location-based stock visibility and order routing is built in.' },
+      { question: 'How are low-stock items handled?', answer: 'Automated alerts notify your team when items fall below reorder points. Out-of-stock items are hidden from customers automatically.' },
+    ],
+    techStack: ['React Native (App)', 'Node.js', 'MongoDB', 'Firebase', 'Google Maps', 'Razorpay'],
+    stats: [{ value: 'Real-time', label: 'Inventory Sync' }, { value: 'Slot', label: 'Delivery Booking' }, { value: 'Auto', label: 'Subscriptions' }],
+    useCases: [
+      { icon: 'startup', title: 'Standalone Grocery Stores', desc: 'Launch an online grocery store for your neighbourhood without building tech from scratch.' },
+      { icon: 'enterprise', title: 'Supermarket Chains', desc: 'Add home delivery to your existing store network with centralised inventory control.' },
+      { icon: 'agency', title: 'Organic & Specialty Stores', desc: 'Sell niche products online — organic, imported, health — with a subscription basket model.' },
+    ],
+    userFlow: [
+      { title: 'Browse & Add to Cart', desc: 'Customer browses categories, sees live stock, and adds items including weekly subscription staples.' },
+      { title: 'Choose Delivery Slot', desc: 'Select a preferred delivery window from available slots in their zone.' },
+      { title: 'Pay & Confirm', desc: 'Review cart, apply coupons, choose payment, and confirm the order.' },
+      { title: 'Track to Door', desc: 'Receive packing and dispatch updates, then track delivery live until it arrives.' },
+    ],
+    deliverables: ['Customer App (iOS & Android)', 'Store Operations & Picker App', 'Admin & Inventory Dashboard', 'Slot Management Engine', 'Loyalty & Subscription Module', 'Full Source Code & Documentation'],
+  },
+
+  // ── Quick-Commerce Grocery ───────────────────────────────────────────────
+  {
+    id: 'grocery-multi-vendor',
+    tag: 'QUICK-COMMERCE',
+    accentColor: '#15803d',
+    title: 'Quick-Commerce Grocery (Blinkit Clone)',
+    description: 'Hyper-local multi-vendor grocery with dark store mapping, 10-min delivery ops, and live rider tracking.',
+    longDescription: 'Build the Blinkit or Zepto for your city. Our Quick-Commerce platform connects customers to the nearest dark store for 10-minute delivery — with multi-vendor seller onboarding, live rider dispatch, demand forecasting to prevent stockouts, and flash sale mechanics to drive basket size. Fully configurable delivery zones, store coverage areas, and dynamic delivery pricing.',
+    features: ['Multi-Vendor Seller Onboarding & Panel', 'Dark Store Operations & Zone Mapping', '10-Minute Delivery Dispatch Engine', 'Live Rider Tracking for Customers', 'Demand Forecasting & Auto-restock Alerts', 'Flash Sales & Time-limited Promotions'],
+    image: 'https://images.unsplash.com/photo-1604719312566-8fa20f135b91?auto=format&fit=crop&q=80&w=1200',
+    gallery: [
+      'https://images.unsplash.com/photo-1542838132-92c53300491e?w=800&q=80',
+      'https://images.unsplash.com/photo-1608686207856-001b95cf60ca?w=800&q=80',
+      'https://images.unsplash.com/photo-1578916171728-46686eac8d58?w=800&q=80',
+    ],
+    faqs: [
+      { question: 'How is the 10-minute delivery achieved technically?', answer: 'Riders are pre-positioned at dark stores. On order placement, the nearest available rider is dispatched immediately with the optimised route. Order is packed in parallel.' },
+      { question: 'Can multiple dark stores serve overlapping zones?', answer: 'Yes. Zone mapping defines which dark store serves each pin code. Overlapping zones can have priority rules based on stock availability.' },
+      { question: 'Is B2B bulk ordering supported alongside B2C?', answer: 'Yes. Separate buyer tiers can be created for B2B buyers with MOQ rules, credit terms, and wholesale pricing.' },
+    ],
+    techStack: ['Flutter (iOS & Android)', 'Next.js', 'MongoDB', 'Redis', 'Google Maps', 'Razorpay'],
+    stats: [{ value: '10-min', label: 'Target delivery time' }, { value: 'Multi', label: 'Vendor & Dark Store' }, { value: 'Live', label: 'Rider Dispatch' }],
+    useCases: [
+      { icon: 'startup', title: 'Quick-Commerce Startups', desc: 'Launch a hyperlocal grocery delivery brand in your city with full dark store operations.' },
+      { icon: 'enterprise', title: 'Kirana Aggregators', desc: 'Aggregate local kirana stores onto one platform and digitise last-mile delivery.' },
+      { icon: 'agency', title: 'D-Mart / Big Bazaar Type Chains', desc: 'Launch a quick-delivery arm for your retail chain to compete with Blinkit and Zepto.' },
+    ],
+    userFlow: [
+      { title: 'Open App & Browse', desc: 'Customer sees available products from the nearest dark store based on their PIN code.' },
+      { title: 'Add to Cart & Pay', desc: 'Add items, apply promo codes, choose payment, and confirm order in under 60 seconds.' },
+      { title: 'Dark Store Packs', desc: 'Store picker receives the order and packs items. A rider is dispatched simultaneously.' },
+      { title: '10-Min Delivery', desc: 'Customer tracks the rider live. Delivery is confirmed with a photo and digital receipt.' },
+    ],
+    deliverables: ['Customer App (iOS & Android)', 'Seller / Dark Store Panel', 'Rider Dispatch App', 'Super Admin & Zone Management Dashboard', 'Demand Forecasting Engine', 'Full Source Code & Documentation'],
+  },
+
+  // ── Real Estate Suite ────────────────────────────────────────────────────
+  {
+    id: 'real-estate-suite',
+    tag: 'PROPTECH',
+    accentColor: '#8b5cf6',
+    title: 'AI Real Estate Portal',
+    description: 'Buy, sell, and rent properties. Manage leads, track deals, and generate AI pitch PPTs automatically.',
+    longDescription: 'A full-stack property portal with AI-powered search, 360° virtual tours, and an agent CRM that converts more enquiries into deals. Buyers find properties through natural language search ("3BHK near metro under 80L"), explore them via virtual tours, and connect with agents. Agents manage their entire pipeline — leads, site visits, negotiations, and deal closure — from a mobile-friendly dashboard.',
+    features: ['AI-Powered Natural Language Property Search', '360° Virtual Property Tours', 'Agent CRM & Lead Pipeline', 'EMI Calculator & Home Loan Integration', 'Developer Project Showcase Pages', 'AI Pitch Deck Generator for Agents'],
+    image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=1200',
+    gallery: [
+      'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80',
+      'https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=800&q=80',
+      'https://images.unsplash.com/photo-1560520031-3a4dc4e9de0c?w=800&q=80',
+    ],
+    faqs: [
+      { question: 'Does it support both residential and commercial listings?', answer: 'Yes. Residential sale, rent, commercial, plots, and new developer projects are all supported with separate listing templates.' },
+      { question: 'How does the AI pitch PPT generator work?', answer: 'Agents select a property and the AI generates a branded presentation with photos, key features, price comparison, neighbourhood data, and ROI projections in under 2 minutes.' },
+      { question: 'Can developers showcase new projects?', answer: 'Yes. Developers get branded project pages with floor plan galleries, construction progress updates, RERA details, and deposit collection.' },
+    ],
+    techStack: ['Next.js', 'Node.js', 'PostgreSQL', 'React Native', 'Google Maps API', 'OpenAI (PPT Generator)'],
+    stats: [{ value: '360°', label: 'Virtual tours' }, { value: 'AI', label: 'Property search & PPT' }, { value: 'Agent', label: 'CRM included' }],
+    useCases: [
+      { icon: 'startup', title: 'PropTech Startups', desc: 'Launch a property marketplace for any city, niche, or property type in 5–8 weeks.' },
+      { icon: 'enterprise', title: 'Real Estate Developers', desc: 'Showcase projects with virtual tours and manage buyer leads without third-party portals.' },
+      { icon: 'agency', title: 'Brokers & Agencies', desc: 'Give your agents a professional platform to list, pitch, and close property deals faster.' },
+    ],
+    userFlow: [
+      { title: 'Search with Natural Language', desc: 'Buyer types "spacious 3BHK near good schools under 80L" — AI returns semantically matched listings.' },
+      { title: 'Virtual Tour & Shortlist', desc: 'Explore properties via 360° virtual tours and shortlist without visiting in person.' },
+      { title: 'Connect & Visit', desc: 'Send an enquiry or book a site visit. Agent receives a WhatsApp notification instantly.' },
+      { title: 'Agent Pitches & Closes', desc: 'Agent generates an AI pitch deck, follows up via CRM, and tracks the deal to closure.' },
+    ],
+    deliverables: ['Property Listing Web Portal', 'Buyer & Seller Mobile App (iOS & Android)', 'Agent CRM & Listing Dashboard', 'AI Property Search & PPT Generator', 'Virtual Tour Integration', 'Full Source Code & Documentation'],
+  },
+
+  // ── Mortgage Management ──────────────────────────────────────────────────
+  {
+    id: 'mortgage-management',
+    tag: 'FINTECH',
+    accentColor: '#0ea5e9',
+    title: 'Smarter Mortgage Management',
+    description: 'Streamline loan origination, EMI calculations, credit checks, and document verification workflows.',
+    longDescription: 'A complete digital mortgage and loan management platform for banks, NBFCs, and mortgage brokers. Digitise the entire loan journey — from online application and AI credit scoring to document verification, underwriting workflow, disbursement tracking, and EMI management. Reduce processing time from weeks to days and eliminate paper-based bottlenecks entirely.',
+    features: ['Online Loan Application & KYC', 'AI Credit Scoring & Risk Assessment', 'Document Upload & Verification Workflow', 'EMI Calculator & Loan Comparison Tool', 'Underwriting & Approval Pipeline', 'Disbursement Tracking & Repayment Management'],
+    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=1200',
+    gallery: [
+      'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&q=80',
+      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
+      'https://images.unsplash.com/photo-1611174743420-3d7df880ce32?w=800&q=80',
+    ],
+    faqs: [
+      { question: 'Does it integrate with CIBIL for credit checks?', answer: 'Yes. CIBIL, Experian, and CRIF High Mark bureau integrations are available for real-time credit score checks during the application.' },
+      { question: 'Can brokers manage multiple lender products on one platform?', answer: 'Yes. Multi-lender product catalogues, comparison tools, and commission tracking for brokers are all included.' },
+      { question: 'Is it RBI-compliant for Indian lending?', answer: 'Yes. The platform is designed for RBI KYC/CKYC guidelines, PMLA compliance, and digital lending framework requirements.' },
+    ],
+    techStack: ['React.js', 'Node.js', 'PostgreSQL', 'Python (ML)', 'CIBIL API', 'Razorpay'],
+    stats: [{ value: 'Digital', label: 'End-to-end loan journey' }, { value: 'AI', label: 'Credit scoring' }, { value: 'RBI', label: 'Compliance ready' }],
+    useCases: [
+      { icon: 'startup', title: 'Mortgage Brokers', desc: 'Give customers a digital application experience and manage multiple lender products from one dashboard.' },
+      { icon: 'enterprise', title: 'NBFCs & Banks', desc: 'Digitise the full loan origination to disbursement pipeline and reduce processing time from weeks to days.' },
+      { icon: 'agency', title: 'Real Estate Developers', desc: 'Offer home loan facilitation to buyers directly from your property portal with integrated lender connections.' },
+    ],
+    userFlow: [
+      { title: 'Apply Online', desc: 'Applicant fills a digital form, uploads identity and income documents, and submits the loan application.' },
+      { title: 'AI Credit Scoring', desc: 'Automated credit bureau check, income analysis, and risk scoring generates a preliminary credit decision.' },
+      { title: 'Underwriting Review', desc: 'Loan officer reviews the AI-scored application, requests additional documents if needed, and approves or declines.' },
+      { title: 'Disbursement & Repayment', desc: 'Loan is disbursed digitally. Borrower manages EMI payments, statements, and foreclosure from the app.' },
+    ],
+    deliverables: ['Borrower Web Portal & Mobile App', 'Loan Officer & Underwriting Dashboard', 'AI Credit Scoring Engine', 'Document Management & Verification Module', 'EMI & Repayment Management System', 'Full Source Code & Documentation'],
+  },
+
+  // ── Banking Software ─────────────────────────────────────────────────────
+  {
+    id: 'banking-software',
+    tag: 'BANKING PLATFORM',
+    accentColor: '#14b8a6',
+    title: 'Core Banking & Fintech Platform',
+    description: 'Digital banking suite with AI fraud detection, real-time transaction monitoring, and multi-rail payments.',
+    longDescription: 'Built for neobanks, credit unions, and fintech startups. Our banking platform delivers current and savings account management, NEFT/RTGS/UPI payment rails, AI-powered fraud detection, loan origination, and regulatory compliance reporting — on a microservices architecture that scales from 1,000 to 10 million customers without re-platforming.',
+    features: ['AI Fraud Detection (85% loss reduction)', 'Real-time AML Transaction Monitoring', 'Digital Account Opening with Video KYC', 'UPI, NEFT, RTGS & IMPS Payment Rails', 'Loan Origination & EMI Servicing', 'Regulatory Compliance Reporting (RBI/SEBI)'],
+    image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=1200',
+    gallery: [
+      'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80',
+      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
+      'https://images.unsplash.com/photo-1593672715438-d88a70629abe?w=800&q=80',
+    ],
+    faqs: [
+      { question: 'Is it RBI-compliant for Indian banking?', answer: 'Yes. Designed for RBI KYC/CKYC guidelines, PMLA compliance, FATF AML requirements, and NPCI integration (UPI/IMPS/NEFT).' },
+      { question: 'Can it integrate with Finacle or Temenos core banking?', answer: 'Yes. Integration adapters for Finacle, Temenos T24, Oracle FLEXCUBE, and Mphasis BankWare are available.' },
+      { question: 'How does the AI fraud detection work?', answer: 'An ensemble ML model scores every transaction in under 200ms across transaction patterns, device fingerprints, and behavioural biometrics.' },
+    ],
+    techStack: ['Java Spring Boot', 'React Native', 'PostgreSQL', 'Kafka', 'Python (ML)', 'HSM Security'],
+    stats: [{ value: '85%', label: 'Fraud loss reduction' }, { value: '<200ms', label: 'Transaction monitoring' }, { value: 'PCI-DSS', label: 'Level 1 compliant' }],
+    useCases: [
+      { icon: 'startup', title: 'Neobanks', desc: 'Launch a fully regulated digital banking experience without legacy core banking overhead.' },
+      { icon: 'enterprise', title: 'Credit Unions', desc: 'Modernise member-facing banking with digital account opening, UPI, and app-based access.' },
+      { icon: 'agency', title: 'Fintech & NBFCs', desc: 'Enter lending or payments with a compliant, scalable platform. KYC, UPI, and loans built in.' },
+    ],
+    userFlow: [
+      { title: 'Account Opening & KYC', desc: 'Customer completes a video KYC, uploads identity documents, and opens a digital account in minutes.' },
+      { title: 'Fund & Transact', desc: 'Add funds via UPI/NEFT, make payments, and transfers — all monitored by the fraud engine in real time.' },
+      { title: 'Apply for Loans', desc: 'Digital loan application with AI credit scoring, automated underwriting, and disbursement in days.' },
+      { title: 'Compliance & Reporting', desc: 'Automated regulatory reports for RBI, SEBI, and IRDAI generated from the compliance module.' },
+    ],
+    deliverables: ['Customer Mobile Banking App (iOS & Android)', 'Internet Banking Web Portal', 'Operations & Compliance Admin Panel', 'AI Fraud Detection Engine', 'Payment Rails Integration (UPI/NEFT/RTGS)', 'Full Source Code & Documentation'],
+  },
+
+  // ── HRMS Software ────────────────────────────────────────────────────────
+  {
+    id: 'hrms-software',
+    tag: 'HRMS',
+    accentColor: '#f59e0b',
+    title: 'HRMS & Payroll Software',
+    description: 'Automate attendance, leave approvals, automated payroll processing, and employee lifecycle management.',
+    longDescription: 'Replace spreadsheets and manual HR processes with a complete Human Resource Management System. From hiring and onboarding to attendance tracking, payroll processing, performance reviews, and exit management — every HR workflow is automated, documented, and accessible by the right people at the right time. Built for companies of 20 to 2,000 employees.',
+    features: ['Automated Payroll Processing with Tax Calculation', 'Biometric & App-based Attendance Tracking', 'Leave & Overtime Management', 'Employee Onboarding & Exit Workflows', 'Performance Review & Goal Tracking', 'HR Analytics & Headcount Reports'],
+    image: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&q=80&w=1200',
+    gallery: [
+      'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80',
+      'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80',
+      'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80',
+    ],
+    faqs: [
+      { question: 'Does it handle Indian payroll with PF, ESI, and TDS?', answer: 'Yes. PF, ESI, TDS, professional tax, and salary components are all configurable. Payslips and Form 16 are auto-generated.' },
+      { question: 'Can employees apply for leave from mobile?', answer: 'Yes. The employee self-service mobile app lets staff apply for leave, check balances, view payslips, and submit expense claims.' },
+      { question: 'Does it integrate with biometric attendance systems?', answer: 'Yes. Integration with ZKTeco, Suprema, and other RFID/biometric systems is available. App-based geo-fencing is also supported.' },
+    ],
+    techStack: ['Vue.js', 'Laravel', 'MySQL', 'React Native', 'Razorpay', 'Firebase'],
+    stats: [{ value: 'Auto', label: 'Payroll Processing' }, { value: 'Biometric', label: 'Attendance Sync' }, { value: 'PF/ESI/TDS', label: 'Compliant' }],
+    useCases: [
+      { icon: 'startup', title: 'Growing Companies (20–200 staff)', desc: 'Replace WhatsApp leave requests and Excel payroll sheets with a proper HR system.' },
+      { icon: 'enterprise', title: 'Mid & Large Enterprises', desc: 'Manage multi-location teams, complex leave policies, and compliance across departments.' },
+      { icon: 'agency', title: 'Outsourcing & Staffing Firms', desc: 'Manage hundreds of client-deployed staff with separate payroll cycles and compliance tracking.' },
+    ],
+    userFlow: [
+      { title: 'Employee Onboarding', desc: 'HR adds new employee, completes digital joining formalities, and sets up payroll and leave entitlements.' },
+      { title: 'Daily Attendance', desc: 'Staff mark attendance via biometric, app check-in, or QR code. Data syncs automatically.' },
+      { title: 'Leave & Payroll Processing', desc: 'Employees apply for leave via app. Payroll runs automatically at month-end with all deductions calculated.' },
+      { title: 'Reports & Reviews', desc: 'HR views headcount reports, attendance trends, payroll summaries, and manages performance cycles.' },
+    ],
+    deliverables: ['HR Admin Web Dashboard', 'Employee Self-Service Mobile App (iOS & Android)', 'Payroll Processing & Payslip Engine', 'Attendance & Leave Management Module', 'Performance Review System', 'Full Source Code & Documentation'],
+  },
+
+  // ── Task Management ──────────────────────────────────────────────────────
+  {
+    id: 'task-management',
+    tag: 'PROJECT MGMT',
+    accentColor: '#3b82f6',
+    title: 'Task & Project Management',
+    description: 'Visual Kanban boards, time tracking, team collaboration, and automated progress reporting.',
+    longDescription: 'A Jira/Asana-style project management platform built for teams that want power without complexity. Create projects, assign tasks, track time, collaborate in context, and get automated progress reports — without chasing team members for updates. Configurable for software teams (sprints, bug tracking) and non-tech teams (marketing calendars, client projects).',
+    features: ['Visual Kanban & List Task Boards', 'Time Tracking & Timesheet Reports', 'Sprint Planning & Backlog Management', 'Team Chat & Threaded Comments on Tasks', 'Automated Weekly Progress Reports', 'Client Portal for External Stakeholders'],
+    image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?auto=format&fit=crop&q=80&w=1200',
+    gallery: [
+      'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80',
+      'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80',
+      'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&q=80',
+    ],
+    faqs: [
+      { question: 'Does it support Agile sprints and backlogs?', answer: 'Yes. Sprint planning, velocity tracking, burndown charts, and backlog grooming are all included for software development teams.' },
+      { question: 'Can clients view project progress without full access?', answer: 'Yes. A read-only client portal shows milestones, task statuses, and uploaded deliverables — without exposing internal discussions.' },
+      { question: 'Can it replace tools like Jira, Asana, or Trello?', answer: 'Yes. It covers all core features of those tools with the added benefit of white-labeling under your brand for client delivery.' },
+    ],
+    techStack: ['React.js', 'Node.js', 'PostgreSQL', 'Redis', 'React Native', 'WebSocket'],
+    stats: [{ value: 'Kanban', label: 'Visual task boards' }, { value: 'Sprint', label: 'Agile planning' }, { value: 'Client', label: 'Portal included' }],
+    useCases: [
+      { icon: 'startup', title: 'Software Dev Teams', desc: 'Sprint planning, bug tracking, code review tasks, and deployment milestones in one board.' },
+      { icon: 'enterprise', title: 'Marketing Agencies', desc: 'Manage client campaigns, content calendars, and delivery timelines with client portal access.' },
+      { icon: 'agency', title: 'SaaS & Product Companies', desc: 'Manage product roadmap, engineering backlogs, and cross-team dependencies in one place.' },
+    ],
+    userFlow: [
+      { title: 'Create Project & Board', desc: 'Set up a Kanban or sprint board, define stages, and invite team members with appropriate roles.' },
+      { title: 'Add & Assign Tasks', desc: 'Create tasks with descriptions, attachments, due dates, and assign to team members with priority levels.' },
+      { title: 'Track & Collaborate', desc: 'Team updates tasks, logs time, comments in context, and moves cards across stages.' },
+      { title: 'Report & Review', desc: 'Automated weekly reports show completion rates, time logged, and blockers — sent to managers and clients.' },
+    ],
+    deliverables: ['Web Project Management Platform', 'Mobile App for Task Updates (iOS & Android)', 'Client Portal (Read-only Access)', 'Time Tracking & Timesheet Module', 'Sprint Planning & Reporting Engine', 'Full Source Code & Documentation'],
+  },
+
+  // ── Milestone Management ─────────────────────────────────────────────────
+  {
+    id: 'milestone-management',
+    tag: 'DELIVERY TRACKER',
+    accentColor: '#6366f1',
+    title: 'Milestone & Delivery Tracker',
+    description: 'Client-facing dashboard to track project phases, approve deliverables, and release milestone payments.',
+    longDescription: 'Built for agencies, software firms, and construction companies that deliver projects in phases. A client-facing portal where clients see live project progress, approve deliverables, and release milestone payments — while your team tracks phase completion, uploads evidence, and generates invoices automatically on approval. Eliminates the "where are we?" client email permanently.',
+    features: ['Client-facing Project Progress Dashboard', 'Milestone-based Payment Escrow & Release', 'Deliverable Upload & Client Approval Workflow', 'Gantt Chart & Phase Timeline View', 'Auto-Invoice Generation on Milestone Approval', 'PDF Progress Report & Summary Export'],
+    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=1200',
+    gallery: [
+      'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&q=80',
+      'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80',
+      'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&q=80',
+    ],
+    faqs: [
+      { question: 'How does milestone payment release work?', answer: 'When your team marks a milestone complete and uploads evidence, the client gets a notification to review and approve. On approval, the linked payment is released or an invoice is auto-generated.' },
+      { question: 'Can the client add comments or request revisions?', answer: 'Yes. Clients can approve, reject with comments, or request changes on any deliverable. The full revision history is maintained.' },
+      { question: 'Is it suitable for construction projects?', answer: 'Yes. Construction phases (foundation, structure, fit-out, handover) with photo evidence upload and site inspection approval are all supported.' },
+    ],
+    techStack: ['Next.js', 'Node.js', 'MongoDB', 'Razorpay (Escrow)', 'AWS S3', 'PostgreSQL'],
+    stats: [{ value: 'Client', label: 'Live progress portal' }, { value: 'Escrow', label: 'Milestone payments' }, { value: 'Auto', label: 'Invoice on approval' }],
+    useCases: [
+      { icon: 'startup', title: 'Software Development Agencies', desc: 'Give clients a professional portal to track development phases, review demos, and release payments.' },
+      { icon: 'enterprise', title: 'Construction Companies', desc: 'Track construction phases with photo evidence and manage bank-linked milestone disbursements.' },
+      { icon: 'agency', title: 'Consultants & Freelancers', desc: 'Manage deliverables, approvals, and payments for multiple client projects from one dashboard.' },
+    ],
+    userFlow: [
+      { title: 'Define Project Milestones', desc: 'Create project phases with deadlines, deliverables required, and linked payment amounts.' },
+      { title: 'Invite Client to Portal', desc: 'Client receives a link to their personalised portal showing the full project Gantt and current phase status.' },
+      { title: 'Upload & Submit for Approval', desc: 'Team uploads deliverables (documents, videos, demo links) and marks the milestone ready for review.' },
+      { title: 'Client Approves & Pays', desc: 'Client reviews deliverables, approves or requests changes. An invoice is auto-generated on approval.' },
+    ],
+    deliverables: ['Client-facing Progress Portal (Web)', 'Team Admin & Milestone Dashboard', 'Deliverable Upload & Approval Workflow', 'Escrow Payment Release Module', 'Auto-Invoice & PDF Report Generator', 'Full Source Code & Documentation'],
+  },
+
+  // ── Healthcare Platform ──────────────────────────────────────────────────
+  {
+    id: 'healthcare-platform',
+    tag: 'HEALTHTECH',
+    accentColor: '#06b6d4',
+    title: 'Healthcare & Telemedicine Platform',
+    description: 'Video consultations, digital EMR, e-prescriptions, and smart appointment triage for clinics and hospitals.',
+    longDescription: 'A complete telemedicine and clinic management platform that modernises patient care. Enable HD video consultations, maintain digital EMR, issue e-prescriptions, and let patients book and track appointments online — while clinics manage schedules, staff, lab reports, and billing from one HIPAA-compliant system. Scales from a solo doctor to a 500-doctor hospital chain.',
+    features: ['HD WebRTC Video Consultations', 'Electronic Medical Records (EMR)', 'E-Prescription with Pharmacy Integration', 'Smart Appointment Booking & Triage', 'Lab Report Upload & Management', 'Insurance Billing & Claim Workflows'],
+    image: 'https://images.unsplash.com/photo-1576091160550-2173ff9e5eb3?auto=format&fit=crop&q=80&w=1200',
+    gallery: [
+      'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&q=80',
+      'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=800&q=80',
+      'https://images.unsplash.com/photo-1551076805-e1869033e561?w=800&q=80',
+    ],
+    faqs: [
+      { question: 'Is patient data HIPAA compliant?', answer: 'Yes. HIPAA-compliant AWS infrastructure with AES-256 encryption, TLS 1.3 in transit, and full audit trails. DPDP Act compliance for Indian clients.' },
+      { question: 'Can patients join video calls without downloading an app?', answer: 'Yes. Patients join from any browser — no app download required. iOS and Android apps are also available for those who prefer them.' },
+      { question: 'Does it work for both in-clinic and online visits?', answer: 'Yes. In-clinic appointment management and video consultations share the same EMR, prescription, and billing system.' },
+    ],
+    techStack: ['React Native', 'Node.js', 'WebRTC', 'AWS HIPAA', 'PostgreSQL', 'Firebase'],
+    stats: [{ value: 'HIPAA', label: 'Compliant' }, { value: 'HD', label: 'Video consultations' }, { value: '4 Apps', label: 'Patient, Doctor, Admin, Pharmacy' }],
+    useCases: [
+      { icon: 'startup', title: 'Solo Doctors & Clinics', desc: 'Accept online bookings and video consultations with digital prescriptions the same week.' },
+      { icon: 'enterprise', title: 'Multi-Specialty Hospitals', desc: 'Centralised patient records, cross-specialty referrals, and multi-branch revenue reporting.' },
+      { icon: 'agency', title: 'Health Startups', desc: 'White-label and launch your own branded telehealth product for a specific medical vertical.' },
+    ],
+    userFlow: [
+      { title: 'Book an Appointment', desc: 'Patient searches by specialty, views doctor availability, and books a video or in-clinic slot.' },
+      { title: 'Join Video Consultation', desc: 'Doctor and patient join a secure HD video call at the scheduled time from web or mobile.' },
+      { title: 'Receive E-Prescription', desc: 'Doctor issues a digital prescription from the dashboard — sent to the patient and pharmacy instantly.' },
+      { title: 'Access Health Records', desc: 'Patient uploads lab reports and views full health history from their personal health dashboard.' },
+    ],
+    deliverables: ['Patient Web & Mobile App (iOS & Android)', 'Doctor Dashboard & Video Platform', 'Admin & Clinic Management Panel', 'EMR & E-Prescription Module', 'Lab Integration & Billing System', 'Full Source Code & Documentation'],
+  },
+
+  // ── Social Voice Rooms ───────────────────────────────────────────────────
+  {
+    id: 'social-voice-rooms',
+    tag: 'SOCIAL APP',
+    accentColor: '#ec4899',
+    title: 'Social Voice & Live Rooms App',
+    description: 'Real-time voice conversations, virtual gifting, live music sharing, and monetized creator moments.',
+    longDescription: 'Build the next Clubhouse or Stereo — a social platform built around live audio and real-time community experiences. Users join themed live rooms, participate in voice conversations, send virtual gifts to speakers, and share music together. Creators monetize through virtual gifts, fan subscriptions, and sponsored room events. Built for Web, iOS, and Android with sub-100ms audio latency.',
+    features: ['Live Audio Rooms with Stage & Audience', 'Virtual Gift & Coin Economy', 'Synchronized Music Listening Rooms', 'Creator Fan Subscriptions & Tipping', 'Room Discovery & Interest-based Feed', 'Moderation Tools & Community Management'],
+    image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=1200',
+    gallery: [
+      'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80',
+      'https://images.unsplash.com/photo-1543269664-647163e1dcf4?w=800&q=80',
+      'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80',
+    ],
+    faqs: [
+      { question: 'How does the virtual gift economy work?', answer: 'Users purchase coins via in-app purchase. They send gifts (animated icons with coin values) to creators during live rooms. Creators cash out their accumulated coins to their bank account.' },
+      { question: 'What is the audio latency?', answer: 'We use Agora RTC for sub-100ms audio latency — indistinguishable from a real conversation. Up to 10,000 listeners per room are supported.' },
+      { question: 'Can creators host paid, ticketed rooms?', answer: 'Yes. Creators can set a coin price to enter specific rooms or unlock premium content, creating exclusive experiences for paying fans.' },
+    ],
+    techStack: ['Flutter (iOS & Android)', 'Node.js', 'Agora (WebRTC)', 'Firebase', 'MongoDB', 'Razorpay'],
+    stats: [{ value: '<100ms', label: 'Audio latency' }, { value: '10K+', label: 'Listeners per room' }, { value: 'Creator', label: 'Monetization built-in' }],
+    useCases: [
+      { icon: 'startup', title: 'Audio Social Startups', desc: 'Launch your own Clubhouse-style platform for a specific niche — music, comedy, language learning, or spirituality.' },
+      { icon: 'enterprise', title: 'Media & Entertainment Brands', desc: 'Add live audio community features to your existing app to increase engagement and session time.' },
+      { icon: 'agency', title: 'Creator Economy Platforms', desc: 'Build a monetization layer for creators beyond content — live rooms, fan subscriptions, and virtual events.' },
+    ],
+    userFlow: [
+      { title: 'Create Profile & Interests', desc: 'User signs up, selects topic interests (music, tech, comedy), and sees a personalised room discovery feed.' },
+      { title: 'Join or Start a Room', desc: 'Join an active room as a listener or start a new room — public, invite-only, or ticketed.' },
+      { title: 'Participate & Gift', desc: 'Request to speak, contribute to conversations, and send virtual gifts to creators during the live session.' },
+      { title: 'Monetize (Creators)', desc: 'Creators track gift earnings, set up fan subscriptions, and cash out to their bank account from the creator dashboard.' },
+    ],
+    deliverables: ['iOS & Android Social App', 'Creator Dashboard & Earnings Management', 'Admin & Moderation Panel', 'Virtual Gift & Coin Economy System', 'Live Room Infrastructure (Agora)', 'Full Source Code & Documentation'],
+  },
 ]
 
-const useCaseIcons = {
-  startup: Rocket,
-  enterprise: Building2,
-  agency: Users,
+const useCaseIcons = { startup: Rocket, enterprise: Building2, agency: Users }
+
+const FEATURE_ICONS = [Zap, Shield, Activity, Settings, Globe, TrendingUp, BarChart3, Star, Monitor, Award, Database, Layers]
+
+function SLabel({ text, color }: { text: string; color: string }) {
+  return (
+    <div className="flex items-center gap-3 mb-5">
+      <div className="w-8 h-[2px] rounded-full" style={{ background: color }} />
+      <span className="text-xs font-bold tracking-widest uppercase" style={{ color }}>{text}</span>
+    </div>
+  )
 }
+
+const BUILD_VS_BUY = [
+  { criteria: 'Time to Market',    custom: '12–18 months of development',              ours: '4–8 weeks — platform is ready-built' },
+  { criteria: 'Development Cost',  custom: '₹30L – ₹1.5Cr+ engineering cost',         ours: 'Fixed price — fraction of custom build' },
+  { criteria: 'Team Required',     custom: '8–12 engineers, PMs, QA, DevOps',          ours: 'No dev team needed — we handle everything' },
+  { criteria: 'Project Risk',      custom: '60% of custom builds go over budget',       ours: 'Low — battle-tested across real clients' },
+  { criteria: 'Post-launch',       custom: 'Full engineering team needed permanently',  ours: 'Covered by 3-month support plan' },
+  { criteria: 'Customisation',     custom: 'Full control — at enormous cost',           ours: 'Full white-label — your brand, your domain' },
+]
 
 export default function LiveDemoProductPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = use(params)
@@ -926,9 +1559,7 @@ export default function LiveDemoProductPage({ params }: { params: Promise<{ id: 
     return (
       <div className="min-h-screen flex flex-col items-center justify-center bg-white pt-20">
         <p className="text-2xl font-bold text-[#0a1628] mb-4">Product not found</p>
-        <Link href="/live-demo" className="text-[#f5a623] font-semibold hover:underline">
-          ← Back to Live Demo
-        </Link>
+        <Link href="/live-demo" className="text-[#f5a623] font-semibold hover:underline">← Back to Live Demo</Link>
       </div>
     )
   }
@@ -939,202 +1570,386 @@ export default function LiveDemoProductPage({ params }: { params: Promise<{ id: 
     <div className="bg-white min-h-screen">
 
       {/* ── Hero ── */}
-      <div className="relative h-[65vh] min-h-[480px] overflow-hidden">
-        <img src={product.image} alt={product.title} className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-[#0a1628]/65 to-[#0a1628]/20" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0a1628]/75 via-transparent to-transparent" />
+      <div className="relative min-h-[75vh] overflow-hidden">
+        <img src={product.image} alt={product.title} className="absolute inset-0 w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-[#0a1628]/70 to-[#0a1628]/25" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0a1628]/80 via-[#0a1628]/40 to-transparent" />
 
-        {/* Back button */}
-        <div className="absolute top-28 left-6 md:left-12">
-          <Link
-            href="/live-demo"
-            className="inline-flex items-center gap-2 text-white/80 hover:text-white text-sm font-medium bg-white/10 backdrop-blur-sm border border-white/20 px-4 py-2 rounded-full transition-colors"
-          >
+        {/* Back */}
+        <div className="absolute top-28 left-6 md:left-12 z-10">
+          <Link href="/live-demo" className="inline-flex items-center gap-2 text-white/80 hover:text-white text-sm font-medium bg-white/10 backdrop-blur-sm border border-white/20 px-4 py-2 rounded-full transition-colors">
             <ArrowLeft size={15} /> Back to Products
           </Link>
         </div>
 
         {/* Hero content */}
-        <div className="absolute bottom-10 left-6 md:left-12 max-w-2xl">
-          <span className="inline-block px-3 py-1 rounded-full text-white text-xs font-bold mb-4" style={{ background: product.accentColor }}>
-            {product.tag}
-          </span>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight mb-3">
-            {product.title}
-          </h1>
-          <p className="text-white/75 text-base md:text-lg leading-relaxed mb-6">{product.description}</p>
-          <div className="flex flex-wrap gap-4">
-            {product.stats.map((s, i) => (
-              <div key={i} className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl px-4 py-2 text-center">
-                <div className="text-base font-black text-white">{s.value}</div>
-                <div className="text-[10px] text-white/60 mt-0.5">{s.label}</div>
-              </div>
-            ))}
+        <div className="absolute bottom-0 inset-x-0 z-10">
+          <div className="max-w-6xl mx-auto px-6 md:px-12 pb-12 pt-20">
+            <span className="inline-block px-3 py-1.5 rounded-full text-white text-xs font-black tracking-wider mb-5" style={{ background: product.accentColor }}>
+              {product.tag}
+            </span>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-white leading-tight mb-3 max-w-3xl">
+              {product.title}
+            </h1>
+            <p className="text-white/75 text-base md:text-lg leading-relaxed mb-6 max-w-2xl">{product.description}</p>
+
+            {/* Stats */}
+            <div className="flex flex-wrap gap-3 mb-5">
+              {product.stats.map((s, i) => (
+                <div key={i} className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl px-4 py-2.5 text-center">
+                  <div className="text-lg font-black text-white leading-none">{s.value}</div>
+                  <div className="text-[10px] text-white/55 mt-1 leading-snug">{s.label}</div>
+                </div>
+              ))}
+            </div>
+
+            {/* Tech tags */}
+            <div className="flex flex-wrap gap-2">
+              {product.techStack.map((tech, i) => (
+                <span key={i} className="bg-white/10 border border-white/15 text-white/65 text-[11px] font-semibold px-3 py-1 rounded-full">
+                  {tech}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </div>
 
       {/* ── Main Content ── */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-12 py-12 md:py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-12 py-14 md:py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-14">
 
-          {/* LEFT */}
-          <div className="lg:col-span-2 flex flex-col gap-14">
+          {/* ── LEFT col-span-2 ── */}
+          <div className="lg:col-span-2 flex flex-col gap-16">
 
-            {/* Overview */}
-            <div>
-              <div className="flex items-center gap-3 mb-5">
-                <div className="w-8 h-[2px]" style={{ background: product.accentColor }} />
-                <span className="text-xs font-bold tracking-widest uppercase" style={{ color: product.accentColor }}>Overview</span>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                <p className="text-gray-600 text-base leading-relaxed">{product.longDescription}</p>
-                <img src={product.gallery[0]} alt={product.title} className="rounded-2xl object-cover w-full h-52 shadow-md" />
-              </div>
-            </div>
-
-            {/* User Journey */}
-            <div>
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-8 h-[2px]" style={{ background: product.accentColor }} />
-                <span className="text-xs font-bold tracking-widest uppercase" style={{ color: product.accentColor }}>User Journey</span>
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {product.userFlow.map((step, i) => (
-                  <div key={i} className="flex gap-4 p-5 rounded-2xl border border-gray-100 bg-gray-50 hover:border-gray-200 hover:shadow-sm transition-all">
-                    <div
-                      className="w-8 h-8 rounded-full flex items-center justify-center text-white text-sm font-black flex-shrink-0 mt-0.5"
-                      style={{ background: product.accentColor }}
-                    >
-                      {i + 1}
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-[#0a1628] text-sm mb-1">{step.title}</h4>
-                      <p className="text-gray-500 text-sm leading-relaxed">{step.desc}</p>
-                    </div>
+            {/* 1. Overview */}
+            <section>
+              <SLabel text="Overview" color={product.accentColor} />
+              <h2 className="text-2xl sm:text-3xl font-black text-[#0a1628] mb-4 leading-tight">
+                Everything You Need — Ready to Launch
+              </h2>
+              {/* Stats highlight strip */}
+              <div className="flex flex-wrap gap-3 mb-6">
+                {product.stats.map((s, i) => (
+                  <div key={i} className="flex items-center gap-3 px-4 py-3 rounded-2xl border border-gray-100 bg-gray-50">
+                    <div className="w-2 h-2 rounded-full flex-shrink-0" style={{ background: product.accentColor }} />
+                    <span className="text-base font-black text-[#0a1628]">{s.value}</span>
+                    <span className="text-xs text-gray-400 font-medium">{s.label}</span>
                   </div>
                 ))}
               </div>
-            </div>
-
-            {/* Who is it for */}
-            <div>
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-8 h-[2px]" style={{ background: product.accentColor }} />
-                <span className="text-xs font-bold tracking-widest uppercase" style={{ color: product.accentColor }}>Who Is It For</span>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <p className="text-gray-600 text-base leading-relaxed">{product.longDescription}</p>
+                <div className="relative">
+                  <img src={product.gallery[0]} alt={product.title} className="rounded-2xl object-cover w-full h-64 shadow-lg" />
+                  <div className="absolute -bottom-3 -right-3 w-16 h-16 rounded-2xl flex items-center justify-center shadow-lg" style={{ background: product.accentColor }}>
+                    <Zap size={28} className="text-white" />
+                  </div>
+                </div>
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                {product.useCases.map((uc, i) => {
-                  const Icon = useCaseIcons[uc.icon]
+            </section>
+
+            {/* 2. Feature Cards */}
+            <section>
+              <SLabel text="Features" color={product.accentColor} />
+              <h2 className="text-2xl sm:text-3xl font-black text-[#0a1628] mb-2 leading-tight">
+                What&apos;s Inside the Platform
+              </h2>
+              <p className="text-gray-500 text-base mb-8">
+                Every feature is production-ready and included in the base deployment — not sold as separate add-ons.
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {product.features.map((f, i) => {
+                  const Icon = FEATURE_ICONS[i % FEATURE_ICONS.length]
+                  const isDark = i % 6 === 0
                   return (
-                    <div key={i} className="bg-gray-50 border border-gray-100 rounded-2xl p-5 hover:shadow-md hover:border-gray-200 transition-all">
-                      <div className="w-9 h-9 rounded-xl flex items-center justify-center mb-3" style={{ background: product.accentColor + '18' }}>
-                        <Icon size={16} style={{ color: product.accentColor }} />
+                    <div key={i} className={`relative flex gap-4 p-5 rounded-2xl border overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group ${isDark ? 'border-transparent text-white' : 'border-gray-100 bg-white'}`}
+                      style={isDark ? { background: `linear-gradient(135deg, #0a1628 0%, #1a2f4e 100%)` } : {}}>
+                      {/* Decorative blob */}
+                      {isDark && <div className="absolute -top-4 -right-4 w-20 h-20 rounded-full opacity-20" style={{ background: product.accentColor }} />}
+                      <div className="w-11 h-11 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-sm"
+                        style={{ background: isDark ? product.accentColor + '30' : product.accentColor + '12' }}>
+                        <Icon size={20} style={{ color: isDark ? '#fff' : product.accentColor }} />
                       </div>
-                      <h4 className="font-bold text-[#0a1628] text-sm mb-1.5">{uc.title}</h4>
-                      <p className="text-gray-500 text-sm leading-relaxed">{uc.desc}</p>
+                      <div className="pt-0.5 relative z-10">
+                        <h3 className={`font-bold text-sm leading-snug ${isDark ? 'text-white' : 'text-[#0a1628]'}`}>{f}</h3>
+                        <div className="flex items-center gap-1.5 mt-1.5">
+                          <div className="w-3 h-3 rounded-full flex items-center justify-center" style={{ background: product.accentColor + '25' }}>
+                            <div className="w-1 h-1 rounded-full" style={{ background: isDark ? '#fff' : product.accentColor }} />
+                          </div>
+                          <p className={`text-xs ${isDark ? 'text-white/55' : 'text-gray-400'}`}>Included in base deployment</p>
+                        </div>
+                      </div>
                     </div>
                   )
                 })}
               </div>
-            </div>
+            </section>
 
-            {/* Gallery */}
-            <div>
-              <div className="flex items-center gap-3 mb-5">
-                <div className="w-8 h-[2px]" style={{ background: product.accentColor }} />
-                <span className="text-xs font-bold tracking-widest uppercase" style={{ color: product.accentColor }}>Screenshots</span>
+            {/* 3. How It Works */}
+            <section>
+              <SLabel text="How It Works" color={product.accentColor} />
+              <h2 className="text-2xl sm:text-3xl font-black text-[#0a1628] mb-2 leading-tight">
+                From Setup to Live in Weeks
+              </h2>
+              <p className="text-gray-500 text-base mb-8">A simple, guided process — we handle everything technical.</p>
+              <div className="relative">
+                <div className="hidden md:block absolute top-8 left-[12%] right-[12%] h-px z-0" style={{ background: `linear-gradient(90deg, ${product.accentColor}50, ${product.accentColor}, ${product.accentColor}50)` }} />
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-5">
+                  {product.userFlow.map((step, i) => (
+                    <div key={i} className="relative z-10 group">
+                      <div className="flex md:flex-col items-start md:items-center gap-4 md:gap-0 p-5 rounded-2xl border border-gray-100 bg-white hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300">
+                        {/* Step circle */}
+                        <div className="relative flex-shrink-0 md:mb-5">
+                          <div className="w-12 h-12 rounded-full flex items-center justify-center text-white text-base font-black shadow-lg group-hover:scale-110 transition-transform duration-300" style={{ background: `linear-gradient(135deg, ${product.accentColor} 0%, ${product.accentColor}cc 100%)` }}>
+                            {i + 1}
+                          </div>
+                          <div className="absolute inset-0 rounded-full opacity-30 blur-md group-hover:opacity-60 transition-opacity" style={{ background: product.accentColor }} />
+                        </div>
+                        <div className="md:text-center">
+                          <div className="font-black text-[#0a1628] text-sm mb-2">{step.title}</div>
+                          <p className="text-gray-500 text-xs leading-relaxed">{step.desc}</p>
+                        </div>
+                      </div>
+                      {/* Connector dot */}
+                      <div className="hidden md:block absolute top-8 -right-2.5 w-5 h-5 rounded-full border-2 border-white z-20 shadow-sm last:hidden" style={{ background: product.accentColor }} />
+                    </div>
+                  ))}
+                </div>
               </div>
-              <div className="grid grid-cols-3 gap-3">
-                {product.gallery.map((img, i) => (
-                  <div key={i} className="rounded-xl overflow-hidden aspect-video bg-gray-100 shadow-sm">
-                    <img src={img} alt={`${product.title} ${i + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+            </section>
+
+            {/* 4. Who Is It For */}
+            <section>
+              <SLabel text="Who It&apos;s For" color={product.accentColor} />
+              <h2 className="text-2xl sm:text-3xl font-black text-[#0a1628] mb-2 leading-tight">
+                Built for These Businesses
+              </h2>
+              <p className="text-gray-500 text-base mb-8">Three distinct use cases — each with measurable outcomes.</p>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+                {product.useCases.map((uc, i) => {
+                  const Icon = useCaseIcons[uc.icon]
+                  const nums = ['01', '02', '03']
+                  return (
+                    <div key={i} className="relative rounded-2xl overflow-hidden border border-gray-100 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group bg-white flex flex-col">
+                      {/* Top accent line */}
+                      <div className="h-1 w-full" style={{ background: `linear-gradient(90deg, ${product.accentColor}, ${product.accentColor}60)` }} />
+                      {/* Gradient header */}
+                      <div className="relative px-6 pt-6 pb-5 overflow-hidden" style={{ background: `linear-gradient(135deg, ${product.accentColor}12 0%, ${product.accentColor}05 100%)` }}>
+                        {/* Ghost number */}
+                        <span className="absolute top-2 right-4 text-5xl font-black leading-none select-none pointer-events-none" style={{ color: product.accentColor + '18' }}>{nums[i]}</span>
+                        {/* Icon */}
+                        <div className="relative z-10 w-14 h-14 rounded-2xl flex items-center justify-center mb-4 shadow-md group-hover:scale-110 transition-transform duration-300" style={{ background: `linear-gradient(135deg, ${product.accentColor}25, ${product.accentColor}12)` }}>
+                          <Icon size={26} style={{ color: product.accentColor }} />
+                        </div>
+                        <h4 className="relative z-10 font-black text-[#0a1628] text-lg leading-tight">{uc.title}</h4>
+                      </div>
+                      {/* Divider */}
+                      <div className="mx-6 h-px" style={{ background: `linear-gradient(90deg, ${product.accentColor}30, transparent)` }} />
+                      {/* Body */}
+                      <div className="px-6 py-5 flex flex-col flex-1">
+                        <p className="text-gray-500 text-sm leading-relaxed flex-1">{uc.desc}</p>
+                        <div className="mt-4 pt-4 border-t border-gray-100 flex items-center gap-2">
+                          <CheckCircle2 size={14} style={{ color: product.accentColor }} />
+                          <span className="text-xs font-bold" style={{ color: product.accentColor }}>Ideal for this business type</span>
+                        </div>
+                      </div>
+                    </div>
+                  )
+                })}
+              </div>
+            </section>
+
+            {/* 5. Build vs Buy */}
+            <section>
+              <SLabel text="Build vs Buy" color={product.accentColor} />
+              <h2 className="text-2xl sm:text-3xl font-black text-[#0a1628] mb-2 leading-tight">
+                Why Not Build It From Scratch?
+              </h2>
+              <p className="text-gray-500 text-base mb-8">Every client asks this. Here is an honest comparison.</p>
+              <div className="rounded-3xl overflow-hidden border border-gray-200 shadow-lg">
+                {/* Header */}
+                <div className="grid grid-cols-3">
+                  <div className="px-5 py-5 bg-[#0a1628] border-b border-r border-white/10">
+                    <span className="text-xs font-black uppercase tracking-widest text-white/40">Criteria</span>
+                  </div>
+                  <div className="px-5 py-5 bg-red-50 border-b border-r border-red-100 flex items-center justify-center gap-2">
+                    <div className="w-6 h-6 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0">
+                      <XCircle size={13} className="text-red-400" />
+                    </div>
+                    <span className="text-xs font-black uppercase tracking-widest text-red-400">Build From Scratch</span>
+                  </div>
+                  <div className="px-5 py-5 border-b border-gray-100 flex items-center justify-center gap-2" style={{ background: product.accentColor + '12' }}>
+                    <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0" style={{ background: product.accentColor + '25' }}>
+                      <CheckCircle2 size={13} style={{ color: product.accentColor }} />
+                    </div>
+                    <span className="text-xs font-black uppercase tracking-widest" style={{ color: product.accentColor }}>Kotibox Ready-Made</span>
+                  </div>
+                </div>
+                {BUILD_VS_BUY.map((row, i) => (
+                  <div key={i} className={`grid grid-cols-3 ${i < BUILD_VS_BUY.length - 1 ? 'border-b border-gray-100' : ''} ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50/50'}`}>
+                    <div className="px-5 py-4 border-r border-gray-100 flex items-center gap-3">
+                      <div className="w-1.5 h-1.5 rounded-full flex-shrink-0 bg-gray-300" />
+                      <span className="font-bold text-[#0a1628] text-sm">{row.criteria}</span>
+                    </div>
+                    <div className="px-5 py-4 border-r border-gray-100 flex items-start gap-2.5">
+                      <XCircle size={14} className="text-red-300 flex-shrink-0 mt-0.5" />
+                      <span className="text-red-500 text-sm leading-snug">{row.custom}</span>
+                    </div>
+                    <div className="px-5 py-4 flex items-start gap-2.5" style={{ background: product.accentColor + '06' }}>
+                      <CheckCircle2 size={14} className="flex-shrink-0 mt-0.5" style={{ color: product.accentColor }} />
+                      <span className="text-sm font-semibold text-[#0a1628] leading-snug">{row.ours}</span>
+                    </div>
+                  </div>
+                ))}
+                {/* Footer CTA */}
+                <div className="grid grid-cols-3 border-t border-gray-200">
+                  <div className="px-5 py-4 bg-gray-50" />
+                  <div className="px-5 py-4 bg-red-50 flex items-center justify-center">
+                    <span className="text-xs font-bold text-red-400">High risk · High cost</span>
+                  </div>
+                  <div className="px-5 py-4 flex items-center justify-center" style={{ background: product.accentColor + '10' }}>
+                    <span className="text-xs font-bold" style={{ color: product.accentColor }}>Fast · Proven · Affordable</span>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* 6. Screenshots */}
+            <section>
+              <SLabel text="Screenshots" color={product.accentColor} />
+              <h2 className="text-2xl sm:text-3xl font-black text-[#0a1628] mb-2 leading-tight">See It in Action</h2>
+              <p className="text-gray-500 text-base mb-6">Real screens from the platform.</p>
+              {/* Main image */}
+              <div className="rounded-2xl overflow-hidden mb-3 relative group shadow-xl border border-gray-100">
+                <img src={product.gallery[0]} alt={`${product.title} 1`} className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-700" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628]/50 to-transparent" />
+                <div className="absolute bottom-4 left-4 flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-white/60" />
+                  <span className="text-white/80 text-xs font-semibold">Platform Preview</span>
+                </div>
+              </div>
+              {/* Thumbnail row */}
+              <div className="grid grid-cols-2 gap-3">
+                {product.gallery.slice(1).map((img, i) => (
+                  <div key={i} className="rounded-xl overflow-hidden aspect-video bg-gray-100 shadow-sm border border-gray-100 group">
+                    <img src={img} alt={`${product.title} ${i + 2}`} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                   </div>
                 ))}
               </div>
-            </div>
+            </section>
 
-            {/* FAQs */}
-            <div>
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-8 h-[2px]" style={{ background: product.accentColor }} />
-                <span className="text-xs font-bold tracking-widest uppercase" style={{ color: product.accentColor }}>FAQs</span>
-              </div>
+            {/* 7. FAQs */}
+            <section>
+              <SLabel text="FAQs" color={product.accentColor} />
+              <h2 className="text-2xl sm:text-3xl font-black text-[#0a1628] mb-2 leading-tight">Frequently Asked Questions</h2>
+              <p className="text-gray-500 text-base mb-8">Technical, commercial, and implementation questions answered.</p>
               <div className="flex flex-col gap-3">
                 {product.faqs.map((faq, i) => (
-                  <div key={i} className="border border-gray-200 rounded-2xl overflow-hidden">
-                    <button
-                      onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                      className="w-full flex items-center justify-between px-6 py-4 text-left hover:bg-gray-50 transition-colors"
-                    >
+                  <div key={i}
+                    className={`border rounded-2xl overflow-hidden transition-all ${openFaq === i ? 'shadow-md' : 'border-gray-200'}`}
+                    style={openFaq === i ? { borderColor: product.accentColor + '60' } : {}}>
+                    <button onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                      className="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-gray-50 transition-colors">
                       <span className="text-[#0a1628] font-semibold text-sm md:text-base pr-4">{faq.question}</span>
                       {openFaq === i
                         ? <ChevronUp size={18} style={{ color: product.accentColor }} className="flex-shrink-0" />
                         : <ChevronDown size={18} className="text-gray-400 flex-shrink-0" />}
                     </button>
                     {openFaq === i && (
-                      <div className="px-6 pb-5 text-gray-500 text-sm leading-relaxed border-t border-gray-100 pt-4">
-                        {faq.answer}
-                      </div>
+                      <div className="px-6 pb-5 text-gray-500 text-sm leading-relaxed border-t border-gray-100 pt-4">{faq.answer}</div>
                     )}
                   </div>
                 ))}
               </div>
-            </div>
+            </section>
 
           </div>
 
-          {/* RIGHT Sidebar */}
-          <div className="flex flex-col gap-6">
+          {/* ── RIGHT Sidebar ── */}
+          <div className="flex flex-col gap-5 lg:sticky lg:top-24 lg:self-start">
 
             {/* Key Features */}
-            <div className="bg-[#0a1628] rounded-2xl p-6">
-              <div className="flex items-center gap-3 mb-5">
-                <div className="w-3 h-3 rounded-full" style={{ background: product.accentColor }} />
-                <span className="text-white font-bold text-base">Key Features</span>
-              </div>
-              <div className="flex flex-col gap-3">
-                {product.features.map((f, i) => (
-                  <div key={i} className="flex items-start gap-3">
-                    <CheckCircle2 size={16} className="flex-shrink-0 mt-0.5" style={{ color: product.accentColor }} />
-                    <span className="text-white/80 text-sm leading-snug">{f}</span>
+            <div className="relative bg-[#0a1628] rounded-2xl p-6 overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 rounded-full opacity-10 blur-2xl" style={{ background: product.accentColor }} />
+              <div className="relative z-10">
+                <div className="flex items-center gap-3 mb-5">
+                  <div className="w-8 h-8 rounded-xl flex items-center justify-center" style={{ background: product.accentColor + '30' }}>
+                    <Zap size={15} style={{ color: product.accentColor }} />
                   </div>
-                ))}
+                  <span className="text-white font-bold text-base">Key Features</span>
+                </div>
+                <div className="flex flex-col gap-2.5">
+                  {product.features.map((f, i) => (
+                    <div key={i} className="flex items-start gap-3 py-1.5 border-b border-white/5 last:border-0">
+                      <CheckCircle2 size={14} className="flex-shrink-0 mt-0.5" style={{ color: product.accentColor }} />
+                      <span className="text-white/80 text-sm leading-snug">{f}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
 
             {/* What's Included */}
-            <div className="bg-white border border-gray-200 rounded-2xl p-6">
+            <div className="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
               <div className="flex items-center gap-2 mb-4">
-                <Package size={16} className="text-[#0a1628]" />
+                <div className="w-7 h-7 rounded-lg flex items-center justify-center bg-[#0a1628]">
+                  <Package size={13} className="text-white" />
+                </div>
                 <span className="text-[#0a1628] font-bold text-base">What&apos;s Included</span>
               </div>
-              <div className="flex flex-col gap-2.5">
+              <div className="flex flex-col gap-2">
                 {product.deliverables.map((d, i) => (
-                  <div key={i} className="flex items-center gap-3">
-                    <div
-                      className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0"
-                      style={{ background: `${product.accentColor}18` }}
-                    >
-                      <div className="w-1.5 h-1.5 rounded-full" style={{ background: product.accentColor }} />
+                  <div key={i} className="flex items-start gap-3 py-1.5 border-b border-gray-50 last:border-0">
+                    <div className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style={{ background: `${product.accentColor}18` }}>
+                      <CheckCircle2 size={10} style={{ color: product.accentColor }} />
                     </div>
-                    <span className="text-sm text-[#0a1628] font-medium">{d}</span>
+                    <span className="text-sm text-[#0a1628] font-medium leading-snug">{d}</span>
                   </div>
                 ))}
               </div>
             </div>
 
             {/* Tech Stack */}
-            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6">
+            <div className="bg-gray-50 border border-gray-100 rounded-2xl p-6">
               <div className="flex items-center gap-2 mb-4">
-                <Code2 size={16} className="text-[#0a1628]" />
+                <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ background: product.accentColor + '18' }}>
+                  <Code2 size={13} style={{ color: product.accentColor }} />
+                </div>
                 <span className="text-[#0a1628] font-bold text-base">Tech Stack</span>
               </div>
               <div className="flex flex-wrap gap-2">
                 {product.techStack.map((tech, i) => (
-                  <span key={i} className="px-3 py-1.5 rounded-full text-xs font-semibold text-[#0a1628] border border-gray-300 bg-white">
+                  <span key={i} className="px-3 py-1.5 rounded-full text-xs font-semibold text-[#0a1628] border border-gray-200 bg-white shadow-sm hover:border-gray-300 transition-colors">
                     {tech}
                   </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Deployment Summary */}
+            <div className="border border-gray-100 rounded-2xl p-6 bg-white shadow-sm">
+              <div className="flex items-center gap-2 mb-4">
+                <div className="w-7 h-7 rounded-lg flex items-center justify-center bg-green-50">
+                  <Clock size={13} className="text-green-600" />
+                </div>
+                <span className="text-[#0a1628] font-bold text-base">Deployment</span>
+              </div>
+              <div className="space-y-2.5">
+                {[
+                  { label: 'Timeline', val: '4–8 weeks to go live' },
+                  { label: 'White-label', val: 'Full branding — your domain & apps' },
+                  { label: 'Support', val: '3 months post-launch included' },
+                  { label: 'Hosting', val: 'Cloud-hosted, managed by us' },
+                  { label: 'Source Code', val: 'Full ownership on delivery' },
+                ].map(item => (
+                  <div key={item.label} className="flex items-start gap-2.5 py-1.5 border-b border-gray-50 last:border-0">
+                    <CheckCircle2 size={13} style={{ color: product.accentColor }} className="flex-shrink-0 mt-0.5" />
+                    <div>
+                      <span className="text-xs font-bold text-[#0a1628]">{item.label}: </span>
+                      <span className="text-xs text-gray-500">{item.val}</span>
+                    </div>
+                  </div>
                 ))}
               </div>
             </div>
@@ -1146,21 +1961,47 @@ export default function LiveDemoProductPage({ params }: { params: Promise<{ id: 
               <p className="text-white/65 text-sm leading-relaxed mb-5">
                 Get a free demo and custom pricing tailored to your business needs.
               </p>
-              <button
-                onClick={openModal}
+              <button onClick={openModal}
                 className="w-full flex items-center justify-center gap-2 py-3 rounded-xl font-bold text-sm transition-all hover:opacity-90"
-                style={{ background: product.accentColor }}
-              >
+                style={{ background: product.accentColor }}>
                 Request a Free Demo
               </button>
-              <Link
-                href="/live-demo"
-                className="w-full flex items-center justify-center gap-2 py-3 mt-3 rounded-xl font-semibold text-sm border border-white/20 text-white/80 hover:bg-white/10 transition-all"
-              >
+              <Link href="/live-demo"
+                className="w-full flex items-center justify-center gap-2 py-3 mt-3 rounded-xl font-semibold text-sm border border-white/20 text-white/80 hover:bg-white/10 transition-all">
                 Browse All Products <ArrowRight size={14} />
               </Link>
             </div>
 
+          </div>
+        </div>
+      </div>
+
+      {/* ── Full-width CTA Banner ── */}
+      <div className="mx-4 sm:mx-8 lg:mx-16 mb-16 rounded-3xl overflow-hidden relative" style={{ background: 'linear-gradient(135deg, #0a1628 0%, #111827 100%)' }}>
+        <div className="absolute top-0 right-0 w-72 h-72 rounded-full opacity-10 blur-[80px]" style={{ background: product.accentColor }} />
+        <div className="relative px-8 md:px-14 py-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div>
+            <div className="flex items-center gap-2 mb-4">
+              <div className="w-2 h-2 rounded-full animate-pulse" style={{ background: product.accentColor }} />
+              <span className="text-white/55 text-xs font-semibold uppercase tracking-widest">Ready-made · Fast Launch</span>
+            </div>
+            <h2 className="text-2xl md:text-3xl font-black text-white mb-3 leading-tight">
+              Ready to Launch <span style={{ color: product.accentColor }}>{product.title.split(' ').slice(0, 3).join(' ')}</span>?
+            </h2>
+            <p className="text-white/55 text-base">
+              We&apos;ll walk you through the full platform, show you every screen, and give you a custom pricing estimate — in a free 30-minute demo.
+            </p>
+          </div>
+          <div className="flex flex-col gap-3 md:items-end">
+            <button onClick={openModal}
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-bold text-white hover:opacity-90 transition-all text-sm"
+              style={{ background: product.accentColor }}>
+              Request Free Demo <ArrowRight size={16} />
+            </button>
+            <Link href="/live-demo"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-semibold text-white/75 border border-white/20 hover:bg-white/10 transition-all text-sm">
+              View All Products <ArrowRight size={14} />
+            </Link>
           </div>
         </div>
       </div>

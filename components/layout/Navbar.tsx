@@ -94,14 +94,13 @@ const rightPanels = [
       { label: 'AI Chatbot Suite', href: '/products/ai-chatbot', icon: MessageSquare },
       { label: 'Food Delivery Platform', href: '/products/food-delivery', icon: UtensilsCrossed },
       { label: 'AI Job Seeker Platform', href: '/products/job-seeker', icon: UserSearch },
-      { label: 'E-Commerce Platform', href: '/live-demo/ecommerce-suite', icon: ShoppingBag },
-      { label: 'CRM & Sales Automation', href: '/live-demo/crm-sales', icon: Users },
-      { label: 'Digital Wallet & Payment', href: '/live-demo/digital-wallet', icon: CreditCard },
-      { label: 'Telemedicine Platform', href: '/live-demo/telemedicine', icon: HeartPulse },
-      { label: 'Business ERP Suite', href: '/live-demo/business-erp', icon: BarChart3 },
-      { label: 'Security Monitoring', href: '/live-demo/security-monitoring', icon: Shield },
-      { label: 'AI Agent Suite', href: '/live-demo/ai-agent-suite', icon: Bot },
-      { label: 'Real Estate Platform', href: '/live-demo/real-estate-suite', icon: Building2 },
+      { label: 'E-Commerce Platform', href: '/products/ecommerce-platform', icon: ShoppingBag },
+      { label: 'CRM & Sales Automation', href: '/products/crm-sales', icon: Users },
+      { label: 'Digital Wallet & Payment', href: '/products/digital-wallet', icon: CreditCard },
+      { label: 'Telemedicine Platform', href: '/products/telemedicine', icon: HeartPulse },
+      { label: 'Business ERP Suite', href: '/products/business-erp', icon: BarChart3 },
+      { label: 'Security Monitoring', href: '/products/security-monitoring', icon: Shield },
+      { label: 'Real Estate Platform', href: '/products/real-estate-suite', icon: Building2 },
     ],
   },
 ]
@@ -247,7 +246,6 @@ export default function Navbar() {
   // Force solid navbar on any detail/inner page
   const solidNav = scrolled || servicesOpen
     || pathname.startsWith('/services')
-    || pathname.startsWith('/live-demo')
     || pathname.startsWith('/products')
     || pathname.startsWith('/admin')
 

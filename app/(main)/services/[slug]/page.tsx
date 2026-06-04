@@ -449,7 +449,7 @@ const services: Record<string, ServiceData> = {
     features: ['SEO Blog Writing', 'Case Studies & Whitepapers', 'Email Newsletter Campaigns', 'Video Script Writing', 'Content Calendar Management', 'Content Performance Analytics'],
     process: [
       { step: '01', title: 'Audience Research', desc: 'Define buyer personas, pain points, and content consumption preferences.' },
-      { step: '02', title: 'Content Strategy', desc: 'Build a topical authority map and 3-month content calendar.' },
+      { step: '02', title: 'Content Strategy', desc: 'Build a topical authority map and 6-month content calendar.' },
       { step: '03', title: 'Creation & Publishing', desc: 'Write, design, and publish content across chosen channels.' },
       { step: '04', title: 'Distribute & Measure', desc: 'Promote content via email and social; track leads and organic traffic.' },
     ],
